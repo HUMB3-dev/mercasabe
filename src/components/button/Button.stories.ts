@@ -1,39 +1,20 @@
-import MyButton from './Button.vue'
+import { Meta } from '@storybook/vue'
+import TheButton from './Button.vue'
 
 export default {
-  title: 'Example/ButtonX',
-  component: MyButton,
+  title: 'Exampxle/ButtonX',
+  component: TheButton,
   argTypes: {
-    backgroundColor: { control: 'color' },
-    size: { control: { type: 'select', options: ['small', 'medium', 'large'] } }
+    variant: {
+      control: 'text',
+      defaultValue: 'Juan Ramon',
+      description: 'Sei la whatever tumorrow'
+    }
   }
-}
+} as Meta<Record<number, number>>
 
-const Template = (args, { argTypes }) => ({
+export const Testing = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { MyButton },
-  template: '<my-button @onClick="onClick" v-bind="$props" />'
+  components: { TheButton },
+  template: '<TheButton @onClick="onClick" variant="My name is JA">My Full Name</TheButton>'
 })
-
-export const Primary = Template.bind({})
-Primary.args = {
-  primary: true,
-  label: 'ButtonX'
-}
-
-export const Secondary = Template.bind({})
-Secondary.args = {
-  label: 'ButtonX'
-}
-
-export const Large = Template.bind({})
-Large.args = {
-  size: 'large',
-  label: 'ButtonX'
-}
-
-export const Small = Template.bind({})
-Small.args = {
-  size: 'small',
-  label: 'ButtonX'
-}
