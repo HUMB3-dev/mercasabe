@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "start-storybook -p 6006",
+    "dev": "start-storybook -p 6060",
     "build": "build-storybook"
   },
   "repository": {
@@ -21,10 +21,12 @@
   "homepage": "https://github.com/sk-merkaly/components#readme",
   "devDependencies": {
     "@babel/core": "^7.14.6",
-    "@storybook/addon-actions": "^6.3.2",
-    "@storybook/addon-essentials": "^6.3.2",
-    "@storybook/addon-links": "^6.3.2",
-    "@storybook/vue": "^6.3.2",
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-essentials": "^6.3.6",
+    "@storybook/addon-links": "^6.3.6",
+    "@storybook/addons": "^6.3.6",
+    "@storybook/theming": "^6.3.6",
+    "@storybook/vue": "^6.3.6",
     "@vue/compiler-sfc": "^3.1.2",
     "babel-loader": "^8.2.2",
     "ts-loader": "^9.2.3",
