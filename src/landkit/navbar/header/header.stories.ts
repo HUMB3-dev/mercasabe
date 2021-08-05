@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/vue';
-import MKHeader from './header.component.vue';
+import MKHeader from './header.vue';
 
 export default {
   title: 'landkit/navbar/header',
