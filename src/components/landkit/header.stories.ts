@@ -7,7 +7,7 @@ export default {
   argTypes: {
     name: {
       control: 'text',
-      defaultValue: 'Title'
+      defaultValue: 'Merkaly'
     },
     src: {
       control: 'text',
@@ -16,8 +16,23 @@ export default {
   }
 } as Meta<Record<number, number>>;
 
-export const Default = (args, { argTypes }) => ({
+export const LoggedOff = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { MKHeader },
-  template: `<MKHeader v-bind="$props" @onClick="onClick" />`
+  template: `
+    <MKHeader v-bind="$props" @onClick="onClick">
+    <template #menu>
+      <BNavItem>Landings</BNavItem>
+      <BNavItem>Pages</BNavItem>
+      <BNavItem>Account</BNavItem>
+      <BNavItem>Documentation</BNavItem>
+    </template>
+
+    <template #actions>
+      <BBtn variant="primary" size="sm" class="navbar-btn">
+        Buy nows
+      </BBtn>
+    </template>
+
+    </MKHeader>`
 });

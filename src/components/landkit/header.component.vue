@@ -1,51 +1,31 @@
 <template>
-  <nav class="navbar navbar-light navbar-expand-lg border-bottom mb-3" style="z-index: 4;">
-    <!-- Brand -->
-    <BNavbarBrand href="/" class="font-weight-bold d-flex align-items-sm-center">
+  <BNavbar class="border-bottom mb-3" toggleable="lg" type="light">
+
+    <BNavbarBrand class="font-weight-bold d-flex align-items-sm-center" to="/">
       <BImg :src="src" width="42" :alt="name" rounded="" />
       <span class="d-none d-md-inline px-2" v-text="name" />
     </BNavbarBrand>
 
-    <!-- Toggler -->
     <BNavbarToggle target="NavMenu">
       <span class="navbar-toggler-icon" />
     </BNavbarToggle>
 
-    <!-- Collapse -->
-    <BCollapse id="NavMenu" is-nav>
+    <BCollapse id="NavMenu" class="overflow-auto" is-nav>
+      <BNavbarToggle target="NavMenu">
+        <i class="fe fe-x" />
+      </BNavbarToggle>
 
-      <!-- Navigation -->
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle">
-            Landings
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle">
-            Pages
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle">
-            Account
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle">
-            Documentation
-          </a>
-        </li>
-      </ul>
+      <BNavbarNav class="ms-auto">
+        <slot name="menu" />
+      </BNavbarNav>
 
-      <!-- Button -->
-      <a class="navbar-btn btn btn-sm btn-primary lift ms-auto" href="#!">
-        Buy now
-      </a>
+      <div class="ms-auto">
+        <slot name="actions" />
+      </div>
 
     </BCollapse>
 
-  </nav>
+  </BNavbar>
 </template>
 
 <script lang="ts">
@@ -55,10 +35,6 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class MKHeader extends Vue {
   @Prop({ type: String, required: true }) readonly name!: string;
   @Prop({ type: String, required: true }) readonly src: string;
-
-  get corner () {
-    return require(`../../assets/img/icons/spot-illustrations/${this.variant}.png`);
-  }
 
   onClick () {
     this.$emit('onClick');
