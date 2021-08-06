@@ -1,8 +1,5 @@
 module.exports = {
-  stories: [
-    '../src/components/**/*.stories.mdx',
-    '../src/components/**/*.stories.@(js|jsx|ts|tsx)'
-  ],
+  stories: ['../src/**/*.tsx'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials'
@@ -15,5 +12,5 @@ module.exports = {
       shouldExtractLiteralValuesFromEnum: true,
       propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true)
     }
-  },
+  }
 }

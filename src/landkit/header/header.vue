@@ -15,11 +15,11 @@
         <i class="fe fe-x" />
       </BNavbarToggle>
 
-      <BNavbarNav class="ms-auto">
+      <BNavbarNav class="ml-auto">
         <slot name="menu" />
       </BNavbarNav>
 
-      <div class="ms-auto">
+      <div class="ml-auto">
         <slot name="actions" />
       </div>
 
@@ -32,7 +32,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component({})
-export default class MKHeader extends Vue {
+export default class KHeader extends Vue {
   @Prop({ type: String, required: true }) readonly name!: string;
   @Prop({ type: String, required: true }) readonly src: string;
 

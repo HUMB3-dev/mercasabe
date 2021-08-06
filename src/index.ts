@@ -1,1 +1,1 @@
-export { MKHeader } from './landkit/navbar/header'
+export { MKHeader } from './landkit/header'

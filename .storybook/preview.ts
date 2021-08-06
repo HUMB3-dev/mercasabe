@@ -1,9 +1,8 @@
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
-import Vue from 'vue';
-// Make BootstrapVue available throughout your project
-Vue.use(BootstrapVue);
-// Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin);
+import '!style-loader!css-loader!sass-loader!./styles.scss'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import Vue, { Component } from 'vue'
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -13,9 +12,9 @@ export const parameters = {
       date: /Date$/
     }
   }
-};
+}
 
-export const decorators = [(story) => ({
+export const decorators = [(story): Component => ({
   components: { story },
   template: '<story />'
-})];
+})]
