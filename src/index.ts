@@ -1,1 +1,2 @@
-export { MKHeader } from './landkit/header'
+export { KHeader } from './landkit/header'
+export { KFooter } from './landkit/footer'

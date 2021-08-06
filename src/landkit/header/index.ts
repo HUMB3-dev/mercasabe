@@ -1,1 +1,1 @@
-export { default as MKHeader } from './header.vue'
+export { default as KHeader } from './header.vue'

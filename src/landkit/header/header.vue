@@ -35,10 +35,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class KHeader extends Vue {
   @Prop({ type: String, required: true }) readonly name!: string;
   @Prop({ type: String, required: true }) readonly src: string;
-
-  onClick () {
-    this.$emit('onClick');
-  }
 }
 </script>
+
 <style scoped />
