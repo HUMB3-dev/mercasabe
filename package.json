@@ -36,7 +36,7 @@
     "vue-template-compiler": "^2.6.14"
   },
   "dependencies": {
-    "@merkaly/ui": "0.0.3",
+    "@merkaly/ui": "0.0.6",
     "bootstrap-vue": "^2.21.2",
     "vue-property-decorator": "^9.1.2"
   }
