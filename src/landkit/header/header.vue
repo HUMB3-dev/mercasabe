@@ -29,12 +29,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({})
 export default class KHeader extends Vue {
-  @Prop({ type: String, required: true }) readonly name!: string;
-  @Prop({ type: String, required: true }) readonly src: string;
+  @Prop({ type: String, required: true }) readonly name!: string
+  @Prop({ type: String, required: true }) readonly src: string
 }
 </script>
 

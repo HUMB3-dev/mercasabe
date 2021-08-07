@@ -3,9 +3,16 @@
   "version": "0.0.0",
   "description": "",
   "main": "src",
+  "files": [
+    "src/**/*.vue",
+    "src/**/*.ts"
+  ],
   "scripts": {
+    "clean": "tsc -b --clean",
+    "prepack": "npm run clean",
     "dev": "start-storybook -p 6060",
-    "build": "build-storybook -o dist"
+    "lint": "eslint src --ext .ts,.vue --ignore-path .gitignore .",
+    "build": "npm run clean && build-storybook -o dist"
   },
   "repository": {
     "type": "git",
@@ -26,9 +33,13 @@
     "@storybook/addons": "^6.3.6",
     "@storybook/theming": "^6.3.6",
     "@storybook/vue": "^6.3.6",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
     "@vue/compiler-sfc": "^3.1.2",
     "babel-loader": "^8.2.2",
     "css-loader": "^3.6.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^7.15.1",
     "postcss-loader": "^4.2.0",
     "sass": "^1.37.5",
     "sass-loader": "^10.1.0",
