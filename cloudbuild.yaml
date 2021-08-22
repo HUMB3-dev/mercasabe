@@ -1,0 +1,28 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'docker build -t $_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$TAG_NAME -f .docker/Dockerfile .'
+    id: Build
+  - name: gcr.io/cloud-builders/docker
+    id: Push
+    args:
+      - push
+      - '$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$TAG_NAME'
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
+    id: Deploy
+    entrypoint: gcloud
+    args:
+      - run
+      - services
+      - update
+      - $_SERVICE_NAME
+      - '--platform=managed'
+      - '--image=$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$TAG_NAME'
+      - '--region=$_DEPLOY_REGION'
+      - '--quiet'
+images:
+  - '$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$TAG_NAME'
+options:
+  substitutionOption: ALLOW_LOOSE
