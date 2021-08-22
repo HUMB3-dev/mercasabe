@@ -1,6 +1,7 @@
 import '!style-loader!css-loader!sass-loader!./styles.scss'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import Vue, { Component } from 'vue'
+
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 

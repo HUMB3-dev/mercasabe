@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  stories: ['../src/**/*.tsx'],
+  stories: ['../src/**/*.ts'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials'
@@ -15,7 +15,7 @@ module.exports = {
     });
 
     // TypeScript
-    config.resolve.extensions.push(".ts", ".tsx");
+    config.resolve.extensions.push(".ts");
 
     return config;
   },

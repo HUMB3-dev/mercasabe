@@ -17,6 +17,9 @@
     "allowSyntheticDefaultImports": true,
     "types": [
       "@types/node"
+    ],
+    "typeRoots": [
+      "index.d.ts"
     ]
   },
   "include": [
