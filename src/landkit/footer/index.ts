@@ -1,1 +1,1 @@
-export { default as KFooter } from './footer.vue'
+export { default as KFooter } from './footer'

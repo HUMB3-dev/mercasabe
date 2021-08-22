@@ -27,6 +27,7 @@
   "homepage": "https://github.com/sk-merkaly/components#readme",
   "devDependencies": {
     "@babel/core": "^7.14.6",
+    "@merkaly/sdk-js": "0.0.11",
     "@storybook/addon-actions": "^6.3.6",
     "@storybook/addon-essentials": "^6.3.6",
     "@storybook/addon-links": "^6.3.6",
@@ -40,6 +41,7 @@
     "css-loader": "^3.6.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^7.15.1",
+    "nuxt-property-decorator": "^2.9.1",
     "postcss-loader": "^4.2.0",
     "sass": "^1.37.5",
     "sass-loader": "^10.1.0",
@@ -49,7 +51,8 @@
     "vue": "^2.6.14",
     "vue-class-component": "^7.2.6",
     "vue-loader": "^15.9.7",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "vuex": "^3.6.2"
   },
   "dependencies": {
     "@merkaly/ui": "0.0.6",
