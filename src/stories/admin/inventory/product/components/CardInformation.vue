@@ -1,5 +1,5 @@
 <template>
-  <BCard class="mb-3" header-tag="h4" no-body>
+  <BCard header-tag="h4" no-body>
     <BCardHeader header-bg-variant="light">
       <BRow align-h="between" align-v="center">
         <BCol class="h4 mb-0">
@@ -8,7 +8,7 @@
       </BRow>
     </BCardHeader>
     <BCardBody>
-      <BFormGroup class="mb-3" label="Title">
+      <BFormGroup label="Title">
         <BFormInput v-model.trim="model.name" required />
       </BFormGroup>
       <BFormGroup label="Description">
