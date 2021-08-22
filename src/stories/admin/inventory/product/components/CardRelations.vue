@@ -9,7 +9,7 @@
     </BCardHeader>
     <BCardBody>
       <BFormGroup label="Category">
-        <BFormSelect class="form-select" />
+        <BFormSelect class="form-select" :options="categories" text-field="name" value-field="id" />
       </BFormGroup>
       <BFormGroup label="Brand">
         <BFormSelect class="form-select" />
@@ -26,8 +26,8 @@ import { Getter, } from 'vuex-class'
 
 @Component({})
 export default class CardRelations extends Vue {
-  @Getter('inventory/categories') readonly categories!: CategoryReference[]
-  @Getter('inventory/brands') readonly brands!: BrandReference[]
+  @Getter('Inventory/categories') readonly categories!: CategoryReference[]
+  @Getter('Inventory/brands') readonly brands!: BrandReference[]
 
 }
 </script>

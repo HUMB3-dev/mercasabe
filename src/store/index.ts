@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import products from './products'
+import Inventory from './inventory'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  modules: { products }
+  modules: { Inventory }
 })
