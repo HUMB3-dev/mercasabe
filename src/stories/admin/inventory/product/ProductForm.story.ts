@@ -1,4 +1,5 @@
-import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
+import Product from '@merkaly/sdk-js/src/inventory/product/product.endpoint'
+import Vue from 'vue'
 import ProductForm from './ProductForm.component.vue'
 
 export default {
@@ -6,7 +7,7 @@ export default {
   component: ProductForm,
   args: {
     busy: false,
-    value: new ProductReference()
+    value: {}
   },
   parameters: {
     backgrounds: {
@@ -15,8 +16,17 @@ export default {
   }
 }
 
-export const Empty = (prop: Record<string, string>) => ({
-  props: Object.keys(prop),
+export const Empty = (args: ProductForm, { loaded: { products: [product] } }: any) => Vue.extend({
+  props: Object.keys(args),
+  data () {
+    return { product }
+  },
   components: { ProductForm },
-  template: '<ProductForm :value="$props.value" :busy="$props.busy" />'
+  template: '<ProductForm v-model="product" :busy="$props.busy" />'
 })
+
+Empty.loaders = [
+  async () => ({
+    products: await Product.find()
+  })
+]

@@ -12,7 +12,7 @@
         <div :class="{'z-index--1': busy }">
           <CardStatus />
 
-          <CardPricing />
+          <CardPricing v-model="pricing" />
 
           <CardRelations />
 
@@ -24,8 +24,10 @@
 </template>
 
 <script lang="ts">
+import { ProductInformation } from '@/stories/admin/inventory/product/components/CardInformation.vue'
+import { ProductPricing } from '@/stories/admin/inventory/product/components/CardPricing.vue'
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Model, Prop, Vue } from 'vue-property-decorator'
 import CardCatalog from './components/CardCatalog.vue'
 import CardHashtags from './components/CardHashtags.vue'
 import CardInformation from './components/CardInformation.vue'
@@ -37,18 +39,22 @@ import FormDragFile from './components/FormDragFile.vue'
 
 const components = {
   CardHashtags, CardRelations, CardPricing, FormDragFile,
-  CardStatus, CardCatalog, CardMedia, CardInformation,
+  CardStatus, CardCatalog, CardMedia, CardInformation
 }
 
 @Component({ components })
 export default class ProductForm extends Vue {
-  @Prop({ required: true, type: Object }) readonly value!: ProductReference
+  @Model('change', { type: Object }) readonly value!: ProductReference
   @Prop({ default: false, type: Boolean }) readonly busy!: boolean
 
-  protected information = {
+  protected information: ProductInformation = {
     name: this.value.name,
     description: this.value.description
   }
 
+  protected pricing: ProductPricing = {
+    sale: this.value.price,
+    purchase: Number((this.value.price * 0.85).toFixed(2))
+  }
 }
 </script>

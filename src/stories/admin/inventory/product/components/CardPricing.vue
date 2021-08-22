@@ -19,7 +19,7 @@
           <template #append>
             <BFormSelect class="form-select" :options="units" />
           </template>
-          <BFormInput v-model="salePrice" type="number" required />
+          <BFormInput v-model.number="model.sale" min="0" type="number" required />
         </BInputGroup>
       </BFormGroup>
     </BCardBody>
@@ -34,7 +34,7 @@
                   <span v-text="priceProfit.toFixed(2)" />
                 </BInputGroupText>
               </template>
-              <BFormInput v-model="purchasePrice" min="0" type="number" required />
+              <BFormInput v-model.number="model.purchase" min="0" type="number" required />
             </BInputGroup>
           </BFormGroup>
         </BCol>
@@ -45,34 +45,37 @@
 
 <script lang="ts">
 import { PRODUCT_UNIT } from '@merkaly/api/src/inventory/products/product.entity'
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, ModelSync, Vue } from 'vue-property-decorator'
+
+export interface ProductPricing {
+  sale?: number
+  purchase?: number
+}
 
 @Component({})
 export default class CardPricing extends Vue {
-
-  protected salePrice: number | null = null
-  protected purchasePrice: number | null = null
+  @ModelSync('value', 'change', { type: Object }) readonly model!: Pricing
 
   get units () {
     return Object.keys(PRODUCT_UNIT)
   }
 
   get priceMargin () {
-    if (!this.salePrice || !this.priceProfit) {
+    if (!this.model.sale || !this.priceProfit) {
       return null
     }
 
-    const percent = (this.priceProfit / this.salePrice) * 100
+    const percent = (this.priceProfit / this.model.sale) * 100
 
     return Number(percent)
   }
 
   get priceProfit (): null | number {
-    if (!this.purchasePrice || !this.salePrice) {
+    if (!this.model.purchase || !this.model.sale) {
       return null
     }
 
-    const percent = (this.salePrice - this.purchasePrice)
+    const percent = (this.model.sale - this.model.purchase)
 
     return Number(percent)
   }

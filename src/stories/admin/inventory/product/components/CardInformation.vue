@@ -9,20 +9,25 @@
     </BCardHeader>
     <BCardBody>
       <BFormGroup class="mb-3" label="Title">
-        <BFormInput v-model.trim="value.name" required />
+        <BFormInput v-model.trim="model.name" required />
       </BFormGroup>
       <BFormGroup label="Description">
-        <BFormTextarea v-model.trim="value.description" rows="8" no-resize required />
+        <BFormTextarea v-model.trim="model.description" rows="8" no-resize required />
       </BFormGroup>
     </BCardBody>
   </BCard>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, ModelSync, Vue } from 'vue-property-decorator'
+
+export interface ProductInformation {
+  name?: string,
+  description?: string
+}
 
 @Component({})
 export default class CardInformation extends Vue {
-  @Prop({ type: Object }) readonly value!: { name?: string, description?: string }
+  @ModelSync('value', 'change', { type: Object }) readonly model!: ProductInformation
 }
 </script>

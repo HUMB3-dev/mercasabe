@@ -1,10 +1,14 @@
 import '!style-loader!css-loader!sass-loader!./styles.scss'
+
+import SDK from '@merkaly/sdk-js'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import Vue, { Component } from 'vue'
 import store from '../src/store'
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+
+SDK.setBaseUrl(String(process.env.STORYBOOK_BASE_URL))
 
 export const decorators = [(story: Component): Component => ({
   store,
