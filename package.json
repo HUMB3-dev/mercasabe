@@ -2,6 +2,9 @@
   "name": "@merkaly/components",
   "version": "0.0.1",
   "private": true,
+  "files": [
+    "src/**/*.vue"
+  ],
   "scripts": {
     "build": "vue-cli-service build",
     "test": "vue-cli-service test:unit",
