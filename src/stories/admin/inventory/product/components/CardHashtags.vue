@@ -28,7 +28,7 @@ export default class CardHashtags extends Vue {
   @Prop({ type: Array }) readonly value!: string[]
   @Ref('form') form!: HTMLFormElement
 
-  protected hashtags = []
+  protected hashtags: string[] = []
   protected hashtag = ''
 
   protected addHashtag () {

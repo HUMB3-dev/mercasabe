@@ -50,15 +50,15 @@ import { Component, Vue } from 'vue-property-decorator'
 @Component({})
 export default class CardPricing extends Vue {
 
-  protected salePrice?: number = null
-  protected purchasePrice?: number = null
+  protected salePrice: number | null = null
+  protected purchasePrice: number | null = null
 
   get units () {
     return Object.keys(PRODUCT_UNIT)
   }
 
   get priceMargin () {
-    if (!this.purchasePrice || !this.priceProfit) {
+    if (!this.salePrice || !this.priceProfit) {
       return null
     }
 
@@ -68,7 +68,7 @@ export default class CardPricing extends Vue {
   }
 
   get priceProfit (): null | number {
-    if (!this.purchasePrice) {
+    if (!this.purchasePrice || !this.salePrice) {
       return null
     }
 
