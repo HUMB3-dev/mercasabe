@@ -18,6 +18,7 @@
       "webpack-env",
       "bootstrap-vue",
       "@merkaly/sdk-js",
+      "vuex-module-decorators",
       "jest"
     ],
     "paths": {
