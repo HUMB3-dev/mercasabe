@@ -3,13 +3,13 @@ steps:
     entrypoint: 'bash'
     args:
       - '-c'
-      - 'docker build -t $_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$TAG_NAME -f .docker/Dockerfile .'
+      - 'docker build --build-arg "STORYBOOK_BASE_URL=$_BASE_URL" -t $_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:latest -f .docker/Dockerfile .'
     id: Build
   - name: gcr.io/cloud-builders/docker
     id: Push
     args:
       - push
-      - '$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$TAG_NAME'
+      - '$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:latest'
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
     id: Deploy
     entrypoint: gcloud
@@ -19,10 +19,10 @@ steps:
       - update
       - $_SERVICE_NAME
       - '--platform=managed'
-      - '--image=$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$TAG_NAME'
+      - '--image=$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:latest'
       - '--region=$_DEPLOY_REGION'
       - '--quiet'
 images:
-  - '$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$TAG_NAME'
+  - '$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:latest'
 options:
   substitutionOption: ALLOW_LOOSE
