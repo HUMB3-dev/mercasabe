@@ -7,7 +7,7 @@
     "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "dev": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o public"
   },
   "dependencies": {
     "core-js": "^3.6.5",
