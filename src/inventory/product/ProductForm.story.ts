@@ -1,11 +1,11 @@
 import Product from '@merkaly/sdk-js/src/inventory/product/product.endpoint'
 import Vue from 'vue'
 import { getModule } from 'vuex-module-decorators'
-import Inventory from '../../../../store/inventory'
-import ProductForm from './ProductForm.component.vue'
+import Inventory from '../../../store/inventory'
+import ProductForm from './ProductForm.vue'
 
 export default {
-  title: 'admin/inventory/product',
+  title: 'inventory/product',
   component: ProductForm,
   args: {
     busy: false,

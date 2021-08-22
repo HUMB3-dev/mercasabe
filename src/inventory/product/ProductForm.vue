@@ -4,7 +4,7 @@
       <BCol cols="12" lg="8">
         <CardInformation v-model="information" class="mb-3" />
 
-        <CardMedia class="mb-3"  />
+        <CardMedia class="mb-3" />
 
         <CardCatalog />
       </BCol>
@@ -24,18 +24,15 @@
 </template>
 
 <script lang="ts">
-import { ProductInformation } from '@/stories/admin/inventory/product/components/CardInformation.vue'
-import { ProductPricing } from '@/stories/admin/inventory/product/components/CardPricing.vue'
-import { ProductStatus } from '@/stories/admin/inventory/product/components/CardStatus.vue'
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
 import { Component, Model, Prop, Vue } from 'vue-property-decorator'
 import CardCatalog from './components/CardCatalog.vue'
 import CardHashtags from './components/CardHashtags.vue'
-import CardInformation from './components/CardInformation.vue'
+import CardInformation, { ProductInformation } from './components/CardInformation.vue'
 import CardMedia from './components/CardMedia.vue'
-import CardPricing from './components/CardPricing.vue'
+import CardPricing, { ProductPricing } from './components/CardPricing.vue'
 import CardRelations from './components/CardRelations.vue'
-import CardStatus from './components/CardStatus.vue'
+import CardStatus, { ProductStatus } from './components/CardStatus.vue'
 import FormDragFile from './components/FormDragFile.vue'
 
 const components = {

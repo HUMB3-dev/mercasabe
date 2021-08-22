@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import ProductForm from '@/stories/admin/inventory/product/ProductForm.component.vue'
+import ProductForm from '@/inventory/product/ProductForm.component.vue'
 
 describe('HelloWorld.vue', () => {
   it('renders props.msg when passed', () => {

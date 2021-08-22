@@ -1,7 +1,7 @@
 const path = require('path')
 
 const config = {
-  stories: ['../src/stories/**/*.story.@(ts|mdx)'],
+  stories: ['../src/**/*.story.@(ts|mdx)'],
 // @ts-ignore
   webpackFinal (config) {
     // SCSS
