@@ -6,7 +6,7 @@
           Pricing
         </BCol>
         <BCol cols="auto">
-          <BBadge v-if="priceMargin" :variant="priceMargin > 0 ? 'success' : 'danger'">
+          <BBadge v-if="priceMargin" :variant="priceMargin > 0 ? 'soft-success' : 'soft-danger'">
             <span v-text="priceMargin.toFixed(2)" />
             <span>%</span>
           </BBadge>
@@ -45,7 +45,7 @@
 
 <script lang="ts">
 import { PRODUCT_UNIT } from '@merkaly/api/src/inventory/products/product.entity'
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 
 @Component({})
 export default class CardPricing extends Vue {

@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { PRODUCT_STATUS } from '@merkaly/api/src/inventory/products/product.entity'
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 
 @Component({})
 export default class CardStatus extends Vue {

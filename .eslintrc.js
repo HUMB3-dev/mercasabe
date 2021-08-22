@@ -1,28 +1,30 @@
 module.exports = {
+  root: true,
   env: {
-    browser: true,
-    es2021: true,
     node: true
   },
-  extends: [
-    'eslint:recommended',
+  'extends': [
     'plugin:vue/essential',
-    'plugin:@typescript-eslint/eslint-recommended'
+    'eslint:recommended',
+    '@vue/typescript/recommended'
   ],
   parserOptions: {
-    parser: require.resolve('@typescript-eslint/parser'),
-    extraFileExtensions: ['.vue'],
-    ecmaFeatures: {
-      jsx: true
-    }
+    ecmaVersion: 2020
   },
-  plugins: [
-    'vue',
-    '@typescript-eslint'
-  ],
   rules: {
-    indent: ['error', 2],
-    quotes: ['error', 'single'],
-    semi: ['error', 'never']
-  }
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+  },
+  overrides: [
+    {
+      files: [
+        '**/__tests__/*.{j,t}s?(x)',
+        '**/tests/unit/**/*.spec.{j,t}s?(x)'
+      ],
+      env: {
+        jest: true
+      }
+    }
+  ]
 }

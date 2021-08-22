@@ -1,29 +1,42 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "declaration": true,
-    "jsx": "react",
-    "baseUrl": "./",
+    "target": "esnext",
+    "module": "esnext",
     "strict": true,
-    "esModuleInterop": true,
-    "strictPropertyInitialization": false,
-    "noImplicitAny": false,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "skipLibCheck": true,
-    "removeComments": true,
-    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
     "types": [
-      "@types/node"
+      "node",
+      "webpack-env",
+      "bootstrap-vue",
+      "@merkaly/sdk-js",
+      "jest"
     ],
-    "typeRoots": [
-      "index.d.ts"
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
     ]
   },
   "include": [
-    "src/**/*"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
   ],
   "exclude": [
     "node_modules"

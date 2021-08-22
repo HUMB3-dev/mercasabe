@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Ref, Vue } from 'nuxt-property-decorator'
+import { Component, Prop, Ref, Vue } from 'vue-property-decorator'
 
 @Component({})
 export default class CardHashtags extends Vue {

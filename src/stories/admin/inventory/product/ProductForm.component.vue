@@ -9,7 +9,7 @@
         <CardCatalog />
       </BCol>
       <BCol cols="12" lg="4">
-        <div :class="{'sticky-top': !busy }">
+        <div :class="{'z-index--1': busy }">
           <CardStatus />
 
           <CardPricing />
@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
-import { Component, Prop, Vue } from 'nuxt-property-decorator'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 import CardCatalog from './components/CardCatalog.vue'
 import CardHashtags from './components/CardHashtags.vue'
 import CardInformation from './components/CardInformation.vue'
@@ -36,7 +36,8 @@ import CardStatus from './components/CardStatus.vue'
 import FormDragFile from './components/FormDragFile.vue'
 
 const components = {
-  CardHashtags, CardRelations, CardPricing, CardStatus, CardCatalog, CardMedia, CardInformation, FormDragFile
+  CardHashtags, CardRelations, CardPricing, FormDragFile,
+  CardStatus, CardCatalog, CardMedia, CardInformation,
 }
 
 @Component({ components })

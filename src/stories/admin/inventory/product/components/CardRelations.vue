@@ -21,7 +21,8 @@
 <script lang="ts">
 import BrandReference from '@merkaly/sdk-js/src/inventory/brand/brand.reference'
 import CategoryReference from '@merkaly/sdk-js/src/inventory/category/category.reference'
-import { Component, Getter, Vue } from 'nuxt-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
+import { Getter, } from 'vuex-class'
 
 @Component({})
 export default class CardRelations extends Vue {

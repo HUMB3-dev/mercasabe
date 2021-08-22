@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Ref, Vue } from 'nuxt-property-decorator'
+import { Component, Ref, Vue } from 'vue-property-decorator'
 
 @Component({})
 export default class FormDragFile extends Vue {
@@ -68,6 +68,7 @@ export default class FormDragFile extends Vue {
   }
 
   protected onChange () {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     for (const file of this.input.files) {
       this.filelist.push(file)

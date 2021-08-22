@@ -1,8 +1,7 @@
-import { Meta } from '@storybook/vue'
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
-import ProductForm from './ProductForm.vue'
+import ProductForm from './ProductForm.component.vue'
 
-const story: Meta<ProductForm> = {
+export default {
   title: 'admin/inventory/product',
   component: ProductForm,
   args: {
@@ -16,11 +15,8 @@ const story: Meta<ProductForm> = {
   }
 }
 
-export const NewProduct = (prop, { argTypes }) => ({
-  props: Object.keys(argTypes),
+export const Empty = (prop: Record<string, string>) => ({
+  props: Object.keys(prop),
   components: { ProductForm },
   template: '<ProductForm :value="$props.value" :busy="$props.busy" />'
 })
-
-
-export default story
