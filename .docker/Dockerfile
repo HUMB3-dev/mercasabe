@@ -11,7 +11,7 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build:storybook
+RUN npm run build
 RUN npm i -g http-server
 
 EXPOSE ${PORT}
