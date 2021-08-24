@@ -1,7 +1,5 @@
 import Product from '@merkaly/sdk-js/src/inventory/product/product.endpoint'
 import Vue from 'vue'
-import { getModule } from 'vuex-module-decorators'
-import Inventory from '../../../../store/inventory'
 import ProductForm from './ProductForm.vue'
 
 export default {
@@ -20,14 +18,7 @@ export default {
 
 export const Empty = (args: ProductForm, { loaded: { products: [product] } }: any) => Vue.extend({
   props: Object.keys(args),
-  created () {
-    const { fetchCategories } = getModule(Inventory, this.$store)
-
-    return fetchCategories()
-  },
-  data () {
-    return { product }
-  },
+  data: () => ({ product }),
   components: { ProductForm },
   template: '<ProductForm v-model="product" :busy="$props.busy" />'
 })
