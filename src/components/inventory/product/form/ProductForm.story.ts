@@ -1,12 +1,13 @@
-import Product from '@merkaly/sdk-js/src/inventory/product/product.endpoint'
-import Vue from 'vue'
-import ProductForm from './ProductForm.vue'
+import { Vue } from 'vue-property-decorator'
+import { getProduct } from '../seed'
+import InventoryProductForm from './ProductForm.vue'
 
 export default {
   title: 'Inventory/Product/Form',
-  component: ProductForm,
+  component: InventoryProductForm,
   args: {
     busy: false,
+    product: getProduct(),
     value: {}
   },
   parameters: {
@@ -16,15 +17,9 @@ export default {
   }
 }
 
-export const Empty = (args: ProductForm, { loaded: { products: [product] } }: any) => Vue.extend({
+export const Empty = (args: InventoryProductForm) => Vue.extend({
   props: Object.keys(args),
-  data: () => ({ product }),
-  components: { ProductForm },
-  template: '<ProductForm v-model="product" :busy="$props.busy" />'
+  components: { InventoryProductForm },
+  template: '<InventoryProductForm v-model="product" v-bind="$props" />'
 })
 
-Empty.loaders = [
-  async () => ({
-    products: await Product.find()
-  })
-]

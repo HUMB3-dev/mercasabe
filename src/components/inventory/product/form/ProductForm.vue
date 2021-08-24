@@ -41,7 +41,7 @@ const components = {
 }
 
 @Component({ components })
-export default class ProductForm extends Vue {
+export default class InventoryProductForm extends Vue {
   @Model('change', { type: Object }) readonly model!: ProductReference
   @Prop({ default: false, type: Boolean }) readonly busy!: boolean
 
@@ -52,7 +52,8 @@ export default class ProductForm extends Vue {
 
   protected pricing: ProductPricing = {
     sale: this.model.price,
-    purchase: Number((this.model.price * 0.85).toFixed(2))
+    purchase: Number((this.model.price * 0.85).toFixed(2)),
+    unit: this.model.unit
   }
 
   protected status: ProductStatus = {

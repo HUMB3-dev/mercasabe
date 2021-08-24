@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import {getProducts} from './ProductList.seed'
+import { Vue } from 'vue-property-decorator'
+import { getProducts } from '../seed'
 import InventoryProductList from './ProductList.vue'
 
 export default {

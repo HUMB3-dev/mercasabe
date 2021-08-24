@@ -17,7 +17,7 @@
       <BFormGroup label="Sale Price">
         <BInputGroup class="mt-3">
           <template #append>
-            <BFormSelect class="form-select" :options="units" />
+            <BFormSelect v-model="model.unit" class="form-select" :options="units" />
           </template>
           <BFormInput v-model.number="model.sale" min="0" type="number" required />
         </BInputGroup>
@@ -50,6 +50,7 @@ import { Component, ModelSync, Vue } from 'vue-property-decorator'
 export interface ProductPricing {
   sale?: number
   purchase?: number
+  unit?: PRODUCT_UNIT
 }
 
 @Component({})
