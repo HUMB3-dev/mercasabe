@@ -3,7 +3,7 @@ steps:
     entrypoint: 'bash'
     args:
       - '-c'
-      - 'docker build --build-arg "STORYBOOK_BASE_URL=$_BASE_URL" -t $_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:latest -f .docker/Dockerfile .'
+      - 'docker build -t $_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:latest -f .docker/Dockerfile .'
     id: Build
   - name: gcr.io/cloud-builders/docker
     id: Push

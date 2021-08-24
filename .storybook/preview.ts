@@ -10,7 +10,7 @@ import Inventory from '../store/inventory'
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
-SDK.setBaseUrl(String(process.env.STORYBOOK_BASE_URL))
+SDK.setBaseUrl('https://api.merkaly.io/')
 
 export const decorators = [(story: Component): Component => ({
   store,
