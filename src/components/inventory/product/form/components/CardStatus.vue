@@ -24,7 +24,7 @@ import { Component, ModelSync, Vue } from 'vue-property-decorator'
 
 export interface ProductStatus {
   state: PRODUCT_STATUS,
-  availableFrom: String
+  availableFrom: string
 }
 
 @Component({})

@@ -20,9 +20,8 @@
       </BRow>
     </BCardHeader>
     <BCardBody class="p-0" body-bg-variant="light">
-      <BTable table-class="mb-0" :items="items" :busy="loading" :fields="fields" responsive="sm"
-              tbody-tr-class="align-middle"
-              hover>
+      <BTable :items="items" :busy="loading" :fields="fields" tbody-tr-class="align-middle" responsive="sm"
+              table-class="mb-0" thead-class="sticky-top bg-200" hover>
         <template #table-busy>
           <div class="text-center py-5">
             <BSpinner variant="primary" />
@@ -30,28 +29,26 @@
         </template>
 
         <template #cell(name)="{ item: product }">
-          <a :href="to(product.id)" class="text-decoration-none">
+          <BListGroupItem :to="to(product.id)" class="bg-transparent border-0 p-0">
             <div class="d-flex align-items-center position-relative">
-              <BImg
-                  src="https://riabir.ru/wp-content/uploads/2020/02/xproduct-placeholder.jpg.pagespeed.ic.jyJwDD83Ag.webp"
-                  class="rounded-1 border border-200" :height="60" />
+              <BImgLazy blank-src="" :src="generateImage(product)" class="shadow-sm fit-cover p-1" :height="60" :width="60" rounded="1" />
               <div class="flex-1 ms-3">
                 <span class="mb-1 fw-semi-bold text-nowrap h6 text-900 stretched-link" v-text="product.name" />
                 <p class="fw-semi-bold mb-0 text-500" v-text="product.id" />
               </div>
             </div>
-          </a>
+          </BListGroupItem>
         </template>
 
         <template #cell(price)="{ item: { price } }">
-          <BBadge v-if="price" variant="soft-primary">
+          <BBadge v-show="price" variant="soft-primary">
             <span>$</span>
             <span v-text="price" />
           </BBadge>
         </template>
 
         <template #cell(status)="{ item: { status } }">
-          <BBadge v-if="status" :variant="statusVariant(status)" pill>
+          <BBadge v-show="status" :variant="statusVariant(status)" pill>
             <span v-text="status" />
             <span class="ms-1 fas fa-check" />
           </BBadge>
@@ -80,7 +77,7 @@
       </BTable>
     </BCardBody>
 
-    <BCardFooter v-if="!loading">
+    <BCardFooter v-show="!loading">
       <div class="d-flex align-items-center justify-content-center">
         <BBtn variant="falcon-default" size="sm" class="me-1 disabled" title="Previous">
           <span class="fas fa-chevron-left" />
@@ -136,6 +133,14 @@ export default class ProductList extends Vue {
     }
 
     return 'soft-secondary'
+  }
+
+  generateImage (product: ProductReference) {
+    if (!product.media.length) {
+      return require('../../../../assets/images/product-placeholder.webp')
+    }
+
+    return product.media[0].src
   }
 
 }

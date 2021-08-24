@@ -14,6 +14,11 @@ export default () => {
     product.status = faker.random.arrayElement(Object.keys(PRODUCT_STATUS)) as PRODUCT_STATUS
     product.category = { id: faker.commerce.department(), name: faker.vehicle.model() }
     product.brand = { id: faker.vehicle.manufacturer(), name: faker.vehicle.manufacturer() }
+    product.media = [{
+      id: faker.vehicle.manufacturer(),
+      name: faker.vehicle.manufacturer(),
+      src: faker.image.image() + '?' + faker.datatype.uuid()
+    }]
 
     products.push(product)
   }

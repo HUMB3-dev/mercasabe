@@ -2,6 +2,7 @@
   "name": "@merkaly/components",
   "version": "0.0.2",
   "files": [
+    "src/assets/*",
     "src/**/*.vue"
   ],
   "scripts": {

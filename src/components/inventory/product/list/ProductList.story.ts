@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import ProductSeed from './Product.seed'
+import ProductsSeed from './ProductList.seed'
 import ProductList from './ProductList.vue'
 
 export default {
@@ -7,7 +7,7 @@ export default {
   component: ProductList,
   args: {
     loading: false,
-    items: ProductSeed(),
+    items: ProductsSeed(),
     title: 'List of products',
     to: (id: string) => `/test/${id}`
   },
