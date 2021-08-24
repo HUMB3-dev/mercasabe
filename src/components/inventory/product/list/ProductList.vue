@@ -42,16 +42,16 @@
         </template>
 
         <template #cell(price)="{ item: { price } }">
-          <BBadge v-show="price" variant="soft-primary">
+          <BBadge v-show="price" variant="soft-primary" class="bg-200">
             <span>$</span>
-            <span v-text="price" />
+            <span v-text="price.toFixed(2)" />
           </BBadge>
         </template>
 
         <template #cell(status)="{ item: { status } }">
-          <BBadge v-show="status" :variant="statusVariant(status)" pill>
+          <BBadge v-show="status" :variant="statusRecord(status).variant" pill>
+            <span class="me-1 fas" :class="statusRecord(status).icon" />
             <span v-text="status" />
-            <span class="ms-1 fas fa-check" />
           </BBadge>
         </template>
 
@@ -91,7 +91,7 @@ import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.refe
 import { Component, Emit, Prop, Vue } from 'vue-property-decorator'
 
 @Component({})
-export default class ProductList extends Vue {
+export default class InventoryProductList extends Vue {
   @Prop({ required: true, type: Array }) readonly items!: ProductReference[]
   @Prop({ default: false, type: Boolean }) readonly loading!: boolean
   @Prop({ default: 10, type: Number }) readonly perPage!: number
@@ -109,16 +109,23 @@ export default class ProductList extends Vue {
     { key: 'actions', sortable: false, label: '' }
   ]
 
-  statusVariant (name: PRODUCT_STATUS) {
+  statusRecord (name: PRODUCT_STATUS) {
+    const clasess = {
+      variant: 'soft-secondary',
+      icon: 'fa-brush'
+    }
+
     if (name === PRODUCT_STATUS.ACTIVE) {
-      return 'soft-success'
+      clasess.variant = 'soft-success'
+      clasess.icon = 'fa-check'
     }
 
     if (name === PRODUCT_STATUS.INACTIVE) {
-      return 'soft-danger'
+      clasess.variant = 'soft-danger'
+      clasess.icon = 'fa-ban'
     }
 
-    return 'soft-secondary'
+    return clasess
   }
 
   generateImage (product: ProductReference) {

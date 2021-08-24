@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import ProductsSeed from './ProductList.seed'
-import ProductList from './ProductList.vue'
+import {getProducts} from './ProductList.seed'
+import InventoryProductList from './ProductList.vue'
 
 export default {
   title: 'Inventory/Product/List',
-  component: ProductList,
+  component: InventoryProductList,
   argTypes: {
     items: { table: { disable: true } },
     to: { table: { disable: true } }
@@ -12,7 +12,7 @@ export default {
   args: {
     loading: false,
     perPage: 5,
-    items: ProductsSeed(),
+    items: getProducts(15),
     title: 'List of products',
     to: (id: string) => `/test/${id}`
   },
@@ -23,10 +23,10 @@ export default {
   }
 }
 
-export const Filled = (args: ProductList) => Vue.extend({
+export const Filled = (args: InventoryProductList) => Vue.extend({
   props: Object.keys(args),
-  components: { ProductList },
-  template: '<ProductList v-bind="$props" />'
+  components: { InventoryProductList },
+  template: '<InventoryProductList v-bind="$props" />'
 })
 Filled.args = {
   totalRows: 15
