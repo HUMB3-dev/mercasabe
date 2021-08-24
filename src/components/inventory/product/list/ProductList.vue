@@ -11,7 +11,7 @@
               <span class="fas fa-filter" />
               <span class="d-none d-sm-inline-block">Filter</span>
             </BBtn>
-            <BBtn variant="falcon-default" :disabled="loading">
+            <BBtn variant="falcon-default" :disabled="loading" @click="onExport">
               <span class="fas fa-external-link-alt" />
               <span class="d-none d-sm-inline-block">Export</span>
             </BBtn>
@@ -31,7 +31,8 @@
         <template #cell(name)="{ item: product }">
           <BListGroupItem :to="to(product.id)" class="bg-transparent border-0 p-0">
             <div class="d-flex align-items-center position-relative">
-              <BImgLazy blank-src="" :src="generateImage(product)" class="shadow-sm fit-cover p-1" :height="60" :width="60" rounded="1" />
+              <BImgLazy blank-src="" :src="generateImage(product)" class="shadow-sm fit-cover p-1" :height="60"
+                        :width="60" rounded="1" />
               <div class="flex-1 ms-3">
                 <span class="mb-1 fw-semi-bold text-nowrap h6 text-900 stretched-link" v-text="product.name" />
                 <p class="fw-semi-bold mb-0 text-500" v-text="product.id" />
@@ -64,9 +65,9 @@
 
         <template #cell(actions)>
           <div class="text-end">
-            <BDropdown class="position-static" variant="falcon-default" size="sm" dropleft>
+            <BDropdown class="position-static" variant="falcon-default px-2 py-01" size="sm" dropleft>
               <template #button-content>
-                <span class="fas fa-ellipsis-h fs--1" />
+                <span class="fas fa-ellipsis-h" />
               </template>
               <BDropdownItem variant="danger">
                 Delete
@@ -76,26 +77,9 @@
         </template>
       </BTable>
     </BCardBody>
-
     <BCardFooter v-show="!loading">
       <div class="d-flex align-items-center justify-content-center">
-        <BBtn variant="falcon-default" size="sm" class="me-1 disabled" title="Previous">
-          <span class="fas fa-chevron-left" />
-        </BBtn>
-        <BNav class="pagination mb-0">
-          <BNavItem link-classes="page">
-            1
-          </BNavItem>
-          <BNavItem link-classes="page">
-            2
-          </BNavItem>
-          <BNavItem link-classes="page">
-            3
-          </BNavItem>
-        </BNav>
-        <BBtn variant="falcon-default" size="sm" class="ms-1" title="Next">
-          <span class="fas fa-chevron-right" />
-        </BBtn>
+        <BPagination :total-rows="totalRows" :per-page="perPage" class="mb-0" size="sm" hide-goto-end-buttons />
       </div>
     </BCardFooter>
   </BCard>
@@ -104,12 +88,14 @@
 <script lang="ts">
 import { PRODUCT_STATUS } from '@merkaly/api/src/inventory/products/product.entity'
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Emit, Prop, Vue } from 'vue-property-decorator'
 
 @Component({})
 export default class ProductList extends Vue {
   @Prop({ required: true, type: Array }) readonly items!: ProductReference[]
   @Prop({ default: false, type: Boolean }) readonly loading!: boolean
+  @Prop({ default: 10, type: Number }) readonly perPage!: number
+  @Prop({ type: Number }) readonly totalRows!: number
   @Prop({ default: 'List of products', type: String }) readonly title!: string
   @Prop({ default: (id: string) => id, type: Function }) readonly to!: (id: string) => string
 
@@ -123,7 +109,7 @@ export default class ProductList extends Vue {
     { key: 'actions', sortable: false, label: '' }
   ]
 
-  statusVariant(name: PRODUCT_STATUS){
+  statusVariant (name: PRODUCT_STATUS) {
     if (name === PRODUCT_STATUS.ACTIVE) {
       return 'soft-success'
     }
@@ -143,5 +129,8 @@ export default class ProductList extends Vue {
     return product.media[0].src
   }
 
+  @Emit('export') onExport () {
+    return
+  }
 }
 </script>
