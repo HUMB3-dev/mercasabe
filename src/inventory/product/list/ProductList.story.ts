@@ -1,5 +1,5 @@
-import Product from '@merkaly/sdk-js/src/inventory/product/product.endpoint'
 import Vue from 'vue'
+import ProductSeed from './Product.seed'
 import ProductList from './ProductList.vue'
 
 export default {
@@ -7,6 +7,7 @@ export default {
   component: ProductList,
   args: {
     loading: false,
+    items: ProductSeed(),
     title: 'List of products',
     to: (id: string) => `/test/${id}`
   },
@@ -17,15 +18,9 @@ export default {
   }
 }
 
-export const Filled = (args: ProductList, { loaded: { products } }: any) => Vue.extend({
+export const Filled = (args: ProductList) => Vue.extend({
   props: Object.keys(args),
-  data: () => ({ products }),
   components: { ProductList },
-  template: '<ProductList :items="products" v-bind="$props" />'
+  template: '<ProductList  v-bind="$props" />'
 })
 
-Filled.loaders = [
-  async () => ({
-    products: await Product.find()
-  })
-]

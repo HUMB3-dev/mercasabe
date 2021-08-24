@@ -20,7 +20,8 @@
       </BRow>
     </BCardHeader>
     <BCardBody class="p-0" body-bg-variant="light">
-      <BTable table-class="mb-0" :items="items" :busy="loading" :fields="fields" responsive="sm" tbody-tr-class="align-middle"
+      <BTable table-class="mb-0" :items="items" :busy="loading" :fields="fields" responsive="sm"
+              tbody-tr-class="align-middle"
               hover>
         <template #table-busy>
           <div class="text-center py-5">
@@ -43,21 +44,25 @@
         </template>
 
         <template #cell(price)="{ item: { price } }">
-          <BBadge variant="soft-primary">
+          <BBadge v-if="price" variant="soft-primary">
             <span>$</span>
             <span v-text="price" />
           </BBadge>
         </template>
 
         <template #cell(status)="{ item: { status } }">
-          <BBadge variant="soft-success" pill>
+          <BBadge v-if="status" :variant="statusVariant(status)" pill>
             <span v-text="status" />
             <span class="ms-1 fas fa-check" />
           </BBadge>
         </template>
 
-        <template #cell(category)>
-          <BBadge variant="soft-secondary" pill>TEST</BBadge>
+        <template #cell(category)="{ item: { category } }">
+          <BBadge v-if="category" variant="soft-light" pill v-text="category.name" />
+        </template>
+
+        <template #cell(brand)="{ item: { brand } }">
+          <BBadge v-if="brand" variant="soft-light" pill v-text="brand.name" />
         </template>
 
         <template #cell(actions)>
@@ -100,6 +105,7 @@
 </template>
 
 <script lang="ts">
+import { PRODUCT_STATUS } from '@merkaly/api/src/inventory/products/product.entity'
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
@@ -116,8 +122,21 @@ export default class ProductList extends Vue {
     { key: 'price', sortable: true },
     { key: 'status', sortable: true },
     { key: 'category', sortable: true },
+    { key: 'brand', sortable: true },
     { key: 'actions', sortable: false, label: '' }
   ]
+
+  statusVariant(name: PRODUCT_STATUS){
+    if (name === PRODUCT_STATUS.ACTIVE) {
+      return 'soft-success'
+    }
+
+    if (name === PRODUCT_STATUS.INACTIVE) {
+      return 'soft-danger'
+    }
+
+    return 'soft-secondary'
+  }
 
 }
 </script>
