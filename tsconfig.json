@@ -18,6 +18,7 @@
       "webpack-env",
       "bootstrap-vue",
       "@merkaly/sdk-js",
+      "@types/faker",
       "vuex-module-decorators",
       "jest"
     ],
