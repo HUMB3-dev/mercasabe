@@ -12,10 +12,7 @@
     </template>
 
     <template #field(status)="{ item: { status } }">
-      <BBadge v-show="status" :variant="statusRecord(status).variant" pill>
-        <span class="me-1 fas" :class="statusRecord(status).icon" />
-        <span v-text="status" />
-      </BBadge>
+      <CellStatus :value="status" />
     </template>
 
     <template #field(category)="{ item: { category } }">
@@ -48,8 +45,9 @@ import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.refe
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import CardTable from '../../../shared/card/table/table'
 import CellName from './components/cell.name'
+import CellStatus from './components/cell.status'
 
-@Component({ components: { CardTable, CellName } })
+@Component({ components: { CellStatus, CardTable, CellName } })
 export default class InventoryProductList extends Vue {
   @Prop({ required: true, type: Array }) readonly items!: ProductReference[]
   @Prop({ default: false, type: Boolean }) readonly busy!: boolean
