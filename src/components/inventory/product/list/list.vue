@@ -5,10 +5,7 @@
     </template>
 
     <template #field(price)="{ item: { price } }">
-      <BBadge v-show="price" variant="soft-primary" class="bg-200">
-        <span>$</span>
-        <span v-text="price.toFixed(2)" />
-      </BBadge>
+      <CellPrice :value="price" />
     </template>
 
     <template #field(status)="{ item: { status } }">
@@ -45,9 +42,10 @@ import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.refe
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import CardTable from '../../../shared/card/table/table'
 import CellName from './components/cell.name'
+import CellPrice from './components/cell.price'
 import CellStatus from './components/cell.status'
 
-@Component({ components: { CellStatus, CardTable, CellName } })
+@Component({ components: { CellStatus, CardTable, CellName, CellPrice } })
 export default class InventoryProductList extends Vue {
   @Prop({ required: true, type: Array }) readonly items!: ProductReference[]
   @Prop({ default: false, type: Boolean }) readonly busy!: boolean
