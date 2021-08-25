@@ -1,10 +1,10 @@
 import { Vue } from 'vue-property-decorator'
-import { getProducts } from '../seed'
-import CategoryList from './CategoryList.vue'
+import { getProducts } from '../../../../fixture/product.fixture'
+import InventoryProductList from './list.vue'
 
 export default {
-  title: 'Inventory/Category/List',
-  component: CategoryList,
+  title: 'Inventory/Product/List',
+  component: InventoryProductList,
   argTypes: {
     items: { table: { disable: true } },
     to: { table: { disable: true } }
@@ -23,9 +23,9 @@ export default {
   }
 }
 
-export const Filled = (args: CategoryList) => Vue.extend({
+export const Filled = (args: InventoryProductList) => Vue.extend({
   props: Object.keys(args),
-  components: { InventoryProductList: CategoryList },
+  components: { InventoryProductList },
   template: '<InventoryProductList v-bind="$props" />'
 })
 Filled.args = {

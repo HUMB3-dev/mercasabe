@@ -31,7 +31,7 @@
 import { Component, Ref, Vue } from 'vue-property-decorator'
 
 @Component({})
-export default class FormDragFile extends Vue {
+export default class FormDropzone extends Vue {
   @Ref('dropfile') readonly input: HTMLInputElement
   protected filelist: File[] = []
   protected color = 'transparent'

@@ -11,17 +11,17 @@
       </BRow>
     </BCardHeader>
     <BCardBody>
-      <FormDragFile />
+      <FormDropzone />
     </BCardBody>
   </BCard>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import FormDragFile from './FormDragFile.vue'
+import FormDropzone from './form.dropzone.vue'
 
 @Component({
-  components: { FormDragFile }
+  components: { FormDropzone }
 })
 export default class CardMedia extends Vue {
 

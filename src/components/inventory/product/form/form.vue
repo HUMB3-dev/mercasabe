@@ -26,19 +26,15 @@
 <script lang="ts">
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
 import { Component, Model, Prop, Vue } from 'vue-property-decorator'
-import CardCatalog from './components/CardCatalog.vue'
-import CardHashtags from './components/CardHashtags.vue'
-import CardInformation, { ProductInformation } from './components/CardInformation.vue'
-import CardMedia from './components/CardMedia.vue'
-import CardPricing, { ProductPricing } from './components/CardPricing.vue'
-import CardRelations from './components/CardRelations.vue'
-import CardStatus, { ProductStatus } from './components/CardStatus.vue'
-import FormDragFile from './components/FormDragFile.vue'
+import CardCatalog from './components/card.catalog'
+import CardHashtags from './components/card.hashtags'
+import CardInformation, { ProductInformation } from './components/card.information'
+import CardMedia from './components/card.media'
+import CardPricing, { ProductPricing } from './components/card.pricing'
+import CardRelations from './components/card.relations'
+import CardStatus, { ProductStatus } from './components/card.status'
 
-const components = {
-  CardHashtags, CardRelations, CardPricing, FormDragFile,
-  CardStatus, CardCatalog, CardMedia, CardInformation
-}
+const components = { CardHashtags, CardRelations, CardPricing, CardStatus, CardCatalog, CardMedia, CardInformation }
 
 @Component({ components })
 export default class InventoryProductForm extends Vue {
