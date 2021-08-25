@@ -1,15 +1,7 @@
 <template>
   <CardTable :items="items" :busy="busy" :fields="fields" :per-page="perPage" :total-rows="totalRows" :title="title">
-    <template #field(name)="{ item: product }">
-      <BListGroupItem :to="to(product.id)" class="bg-transparent border-0 p-0">
-        <div class="d-flex align-items-center position-relative">
-          <BImgLazy blank-src="" :src="generateImage(product)" class="shadow-sm fit-cover p-1" :height="60" :width="60" rounded="1" />
-          <div class="flex-1 ms-3">
-            <span class="mb-1 fw-semi-bold text-nowrap h6 text-900 stretched-link" v-text="product.name" />
-            <p class="fw-semi-bold mb-0 text-500" v-text="product.id" />
-          </div>
-        </div>
-      </BListGroupItem>
+    <template #field(name)="{ item: {id , name, media} }">
+      <CellName :id="id" :name="name" :caption="id" :src="generateImage(media)" :to="to" />
     </template>
 
     <template #field(price)="{ item: { price } }">
@@ -50,12 +42,14 @@
 </template>
 
 <script lang="ts">
+import { ProductMediaEntity } from '@merkaly/api/src/inventory/products/media/index'
 import { PRODUCT_STATUS } from '@merkaly/api/src/inventory/products/product.entity'
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import CardTable from '../../../shared/card/table/table'
+import CellName from './components/cell.name'
 
-@Component({ components: { CardTable } })
+@Component({ components: { CardTable, CellName } })
 export default class InventoryProductList extends Vue {
   @Prop({ required: true, type: Array }) readonly items!: ProductReference[]
   @Prop({ default: false, type: Boolean }) readonly busy!: boolean
@@ -92,12 +86,12 @@ export default class InventoryProductList extends Vue {
     return clasess
   }
 
-  generateImage (product: ProductReference) {
-    if (!product.media.length) {
+  generateImage (medias: ProductMediaEntity) {
+    if (!medias.length) {
       return require('../../../../assets/images/product-placeholder.webp')
     }
 
-    return product.media[0].src
+    return medias[0].src
   }
 }
 </script>
