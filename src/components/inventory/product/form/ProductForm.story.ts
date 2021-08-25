@@ -1,5 +1,5 @@
 import { Vue } from 'vue-property-decorator'
-import { getProduct } from '../seed'
+import { getProduct } from '../../../../fixture/seed'
 import InventoryProductForm from './ProductForm.vue'
 
 export default {
