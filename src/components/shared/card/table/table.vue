@@ -20,7 +20,8 @@
       </BRow>
     </BCardHeader>
     <BCardBody class="p-0" body-bg-variant="light">
-      <BTable :items="items" :busy="busy" :fields="fields" tbody-tr-class="align-middle" responsive="sm" table-class="mb-0" thead-class="sticky-top bg-200" hover>
+      <BTable :items="items" :busy="busy" :fields="headers" tbody-tr-class="align-middle" responsive="sm"
+              table-class="mb-0" thead-class="sticky-top bg-200" hover>
         <template #table-busy>
           <div class="text-center py-5">
             <BSpinner variant="primary" />
@@ -32,6 +33,11 @@
             {{ cell.value }}
           </slot>
         </template>
+
+        <template v-if="hasSlotActions" #cell(actions)>
+          <slot name="actions" />
+        </template>
+
       </BTable>
       <slot />
     </BCardBody>
@@ -55,5 +61,19 @@ export default class CardTable extends Vue {
   @Prop({ default: false, type: Boolean }) readonly busy!: boolean
   @Prop({ default: 10, type: Number }) readonly perPage!: number
   @Prop({ type: Number }) readonly totalRows!: number
+
+  protected get hasSlotActions () {
+    return !!this.$slots?.actions
+  }
+
+  get headers () {
+    const header = this.fields
+
+    if (this.hasSlotActions) {
+      header.push({ key: 'actions', sortable: false, label: '' })
+    }
+
+    return header
+  }
 }
 </script>

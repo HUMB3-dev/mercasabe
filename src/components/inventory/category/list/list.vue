@@ -11,7 +11,7 @@
         </div>
       </BListGroupItem>
     </template>
-    <template #field(actions)>
+    <template #actions>
       <div class="text-end">
         <BDropdown class="position-static" variant="falcon-default px-2 py-01" size="sm" dropleft>
           <template #button-content>
@@ -41,8 +41,7 @@ export default class CategoryList extends Vue {
   @Prop({ default: (id: string) => id, type: Function }) readonly to!: (id: string) => string
 
   protected readonly fields = [
-    { key: 'name', sortable: true },
-    { key: 'actions', sortable: false, label: '' }
+    { key: 'name', sortable: true }
   ]
 
   get src () {

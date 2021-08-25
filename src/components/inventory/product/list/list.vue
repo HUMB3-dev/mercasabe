@@ -26,7 +26,7 @@
       <BBadge v-if="brand" variant="soft-light" pill v-text="brand.name" />
     </template>
 
-    <template #field(actions)>
+    <template #actions>
       <div class="text-end">
         <BDropdown class="position-static" variant="falcon-default px-2 py-01" size="sm" dropleft>
           <template #button-content>
@@ -63,8 +63,7 @@ export default class InventoryProductList extends Vue {
     { key: 'price', sortable: true },
     { key: 'status', sortable: true },
     { key: 'category', sortable: true },
-    { key: 'brand', sortable: true },
-    { key: 'actions', sortable: false, label: '' }
+    { key: 'brand', sortable: true }
   ]
 
   statusRecord (name: PRODUCT_STATUS) {
