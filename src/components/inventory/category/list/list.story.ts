@@ -1,5 +1,5 @@
 import { Vue } from 'vue-property-decorator'
-import { getProducts } from '../../../../fixture/category.fixture'
+import { getCategories } from '../../../../fixture/category.fixture'
 import CategoryList from './list.vue'
 
 export default {
@@ -10,10 +10,10 @@ export default {
     to: { table: { disable: true } }
   },
   args: {
-    loading: false,
+    busy: false,
     perPage: 5,
-    items: getProducts(15),
-    title: 'List of products',
+    items: getCategories(15),
+    title: 'List of categories',
     to: (id: string) => `/test/${id}`
   },
   parameters: {

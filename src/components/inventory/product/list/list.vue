@@ -99,7 +99,6 @@ export default class InventoryProductList extends Vue {
   @Prop({ default: 'List of products', type: String }) readonly title!: string
   @Prop({ default: (id: string) => id, type: Function }) readonly to!: (id: string) => string
 
-  protected products: ProductReference[] = []
   protected readonly fields = [
     { key: 'name', sortable: true },
     { key: 'price', sortable: true },
