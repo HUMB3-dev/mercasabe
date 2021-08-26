@@ -26,13 +26,13 @@
 <script lang="ts">
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
 import { Component, Model, Prop, Vue } from 'vue-property-decorator'
-import CardCatalog from './components/card.catalog'
-import CardHashtags from './components/card.hashtags'
-import CardInformation, { ProductInformation } from './components/card.information'
-import CardMedia from './components/card.media'
-import CardPricing, { ProductPricing } from './components/card.pricing'
-import CardRelations from './components/card.relations'
-import CardStatus, { ProductStatus } from './components/card.status'
+import CardCatalog from './components/card.catalog.vue'
+import CardHashtags from './components/card.hashtags.vue'
+import CardInformation, { ProductInformation } from './components/card.information.vue'
+import CardMedia from './components/card.media.vue'
+import CardPricing, { ProductPricing } from './components/card.pricing.vue'
+import CardRelations from './components/card.relations.vue'
+import CardStatus, { ProductStatus } from './components/card.status.vue'
 
 const components = { CardHashtags, CardRelations, CardPricing, CardStatus, CardCatalog, CardMedia, CardInformation }
 

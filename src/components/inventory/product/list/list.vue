@@ -1,7 +1,7 @@
 <template>
   <CardTable :items="items" :busy="busy" :fields="fields" :per-page="perPage" :total-rows="totalRows" :title="title">
-    <template #field(name)="{ item: {id , name, media} }">
-      <CellName :id="id" :name="name" :caption="id" :src="generateImage(media)" :to="to" />
+    <template #field(name)="{ item: {id , name} }">
+      <CellName :id="id" :name="name" :caption="id" :src="placeholderImage" :to="to" />
     </template>
 
     <template #field(price)="{ item: { price } }">
@@ -36,7 +36,6 @@
 </template>
 
 <script lang="ts">
-import { ProductMediaEntity } from '@merkaly/api/src/inventory/products/media/index'
 import { PRODUCT_STATUS } from '@merkaly/api/src/inventory/products/product.entity'
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
 import { Component, Prop, Vue } from 'vue-property-decorator'
@@ -81,12 +80,8 @@ export default class InventoryProductList extends Vue {
     return clasess
   }
 
-  generateImage (medias: ProductMediaEntity) {
-    if (!medias.length) {
-      return require('../../../../assets/images/product-placeholder.webp')
-    }
-
-    return medias[0].src
+  get placeholderImage () {
+    return require('../../../../assets/images/product-placeholder.webp')
   }
 }
 </script>
