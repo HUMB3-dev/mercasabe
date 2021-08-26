@@ -1505,6 +1505,13 @@
     "@merkaly/api" "^0.0.14"
     axios "^0.21.1"
 
+"@merkaly/ui@^0.1.0-0":
+  version "0.1.0-0"
+  resolved "https://registry.yarnpkg.com/@merkaly/ui/-/ui-0.1.0-0.tgz#2858168fb5b883944a6b700d967dc36f3e07cf88"
+  integrity sha512-ZqjWwrfEgnC3+Ny0k7Z4ob1fQAV7TRohu8wBr6TNQPEmec0q4MzFukHcL3cSfuBq6cAbxvi4evzG2ceGxeJWjw==
+  dependencies:
+    bootstrap "^5.1.0"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -4269,6 +4276,11 @@ bootstrap-vue@^2.21.2:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.6.0.tgz#97b9f29ac98f98dfa43bf7468262d84392552fd7"
   integrity sha512-Io55IuQY3kydzHtbGvQya3H+KorS/M9rSNyfCGCg9WZ4pyT/lCxIlpJgG1GXW/PswzC84Tr2fBYi+7+jFVQQBw==
+
+bootstrap@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.1.0.tgz#543ef8f44f4b9af67b0230f19508542fec38ef55"
+  integrity sha512-bs74WNI9BgBo3cEovmdMHikSKoXnDgA6VQjJ7TyTotU6L7d41ZyCEEelPwkYEzsG/Zjv3ie9IE3EMAje0W9Xew==
 
 boxen@^4.2.0:
   version "4.2.0"

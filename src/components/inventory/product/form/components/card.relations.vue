@@ -1,6 +1,6 @@
 <template>
   <BCard header-tag="h4" no-body>
-    <BCardHeader header-bg-variant="light">
+    <BCardHeader>
       <BRow align-h="between" align-v="center">
         <BCol class="h4 mb-0">
           Relations

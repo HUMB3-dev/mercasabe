@@ -1,5 +1,5 @@
 <template>
-  <BCard no-body data-list>
+  <BCard no-body>
     <BCardHeader>
       <BRow align-h="between" align-v="center">
         <BCol cols="4" sm="auto" class="d-flex align-items-center pe-0">
@@ -19,7 +19,7 @@
         </BCol>
       </BRow>
     </BCardHeader>
-    <BCardBody class="p-0" body-bg-variant="light">
+    <BCardBody class="p-0">
       <BTable :items="items" :busy="busy" :fields="headers" tbody-tr-class="align-middle" responsive="sm"
               table-class="mb-0" thead-class="sticky-top bg-200" hover>
         <template #table-busy>

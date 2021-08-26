@@ -40,10 +40,10 @@ import { ProductMediaEntity } from '@merkaly/api/src/inventory/products/media/in
 import { PRODUCT_STATUS } from '@merkaly/api/src/inventory/products/product.entity'
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import CardTable from '../../../shared/card/table/table'
-import CellName from './components/cell.name'
-import CellPrice from './components/cell.price'
-import CellStatus from './components/cell.status'
+import CardTable from '../../../shared/card/table/table.vue'
+import CellName from './components/cell.name.vue'
+import CellPrice from './components/cell.price.vue'
+import CellStatus from './components/cell.status.vue'
 
 @Component({ components: { CellStatus, CardTable, CellName, CellPrice } })
 export default class InventoryProductList extends Vue {

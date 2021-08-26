@@ -22,11 +22,6 @@
       "vuex-module-decorators",
       "jest"
     ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
     "lib": [
       "esnext",
       "dom",
