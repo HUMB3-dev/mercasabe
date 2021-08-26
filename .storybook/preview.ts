@@ -1,12 +1,14 @@
 import '!style-loader!css-loader!sass-loader!./styles.scss'
-
 import SDK from '@merkaly/sdk-js'
-import { Component } from 'vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import Vue, { Component } from 'vue'
 import { getModule } from 'vuex-module-decorators'
-import '../src/main'
 
 import store from '../store'
 import Inventory from '../store/inventory'
+
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
 
 SDK.setBaseUrl('https://api.merkaly.io/')
 

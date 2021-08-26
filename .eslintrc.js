@@ -13,6 +13,7 @@ module.exports = {
   },
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-namespace': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   },
