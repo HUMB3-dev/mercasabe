@@ -13,6 +13,7 @@ export const decorators = [(story: Component): Component => ({
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
+  backgrounds: { default: 'light' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
