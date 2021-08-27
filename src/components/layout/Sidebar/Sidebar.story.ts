@@ -14,6 +14,7 @@ export default {
   args: {
     title: 'test',
     to: '/main/page',
+    variant: 'transparent',
     collapsed: false,
     src: 'https://bootstrap-vue.org/_nuxt/icons/icon_512x512.67aef2.png',
     tree: [{

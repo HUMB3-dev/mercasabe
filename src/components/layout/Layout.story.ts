@@ -1,5 +1,4 @@
 import { Meta } from '@storybook/vue'
-import { Vue } from 'vue-property-decorator'
 import Layout from './Layout.vue'
 import { ISidebarMenu } from './Sidebar/SidebarMenu/SidebarMenu.vue'
 
@@ -33,11 +32,23 @@ export default {
   }
 } as Meta<Layout>
 
-export const Default = (args: Layout) => Vue.extend({
+const Template = (args: Layout) => ({
   props: Object.keys(args),
   components: { Layout },
-  template: `
-    <Layout v-bind="$props">
-    <div>Empty</div>
-    </Layout>`
+  template: '<Layout v-bind="$props" />'
 })
+
+export const ThemeLight = Template.bind({})
+ThemeLight.args = {
+  title: 'Light',
+  dark: false
+}
+
+export const ThemeDark = Template.bind({})
+ThemeDark.parameters = {
+  backgrounds: { default: 'dark' }
+}
+ThemeDark.args = {
+  title: 'Dark',
+  dark: true
+}

@@ -4,6 +4,7 @@
       <Fontawesome name="bars" />
     </BNavbarToggle>
     <BNavbarBrand class="me-1 me-sm-3" :to="to">
+      -->{{ to }}<--
       <div class="d-flex align-items-center">
         <BImg class="me-2" :src="src" :alt="title" width="40" />
         <span class="font-sans-serif" v-text="title" />
@@ -44,6 +45,4 @@ export default class TheHeader extends Vue {
 }
 </script>
 
-<style scoped>
-
-</style>
+<style lang="scss" scoped />

@@ -1,9 +1,9 @@
 <template>
-  <main class="main">
+  <main class="main" :class="{dark}">
     <div class="container-fluid">
-      <TheSidebar :tree="tree" :src="src" :title="title" :variant="variant" />
+      <TheSidebar :tree="tree" v-bind="bind" />
       <div class="content d-flex flex-column pb-0">
-        <TheHeader :src="src" :title="title" :to="to">
+        <TheHeader v-bind="bind">
           <slot name="header" />
         </TheHeader>
         <div class="flex-fill">
@@ -30,7 +30,15 @@ export default class Main extends Vue {
   @Prop({ type: [Array], required: true }) readonly tree!: ISidebarMenu[]
   @Prop({ type: [String, Object], default: null }) readonly to!: string
   @Prop({ type: [String], default: 'card' }) readonly variant!: NavbarVariants
+  @Prop({ type: [Boolean], default: false }) readonly dark!: boolean
 
+  get bind () {
+    return {
+      src: this.src,
+      title: this.title,
+      to: this.to
+    }
+  }
 }
 </script>
 

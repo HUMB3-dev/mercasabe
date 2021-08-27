@@ -9,6 +9,7 @@ export default {
   component: TheHeader,
   args: {
     value: '',
+    to: '/random',
     title: 'Title',
     src: 'https://prium.github.io/falcon/v3.1.0/assets/img/icons/spot-illustrations/falcon.png'
   }
