@@ -28,15 +28,15 @@ import { Component, Emit, Prop, Vue } from 'vue-property-decorator'
 import Fontawesome from '../../shared/icon/fontawesome/fontawesome.vue'
 import SidebarMenu, { ISidebarMenu } from './SidebarMenu/SidebarMenu.vue'
 
-type NavbarVariants = 'transparent' | 'inverted' | 'card' | 'vibrant'
+export type NavbarVariants = 'transparent' | 'inverted' | 'card' | 'vibrant'
 
 @Component({ components: { SidebarMenu, Fontawesome } })
 export default class TheSidebar extends Vue {
   @Prop({ type: [String], required: true }) readonly title!: string
   @Prop({ type: [String], required: true }) readonly src!: string
   @Prop({ type: [Array], required: true }) readonly tree!: ISidebarMenu[]
-  @Prop({ type: [String], default: 'card' }) readonly variant!: NavbarVariants
   @Prop({ type: [String, Object], default: null }) readonly to!: string
+  @Prop({ type: [String], default: 'card' }) readonly variant!: NavbarVariants
   @Prop({ type: [Boolean], default: false }) readonly collapsed!: boolean
 
   protected minibar = false

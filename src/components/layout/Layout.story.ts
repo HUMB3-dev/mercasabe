@@ -15,7 +15,6 @@ export default {
   args: {
     title: 'test',
     to: '/main/page',
-    collapsed: false,
     src: 'https://bootstrap-vue.org/_nuxt/icons/icon_512x512.67aef2.png',
     tree: [{
       title: 'Application',
@@ -40,6 +39,5 @@ export const Default = (args: Layout) => Vue.extend({
   template: `
     <Layout v-bind="$props">
     <div>Empty</div>
-    </Layout>
-  `
+    </Layout>`
 })

@@ -3,10 +3,10 @@
     <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button">
       <Fontawesome name="bars" />
       <span class="navbar-toggle-icon">
-        <span class="toggle-line"></span>
+        <span class="toggle-line" />
       </span>
     </button>
-    <BNavbarBrand class="me-1 me-sm-3">
+    <BNavbarBrand class="me-1 me-sm-3" :to="to">
       <div class="d-flex align-items-center">
         <BImg class="me-2" :src="src" :alt="title" width="40" />
         <span class="font-sans-serif" v-text="title" />
@@ -42,6 +42,8 @@ export default class TheHeader extends Vue {
   @VModel({ type: [String], default: null }) readonly search!: string
   @Prop({ type: [String], required: true }) readonly title!: string
   @Prop({ type: [String], required: true }) readonly src!: string
+  @Prop({ type: [String, Object], default: null }) readonly to!: string
+
 }
 </script>
 
