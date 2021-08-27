@@ -17,7 +17,7 @@
             <BFormInput />
           </BFormGroup>
         </BCol>
-        <BCol cols="6" align-self="center">
+        <BCol align-self="center" cols="6">
           <BFormGroup label="Barcode (ISBN, UPC, GTIN, etc)">
             <BFormInput />
           </BFormGroup>
@@ -30,7 +30,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
-@Component({})
+@Component
 export default class CardCatalog extends Vue {
 
 }

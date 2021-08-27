@@ -2,16 +2,16 @@
   <BCard no-body>
     <BCardHeader>
       <BRow align-h="between" align-v="center">
-        <BCol cols="4" sm="auto" class="d-flex align-items-center pe-0">
+        <BCol class="d-flex align-items-center pe-0" cols="4" sm="auto">
           <h5 class="fs-0 mb-0 text-nowrap py-2 py-xl-0" v-text="title" />
         </BCol>
-        <BCol cols="8" sm="auto" class="ms-auto text-end ps-0">
+        <BCol class="ms-auto text-end ps-0" cols="8" sm="auto">
           <BBtnGroup size="sm">
-            <BBtn variant="falcon-warning" :disabled="busy">
+            <BBtn :disabled="busy" variant="falcon-warning">
               <span class="fas fa-filter" />
               <span class="d-none d-sm-inline-block">Filter</span>
             </BBtn>
-            <BBtn variant="falcon-default" :disabled="busy">
+            <BBtn :disabled="busy" variant="falcon-default">
               <span class="fas fa-external-link-alt" />
               <span class="d-none d-sm-inline-block">Export</span>
             </BBtn>
@@ -20,8 +20,8 @@
       </BRow>
     </BCardHeader>
     <BCardBody class="p-0">
-      <BTable :items="items" :busy="busy" :fields="headers" tbody-tr-class="align-middle" responsive="sm"
-              table-class="mb-0" thead-class="sticky-top bg-200" hover>
+      <BTable :busy="busy" :fields="headers" :items="items" hover responsive="sm"
+              table-class="mb-0" tbody-tr-class="align-middle" thead-class="sticky-top bg-200">
         <template #table-busy>
           <div class="text-center py-5">
             <BSpinner variant="primary" />
@@ -29,7 +29,7 @@
         </template>
 
         <template v-for="{ key } in fields" :slot="'cell(' + key + ')'" slot-scope="cell">
-          <slot :name="`field(${key})`" v-bind="cell">
+          <slot v-bind="cell" :name="`field(${key})`">
             {{ cell.value }}
           </slot>
         </template>
@@ -44,7 +44,7 @@
 
     <BCardFooter v-show="!busy">
       <div class="d-flex align-items-center justify-content-center">
-        <BPagination :total-rows="totalRows" :per-page="perPage" class="mb-0" size="sm" hide-goto-end-buttons />
+        <BPagination :per-page="perPage" :total-rows="totalRows" class="mb-0" hide-goto-end-buttons size="sm" />
       </div>
     </BCardFooter>
   </BCard>
@@ -53,7 +53,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
-@Component({})
+@Component
 export default class CardTable extends Vue {
   @Prop({ required: true, type: String }) readonly title!: string
   @Prop({ required: true, type: Array }) readonly items!: unknown[]
@@ -61,10 +61,6 @@ export default class CardTable extends Vue {
   @Prop({ default: false, type: Boolean }) readonly busy!: boolean
   @Prop({ default: 10, type: Number }) readonly perPage!: number
   @Prop({ type: Number }) readonly totalRows!: number
-
-  protected get hasSlotActions () {
-    return !!this.$slots?.actions
-  }
 
   get headers () {
     const header = this.fields
@@ -74,6 +70,10 @@ export default class CardTable extends Vue {
     }
 
     return header
+  }
+
+  protected get hasSlotActions () {
+    return !!this.$slots?.actions
   }
 }
 </script>

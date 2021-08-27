@@ -9,7 +9,7 @@
         <CardCatalog />
       </BCol>
       <BCol cols="12" lg="4">
-        <div class="sticky-top" :class="{'z-index--1': busy }">
+        <div :class="{'z-index--1': busy }" class="sticky-top">
           <CardStatus v-model="status" class="mb-3" />
 
           <CardPricing v-model="pricing" class="mb-3" />

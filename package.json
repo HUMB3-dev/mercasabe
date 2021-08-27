@@ -12,7 +12,7 @@
     "build": "build-storybook -o public"
   },
   "dependencies": {
-    "@merkaly/ui": "^0.1.0-3"
+    "@merkaly/ui": "^0.1.0-5"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",

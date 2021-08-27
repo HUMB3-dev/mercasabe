@@ -1,16 +1,16 @@
 <template>
   <BBadge v-show="status" :variant="statusRecord(status).variant" pill>
-    <span class="me-1 fas" :class="statusRecord(status).icon" />
+    <span :class="statusRecord(status).icon" class="me-1 fas" />
     <span v-text="status" />
   </BBadge>
 </template>
 
 <script lang="ts">
 import { PRODUCT_STATUS } from '@merkaly/api/src/inventory/products/product.entity'
-import { Component, VModel } from 'vue-property-decorator'
+import { Component, VModel, Vue } from 'vue-property-decorator'
 
-@Component({})
-export default class CellStatus {
+@Component
+export default class CellStatus extends Vue {
   @VModel({ type: String }) readonly status!: PRODUCT_STATUS
 
   protected statusRecord (name: PRODUCT_STATUS) {

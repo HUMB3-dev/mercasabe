@@ -17,9 +17,9 @@
       <BFormGroup label="Sale Price">
         <BInputGroup class="mt-3">
           <template #append>
-            <BFormSelect v-model="model.unit" class="form-select" :options="units" />
+            <BFormSelect v-model="model.unit" :options="units" class="form-select" />
           </template>
-          <BFormInput v-model.number="model.sale" min="0" type="number" required />
+          <BFormInput v-model.number="model.sale" min="0" required type="number" />
         </BInputGroup>
       </BFormGroup>
     </BCardBody>
@@ -34,7 +34,7 @@
                   <span v-text="priceProfit.toFixed(2)" />
                 </BInputGroupText>
               </template>
-              <BFormInput v-model.number="model.purchase" min="0" type="number" required />
+              <BFormInput v-model.number="model.purchase" min="0" required type="number" />
             </BInputGroup>
           </BFormGroup>
         </BCol>
@@ -53,7 +53,7 @@ export interface ProductPricing {
   unit?: PRODUCT_UNIT
 }
 
-@Component({})
+@Component
 export default class CardPricing extends Vue {
   @ModelSync('value', 'change', { type: Object }) readonly model!: ProductPricing
 

@@ -9,7 +9,7 @@
     </BCardHeader>
     <BCardBody>
       <BFormGroup label="Category">
-        <BFormSelect class="form-select" :options="categories" text-field="name" value-field="id" />
+        <BFormSelect :options="categories" class="form-select" text-field="name" value-field="id" />
       </BFormGroup>
       <BFormGroup label="Brand">
         <BFormSelect class="form-select" />
@@ -22,9 +22,9 @@
 import BrandReference from '@merkaly/sdk-js/src/inventory/brand/brand.reference'
 import CategoryReference from '@merkaly/sdk-js/src/inventory/category/category.reference'
 import { Component, Vue } from 'vue-property-decorator'
-import { Getter, } from 'vuex-class'
+import { Getter } from 'vuex-class'
 
-@Component({})
+@Component
 export default class CardRelations extends Vue {
   @Getter('Inventory/categories') readonly categories!: CategoryReference[]
   @Getter('Inventory/brands') readonly brands!: BrandReference[]

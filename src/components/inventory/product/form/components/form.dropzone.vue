@@ -1,11 +1,11 @@
 <template>
-  <div class="drop-area overflow-auto" :class="colorClass" @dragover="dragover" @dragleave="dragleave" @drop="drop">
-    <input ref="dropfile" :accept="accept" type="file" multiple @change="onChange">
+  <div :class="colorClass" class="drop-area overflow-auto" @dragleave="dragleave" @dragover="dragover" @drop="drop">
+    <input ref="dropfile" :accept="accept" multiple type="file" @change="onChange">
 
-    <BRow v-if="!hasFiles" class="mx-auto" align-content="center">
+    <BRow v-if="!hasFiles" align-content="center" class="mx-auto">
       <div class="d-flex align-items-center flex-column">
         <i class="fa fa-copy fa-3x" />
-        <BBtn variant="falcon-default" class="my-3">
+        <BBtn class="my-3" variant="falcon-default">
           Add files
         </BBtn>
         <code>or drop files to upload</code>
@@ -16,7 +16,7 @@
       <BCol v-for="(file, key) in filelist" :key="key" class="p-2 file-preview" cols="2">
         <BCard class="h-100" no-body>
           <div class="file-menu rounded">
-            <BBtn class="btn-circle float-end" variant="falcon-danger" size="sm" @click="removeFile(key)">
+            <BBtn class="btn-circle float-end" size="sm" variant="falcon-danger" @click="removeFile(key)">
               <i class="small fa fa-trash" />
             </BBtn>
           </div>
@@ -30,7 +30,7 @@
 <script lang="ts">
 import { Component, Ref, Vue } from 'vue-property-decorator'
 
-@Component({})
+@Component
 export default class FormDropzone extends Vue {
   @Ref('dropfile') readonly input: HTMLInputElement
   protected filelist: File[] = []

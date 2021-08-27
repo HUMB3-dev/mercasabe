@@ -9,7 +9,7 @@
     </BCardHeader>
     <BCardBody>
       <BFormGroup label="Initial Status">
-        <BFormSelect v-model="model.state" class="form-select" :options="status" />
+        <BFormSelect v-model="model.state" :options="status" class="form-select" />
       </BFormGroup>
       <BFormGroup label="Available from">
         <BFormInput v-model="model.availableFrom" type="date" />
@@ -27,7 +27,7 @@ export interface ProductStatus {
   availableFrom: string
 }
 
-@Component({})
+@Component
 export default class CardStatus extends Vue {
   @ModelSync('value', 'change', { type: Object }) readonly model!: ProductStatus
 

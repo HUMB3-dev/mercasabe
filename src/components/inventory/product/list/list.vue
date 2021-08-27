@@ -1,7 +1,7 @@
 <template>
-  <CardTable :items="items" :busy="busy" :fields="fields" :per-page="perPage" :total-rows="totalRows" :title="title">
+  <CardTable :busy="busy" :fields="fields" :items="items" :per-page="perPage" :title="title" :total-rows="totalRows">
     <template #field(name)="{ item: {id , name} }">
-      <CellName :id="id" :name="name" :caption="id" :src="placeholderImage" :to="to" />
+      <CellName :id="id" :caption="id" :name="name" :src="placeholderImage" :to="to" />
     </template>
 
     <template #field(price)="{ item: { price } }">
@@ -13,16 +13,16 @@
     </template>
 
     <template #field(category)="{ item: { category } }">
-      <BBadge v-if="category" variant="soft-light" pill v-text="category.name" />
+      <BBadge v-if="category" pill variant="soft-light" v-text="category.name" />
     </template>
 
     <template #field(brand)="{ item: { brand } }">
-      <BBadge v-if="brand" variant="soft-light" pill v-text="brand.name" />
+      <BBadge v-if="brand" pill variant="soft-light" v-text="brand.name" />
     </template>
 
     <template #actions>
       <div class="text-end">
-        <BDropdown class="position-static" variant="falcon-default px-2 py-01" size="sm" dropleft>
+        <BDropdown class="position-static" dropleft size="sm" variant="falcon-default px-2 py-01">
           <template #button-content>
             <span class="fas fa-ellipsis-h" />
           </template>
@@ -61,6 +61,10 @@ export default class InventoryProductList extends Vue {
     { key: 'brand', sortable: true }
   ]
 
+  get placeholderImage () {
+    return require('../../../../assets/images/product-placeholder.webp')
+  }
+
   statusRecord (name: PRODUCT_STATUS) {
     const clasess = {
       variant: 'soft-secondary',
@@ -78,10 +82,6 @@ export default class InventoryProductList extends Vue {
     }
 
     return clasess
-  }
-
-  get placeholderImage () {
-    return require('../../../../assets/images/product-placeholder.webp')
   }
 }
 </script>

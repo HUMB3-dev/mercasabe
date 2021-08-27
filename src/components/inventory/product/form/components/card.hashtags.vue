@@ -9,7 +9,7 @@
     </BCardHeader>
     <BCardBody>
       <BRow align-h="start" class="gap-3 mx-0" cols="6">
-        <BBadge v-for="tag in model" :key="tag" variant="soft-secondary" pill v-text="tag" />
+        <BBadge v-for="tag in model" :key="tag" pill variant="soft-secondary" v-text="tag" />
       </BRow>
     </BCardBody>
     <BCardFooter class="p-0">
@@ -23,7 +23,7 @@
 <script lang="ts">
 import { Component, Emit, ModelSync, Prop, Ref, Vue } from 'vue-property-decorator'
 
-@Component({})
+@Component
 export default class CardHashtags extends Vue {
   @ModelSync('value', 'change', { type: Object }) readonly model!: string[]
   @Prop({ type: Array }) readonly value!: string[]
@@ -32,7 +32,8 @@ export default class CardHashtags extends Vue {
   protected hashtags: string[] = []
   protected hashtag = ''
 
-  @Emit('input') protected addHashtag () {
+  @Emit('input')
+  protected addHashtag () {
     this.value.push(this.hashtag)
     this.form.reset()
 

@@ -1,9 +1,9 @@
 <template>
-  <CardTable :items="items" :busy="busy" :fields="fields" :title="title" :per-page="perPage" :total-rows="totalRows">
+  <CardTable :busy="busy" :fields="fields" :items="items" :per-page="perPage" :title="title" :total-rows="totalRows">
     <template #field(name)="{ item: category }">
       <BListGroupItem :to="to(category.id)" class="bg-transparent border-0 p-0">
         <div class="d-flex align-items-center position-relative">
-          <BImgLazy blank-src="" :src="src" class="shadow-sm fit-cover p-1" :height="60" :width="60" rounded="1" />
+          <BImgLazy :height="60" :src="src" :width="60" blank-src="" class="shadow-sm fit-cover p-1" rounded="1" />
           <div class="ms-3">
             <div class="mb-1 fw-semi-bold text-nowrap text-900 px-2" v-text="category.name" />
             <BBadge class="fw-semi-bold mb-0 text-500" variant="soft-light" v-text="category.status" />
@@ -13,7 +13,7 @@
     </template>
     <template #actions>
       <div class="text-end">
-        <BDropdown class="position-static" variant="falcon-default px-2 py-01" size="sm" dropleft>
+        <BDropdown class="position-static" dropleft size="sm" variant="falcon-default px-2 py-01">
           <template #button-content>
             <span class="fas fa-ellipsis-h" />
           </template>

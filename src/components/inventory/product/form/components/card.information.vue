@@ -12,7 +12,7 @@
         <BFormInput v-model.trim="model.name" required />
       </BFormGroup>
       <BFormGroup label="Description">
-        <BFormTextarea v-model.trim="model.description" rows="8" no-resize required />
+        <BFormTextarea v-model.trim="model.description" no-resize required rows="8" />
       </BFormGroup>
     </BCardBody>
   </BCard>
@@ -26,7 +26,7 @@ export interface ProductInformation {
   description?: string
 }
 
-@Component({})
+@Component
 export default class CardInformation extends Vue {
   @ModelSync('value', 'change', { type: Object }) readonly model!: ProductInformation
 }

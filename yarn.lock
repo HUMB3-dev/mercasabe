@@ -1510,10 +1510,10 @@
     "@merkaly/api" "^0.0.14"
     axios "^0.21.1"
 
-"@merkaly/ui@^0.1.0-3":
-  version "0.1.0-3"
-  resolved "https://registry.yarnpkg.com/@merkaly/ui/-/ui-0.1.0-3.tgz#2a56a8178927f913097d7deba367415ba7561c13"
-  integrity sha512-dubz9OW4xadIqvrcGJ5A/S6LiSQBS41FWgOlPzYXlEo6x81B8nOdjQ9Ih1AcXumbPb43Iby6E0TlAofFJi0b9A==
+"@merkaly/ui@^0.1.0-5":
+  version "0.1.0-5"
+  resolved "https://registry.yarnpkg.com/@merkaly/ui/-/ui-0.1.0-5.tgz#de3c5d64f3632ee4977e943a3bf6205a98cacc82"
+  integrity sha512-jdaOmadhzwiTRLnScOGTcfM1eT2duAJQwiZBuaxjJx+Jo+ANslgH3MQ4qExm1cddbK+v4wzl/W13+Zwdk31S8Q==
   dependencies:
     "@fortawesome/fontawesome-free" "^5.15.4"
     bootstrap "^5.1.0"
