@@ -12,7 +12,7 @@ export default {
       control: { type: 'select' }
     }
   },
-  args:{
+  args: {
     title: 'test',
     to: '/main/page',
     collapsed: false,
@@ -37,5 +37,9 @@ export default {
 export const Default = (args: Layout) => Vue.extend({
   props: Object.keys(args),
   components: { Layout },
-  template: '<Layout v-bind="$props" />'
+  template: `
+    <Layout v-bind="$props">
+    <div>Empty</div>
+    </Layout>
+  `
 })
