@@ -34,7 +34,7 @@ export default class SideMenuItem extends Vue {
 
   get bindItemsAttrs () {
     return {
-      to: this.to,
+      to: this.hasChildren ? null : this.to,
       'link-attrs': {
         'aria-expanded': this.expanded
       },
