@@ -1,5 +1,5 @@
 <template>
-  <BNavbar type="glass" class="navbar-top navbar-expand">
+  <BNavbar type="top" class="navbar-expand">
     <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button">
       <Fontawesome name="bars" />
       <span class="navbar-toggle-icon">
@@ -16,8 +16,7 @@
       <BNavItem link-classes="p-1">
         <div class="search-box">
           <BForm>
-            <BFormInput v-model="search" class="px-4 ms-1 rounded-pill" type="search" placeholder="Search..."
-                        @input="$emit('search', search)" />
+            <BFormInput v-model="search" class="px-4 ms-1 rounded-pill" type="search" placeholder="Search..." />
             <Fontawesome name="search" class="search-box-icon" />
           </BForm>
         </div>

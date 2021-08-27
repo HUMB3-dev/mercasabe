@@ -1,32 +1,30 @@
 <template>
-  <div :class="{'navbar-vertical-collapsed': minibar && !hovered}">
-    <BNavbar type="vertical" toggleable="xl" :class="[navbarVariant]">
-      <div class="d-flex align-items-center py-3">
-        <div class="me-2">
-          <BBtn variant="circle" class="navbar-toggler-humburger-icon navbar-vertical-toggle" @click="toggleBar">
-            <Fontawesome :name="navbarIcon" />
-          </BBtn>
-        </div>
-        <BNavbarBrand :to="to">
-          <div class="d-flex align-items-center">
-            <img class="me-2" :src="src" :alt="title" width="40">
-            <span class="font-sans-serif" v-text="title" />
-          </div>
-        </BNavbarBrand>
+  <BNavbar type="vertical" toggleable="xl" :class="[navbarVariant]">
+    <div class="d-flex align-items-center py-3">
+      <div class="me-2">
+        <BBtn variant="transparent" class="navbar-toggler-humburger-icon navbar-vertical-toggle" @click="toggleBar">
+          <Fontawesome :name="navbarIcon" />
+        </BBtn>
       </div>
-      <BCollapse class="navbar-collapse" id="navbarVerticalCollapse" is-nav>
-        <div class="navbar-vertical-content scrollbar" @mouseover="hovered = true" @mouseleave="hovered = false">
-          <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
-            <SidebarMenu v-for="menu in tree" :key="menu.title" v-bind="menu" />
-          </ul>
+      <BNavbarBrand :to="to">
+        <div class="d-flex align-items-center">
+          <img class="me-2" :src="src" :alt="title" width="40">
+          <span class="font-sans-serif" v-text="title" />
         </div>
-      </BCollapse>
-    </BNavbar>
-  </div>
+      </BNavbarBrand>
+    </div>
+    <BCollapse class="navbar-collapse" id="navbarVerticalCollapse" is-nav>
+      <div class="navbar-vertical-content scrollbar" @mouseover="hovered = true" @mouseleave="hovered = false">
+        <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
+          <SidebarMenu v-for="menu in tree" :key="menu.title" v-bind="menu" />
+        </ul>
+      </div>
+    </BCollapse>
+  </BNavbar>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Emit, Prop, Vue } from 'vue-property-decorator'
 import Fontawesome from '../../shared/icon/fontawesome/fontawesome.vue'
 import SidebarMenu, { ISidebarMenu } from './SidebarMenu/SidebarMenu.vue'
 
@@ -56,8 +54,12 @@ export default class TheSidebar extends Vue {
     return this.minibar ? 'ellipsis-vertical' : 'bars'
   }
 
-  toggleBar () {
+  @Emit('toggle') toggleBar () {
     this.minibar = !this.minibar
+
+    document.body.classList.toggle('navbar-vertical-collapsed', (this.minibar && !this.hovered))
+
+    return this.minibar
   }
 }
 </script>
