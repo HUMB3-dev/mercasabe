@@ -1,6 +1,6 @@
 <template>
-  <BBadge v-show="status" :variant="statusRecord(status).variant" pill>
-    <span :class="statusRecord(status).icon" class="me-1 fas" />
+  <BBadge v-show="status" :variant="variant.variant" pill>
+    <Fontawesome :name="variant.icon" class="me-1" />
     <span v-text="status" />
   </BBadge>
 </template>
@@ -8,25 +8,26 @@
 <script lang="ts">
 import { PRODUCT_STATUS } from '@merkaly/api/src/inventory/products/product.entity'
 import { Component, VModel, Vue } from 'vue-property-decorator'
+import Fontawesome from '../../../../shared/icon/fontawesome/fontawesome.vue'
 
-@Component
+@Component({ components: { Fontawesome } })
 export default class CellStatus extends Vue {
   @VModel({ type: String }) readonly status!: PRODUCT_STATUS
 
-  protected statusRecord (name: PRODUCT_STATUS) {
+  protected get variant () {
     const clasess = {
       variant: 'soft-secondary',
-      icon: 'fa-brush'
+      icon: 'brush'
     }
 
-    if (name === PRODUCT_STATUS.ACTIVE) {
+    if (this.status === PRODUCT_STATUS.ACTIVE) {
       clasess.variant = 'soft-success'
-      clasess.icon = 'fa-check'
+      clasess.icon = 'check'
     }
 
-    if (name === PRODUCT_STATUS.INACTIVE) {
+    if (this.status === PRODUCT_STATUS.INACTIVE) {
       clasess.variant = 'soft-danger'
-      clasess.icon = 'fa-ban'
+      clasess.icon = 'ban'
     }
 
     return clasess
