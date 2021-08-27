@@ -1,4 +1,3 @@
-import CategoryEndpoint from '@merkaly/sdk-js/src/inventory/category/category.endpoint'
 import CategoryReference from '@merkaly/sdk-js/src/inventory/category/category.reference'
 import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
 
@@ -10,7 +9,7 @@ import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
   }
 
   @Action({ commit: 'setCategories' }) fetchCategories () {
-    return CategoryEndpoint.find()
+    return
   }
 
   get categories () {

@@ -1,21 +1,12 @@
-import SDK from '@merkaly/sdk-js'
+import '@merkaly/ui/src/falcon/index.scss'
 import Vue, { Component } from 'vue'
-import { getModule } from 'vuex-module-decorators'
-import MKComponents from '../src/main'
+import MerkalyComponents from '../src/main'
 import store from '../store'
-import Inventory from '../store/inventory'
 
-Vue.use(MKComponents)
-
-SDK.setBaseUrl('https://api.merkaly.io/')
+Vue.use(MerkalyComponents)
 
 export const decorators = [(story: Component): Component => ({
   store,
-  created () {
-    const { fetchCategories } = getModule(Inventory, store)
-
-    return fetchCategories()
-  },
   components: { story },
   template: ('<story />')
 })]
