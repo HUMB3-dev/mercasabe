@@ -1,11 +1,8 @@
 <template>
-  <BNavbar type="top" class="navbar-expand">
-    <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button">
+  <BNavbar type="glass" class="navbar-top navbar-expand">
+    <BNavbarToggle class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" target="navbarVerticalCollapse">
       <Fontawesome name="bars" />
-      <span class="navbar-toggle-icon">
-        <span class="toggle-line" />
-      </span>
-    </button>
+    </BNavbarToggle>
     <BNavbarBrand class="me-1 me-sm-3" :to="to">
       <div class="d-flex align-items-center">
         <BImg class="me-2" :src="src" :alt="title" width="40" />

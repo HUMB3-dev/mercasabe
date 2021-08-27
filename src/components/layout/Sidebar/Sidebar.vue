@@ -1,6 +1,6 @@
 <template>
   <BNavbar type="vertical" toggleable="xl" :class="[navbarVariant]">
-    <div class="d-flex align-items-center py-3">
+    <div class="d-flex align-items-center py-md-3">
       <div class="me-2">
         <BBtn variant="transparent" class="navbar-toggler-humburger-icon navbar-vertical-toggle" @click="toggleBar">
           <Fontawesome :name="navbarIcon" />
@@ -15,9 +15,9 @@
     </div>
     <BCollapse class="navbar-collapse" id="navbarVerticalCollapse" is-nav>
       <div class="navbar-vertical-content scrollbar" @mouseover="hovered = true" @mouseleave="hovered = false">
-        <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
+        <BNavbarNav class="flex-column mb-3" id="navbarVerticalNav">
           <SidebarMenu v-for="menu in tree" :key="menu.title" v-bind="menu" />
-        </ul>
+        </BNavbarNav>
       </div>
     </BCollapse>
   </BNavbar>
