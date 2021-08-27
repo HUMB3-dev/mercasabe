@@ -5,8 +5,15 @@ import { ISidebarMenu } from './SidebarMenu/SidebarMenu.vue'
 export default {
   title: 'Layout/Sidebar',
   component: TheSidebar,
+  argTypes: {
+    variant: {
+      options: ['transparent', 'inverted', 'card', 'vibrant'],
+      control: { type: 'select' }
+    }
+  },
   args: {
     title: 'test',
+    src: 'http://localhost:6502/_nuxt/static/icon.png',
     to: '/main/page',
     tree: [{
       title: 'Application',
