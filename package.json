@@ -4,6 +4,7 @@
   "main": "./src/main.ts",
   "files": [
     "src/assets/*",
+    "src/main.ts",
     "src/**/*.vue"
   ],
   "scripts": {
