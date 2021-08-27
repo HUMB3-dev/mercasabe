@@ -1202,11 +1202,6 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@fortawesome/fontawesome-free@^5.15.4":
-  version "5.15.4"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.4.tgz#ecda5712b61ac852c760d8b3c79c96adca5554e5"
-  integrity sha512-eYm8vijH/hpzr/6/1CJ/V/Eb1xQFW2nnUKArb3z+yUWv7HTwj6M7SP957oMjfZjAHU6qpoNc2wQvIxBLWYa/Jg==
-
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -1510,12 +1505,11 @@
     "@merkaly/api" "^0.0.14"
     axios "^0.21.1"
 
-"@merkaly/ui@^0.1.0-5":
-  version "0.1.0-5"
-  resolved "https://registry.yarnpkg.com/@merkaly/ui/-/ui-0.1.0-5.tgz#de3c5d64f3632ee4977e943a3bf6205a98cacc82"
-  integrity sha512-jdaOmadhzwiTRLnScOGTcfM1eT2duAJQwiZBuaxjJx+Jo+ANslgH3MQ4qExm1cddbK+v4wzl/W13+Zwdk31S8Q==
+"@merkaly/ui@0.1.0-7":
+  version "0.1.0-7"
+  resolved "https://registry.yarnpkg.com/@merkaly/ui/-/ui-0.1.0-7.tgz#d23e298245344bcb1b53b5db1d04cc4f3ae4c1a8"
+  integrity sha512-5VzNg8VTY6AuGqdfb/yPIjAJNBP4usT3rDbxe5GYUj1WjsSaRoCuROgKYKEULk/D1Hz4eIQ+GOI5xOOigJ7JBg==
   dependencies:
-    "@fortawesome/fontawesome-free" "^5.15.4"
     bootstrap "^5.1.0"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
