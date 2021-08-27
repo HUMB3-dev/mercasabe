@@ -13,8 +13,9 @@ export default {
   },
   args: {
     title: 'test',
-    src: 'http://localhost:6502/_nuxt/static/icon.png',
     to: '/main/page',
+    collapsed: false,
+    src: 'http://localhost:6502/_nuxt/static/icon.png',
     tree: [{
       title: 'Application',
       items: [{
