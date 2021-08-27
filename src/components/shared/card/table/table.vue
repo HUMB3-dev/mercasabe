@@ -15,6 +15,7 @@
               <span class="fas fa-external-link-alt" />
               <span class="d-none d-sm-inline-block">Export</span>
             </BBtn>
+            <slot name="toolbar" />
           </BBtnGroup>
         </BCol>
       </BRow>

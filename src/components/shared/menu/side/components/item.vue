@@ -11,9 +11,9 @@
       </div>
     </BNavItem>
 
-    <b-collapse v-model="expanded" class="mt-2">
+    <BCollapse v-if="hasChildren" v-model="expanded" class="mt-2">
       <slot />
-    </b-collapse>
+    </BCollapse>
   </div>
 </template>
 

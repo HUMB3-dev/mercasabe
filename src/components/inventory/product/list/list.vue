@@ -1,5 +1,10 @@
 <template>
   <CardTable :busy="busy" :fields="fields" :items="items" :per-page="perPage" :title="title" :total-rows="totalRows">
+    <template #toolbar>
+      <BBtn variant="falcon-primary" @click="doReload">
+        <Fontawesome name="rotate" />
+      </BBtn>
+    </template>
     <template #field(name)="{ item: {id , name} }">
       <CellName :id="id" :caption="id" :name="name" :src="placeholderImage" :to="to" />
     </template>
@@ -36,15 +41,15 @@
 </template>
 
 <script lang="ts">
-import { PRODUCT_STATUS } from '@merkaly/api/src/inventory/products/product.entity'
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Emit, Prop, Vue } from 'vue-property-decorator'
 import CardTable from '../../../shared/card/table/table.vue'
+import Fontawesome from '../../../shared/icon/fontawesome/fontawesome.vue'
 import CellName from './components/cell.name.vue'
 import CellPrice from './components/cell.price.vue'
 import CellStatus from './components/cell.status.vue'
 
-@Component({ components: { CellStatus, CardTable, CellName, CellPrice } })
+@Component({ components: { Fontawesome, CellStatus, CardTable, CellName, CellPrice } })
 export default class InventoryProductList extends Vue {
   @Prop({ required: true, type: Array }) readonly items!: ProductReference[]
   @Prop({ default: false, type: Boolean }) readonly busy!: boolean
@@ -65,23 +70,8 @@ export default class InventoryProductList extends Vue {
     return require('../../../../assets/images/product-placeholder.webp')
   }
 
-  statusRecord (name: PRODUCT_STATUS) {
-    const clasess = {
-      variant: 'soft-secondary',
-      icon: 'fa-brush'
-    }
-
-    if (name === PRODUCT_STATUS.ACTIVE) {
-      clasess.variant = 'soft-success'
-      clasess.icon = 'fa-check'
-    }
-
-    if (name === PRODUCT_STATUS.INACTIVE) {
-      clasess.variant = 'soft-danger'
-      clasess.icon = 'fa-ban'
-    }
-
-    return clasess
+  @Emit('reload') doReload () {
+    return
   }
 }
 </script>
