@@ -7,29 +7,34 @@
           <Fontawesome name="bars" />
         </BBtn>
       </div>
-      <a class="navbar-brand" href="../index.html">
+      <BNavbarBrand :to="to">
         <div class="d-flex align-items-center py-3">
           <img class="me-2" src="https://prium.github.io/falcon/v3.3.0/assets/img/icons/spot-illustrations/falcon.png"
-               alt="" width="40">
-          <span class="font-sans-serif">falcon</span>
+               :alt="title" width="40">
+          <span class="font-sans-serif" v-text="title" />
         </div>
-      </a>
+      </BNavbarBrand>
     </div>
     <BCollapse class="navbar-collapse" id="navbarVerticalCollapse" is-nav>
       <div class="navbar-vertical-content scrollbar">
-        content
+        <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
+          <SidebarMenu v-for="menu in tree" :key="menu.title" v-bind="menu" />
+        </ul>
       </div>
     </BCollapse>
   </nav>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 import Fontawesome from '../../shared/icon/fontawesome/fontawesome.vue'
+import SidebarMenu, { ISidebarMenu } from './SidebarMenu/SidebarMenu.vue'
 
-@Component({ components: { Fontawesome } })
+@Component({ components: { SidebarMenu, Fontawesome } })
 export default class TheSidebar extends Vue {
-
+  @Prop({ type: String, required: true }) readonly title!: string
+  @Prop({ type: [String, Object], default: null }) readonly to!: string
+  @Prop({ type: Array, required: true }) readonly tree!: ISidebarMenu[]
 }
 </script>
 
