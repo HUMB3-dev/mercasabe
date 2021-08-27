@@ -1,10 +1,11 @@
 import SDK from '@merkaly/sdk-js'
-import { Component } from 'vue'
+import Vue, { Component } from 'vue'
 import { getModule } from 'vuex-module-decorators'
-import '../src/main'
-
+import MKComponents from '../src/main'
 import store from '../store'
 import Inventory from '../store/inventory'
+
+Vue.use(MKComponents)
 
 SDK.setBaseUrl('https://api.merkaly.io/')
 

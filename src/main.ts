@@ -1,6 +1,9 @@
 import '@merkaly/ui/src/falcon/index.scss'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import Vue from 'vue'
+import { BootstrapVue } from 'bootstrap-vue'
+import { VueConstructor } from 'vue'
 
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
+export default {
+  install: (vue: VueConstructor) => {
+    vue.use(BootstrapVue)
+  }
+}
