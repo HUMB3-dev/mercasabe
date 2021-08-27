@@ -43,14 +43,14 @@
 <script lang="ts">
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
 import { Component, Emit, Prop, Vue } from 'vue-property-decorator'
-import CardTable from '../../../shared/card/table/table.vue'
-import Fontawesome from '../../../shared/icon/fontawesome/fontawesome.vue'
-import CellName from './components/cell.name.vue'
-import CellPrice from './components/cell.price.vue'
-import CellStatus from './components/cell.status.vue'
+import CardTable from '../../../../shared/card/table/table.vue'
+import Fontawesome from '../../../../shared/icon/fontawesome/fontawesome.vue'
+import CellName from './components/CellName.vue'
+import CellPrice from './components/CellPrice.vue'
+import CellStatus from './components/CellStatus.vue'
 
 @Component({ components: { Fontawesome, CellStatus, CardTable, CellName, CellPrice } })
-export default class InventoryProductList extends Vue {
+export default class ProductList extends Vue {
   @Prop({ required: true, type: Array }) readonly items!: ProductReference[]
   @Prop({ default: false, type: Boolean }) readonly busy!: boolean
   @Prop({ default: 10, type: Number }) readonly perPage!: number
@@ -67,7 +67,7 @@ export default class InventoryProductList extends Vue {
   ]
 
   get placeholderImage () {
-    return require('../../../../assets/images/product-placeholder.webp')
+    return require('../../../../../assets/images/product-placeholder.webp')
   }
 
   @Emit('reload') doReload () {

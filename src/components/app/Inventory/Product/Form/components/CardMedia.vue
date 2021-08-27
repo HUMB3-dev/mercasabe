@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import FormDropzone from './form.dropzone.vue'
+import FormDropzone from '../../../../../form/Dropzone/FormDropzone.vue'
 
 @Component({
   components: { FormDropzone }

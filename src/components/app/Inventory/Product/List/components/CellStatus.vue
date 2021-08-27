@@ -8,7 +8,7 @@
 <script lang="ts">
 import { PRODUCT_STATUS } from '@merkaly/api/src/inventory/products/product.entity'
 import { Component, VModel, Vue } from 'vue-property-decorator'
-import Fontawesome from '../../../../shared/icon/fontawesome/fontawesome.vue'
+import Fontawesome from '../../../../../shared/icon/fontawesome/fontawesome.vue'
 
 @Component({ components: { Fontawesome } })
 export default class CellStatus extends Vue {

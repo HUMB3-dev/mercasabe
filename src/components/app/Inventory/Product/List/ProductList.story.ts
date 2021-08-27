@@ -1,11 +1,11 @@
 import { Meta } from '@storybook/vue'
 import { Vue } from 'vue-property-decorator'
-import { getProducts } from '../../../../fixture/product.fixture'
-import InventoryProductList from './list.vue'
+import { getProducts } from '../../../../../fixture/product.fixture'
+import ProductList from './ProductList.vue'
 
 export default {
-  title: 'Inventory/Product/List',
-  component: InventoryProductList,
+  title: 'App/Inventory/Product/List',
+  component: ProductList,
   argTypes: {
     items: { table: { disable: true } },
     to: { table: { disable: true } }
@@ -22,12 +22,12 @@ export default {
       default: 'light'
     }
   }
-} as Meta<InventoryProductList>
+} as Meta<ProductList>
 
-export const Filled = (args: InventoryProductList) => Vue.extend({
+export const Filled = (args: ProductList) => Vue.extend({
   props: Object.keys(args),
-  components: { InventoryProductList },
-  template: '<InventoryProductList v-bind="$props" />'
+  components: { ProductList },
+  template: '<ProductList v-bind="$props" />'
 })
 Filled.args = {
   totalRows: 15

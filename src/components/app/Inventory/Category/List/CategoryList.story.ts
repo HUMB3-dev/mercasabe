@@ -1,9 +1,9 @@
 import { Vue } from 'vue-property-decorator'
-import { getCategories } from '../../../../fixture/category.fixture'
-import CategoryList from './list.vue'
+import { getCategories } from '../../../../../fixture/category.fixture'
+import CategoryList from './CategoryList.vue'
 
 export default {
-  title: 'Inventory/Category/List',
+  title: 'App/Inventory/Category/List',
   component: CategoryList,
   argTypes: {
     items: { table: { disable: true } },
@@ -25,8 +25,8 @@ export default {
 
 export const Filled = (args: CategoryList) => Vue.extend({
   props: Object.keys(args),
-  components: { InventoryProductList: CategoryList },
-  template: '<InventoryProductList v-bind="$props" />'
+  components: { CategoryList },
+  template: '<CategoryList v-bind="$props" />'
 })
 Filled.args = {
   totalRows: 15
