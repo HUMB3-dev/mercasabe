@@ -1505,10 +1505,10 @@
     "@merkaly/api" "^0.0.14"
     axios "^0.21.1"
 
-"@merkaly/ui@0.1.0-7":
-  version "0.1.0-7"
-  resolved "https://registry.yarnpkg.com/@merkaly/ui/-/ui-0.1.0-7.tgz#d23e298245344bcb1b53b5db1d04cc4f3ae4c1a8"
-  integrity sha512-5VzNg8VTY6AuGqdfb/yPIjAJNBP4usT3rDbxe5GYUj1WjsSaRoCuROgKYKEULk/D1Hz4eIQ+GOI5xOOigJ7JBg==
+"@merkaly/ui@0.1.1":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@merkaly/ui/-/ui-0.1.0.tgz#fa360133c6bb75df5547709d2e754d52770aaa70"
+  integrity sha512-Lp70MpTjgh1+G8dAOObuLouus+IJwu+SlW3TYQeFWtq+i6z7IZ8eiROSs7MAbyxHKlRDG8AAmZpXLyB0VTLZgA==
   dependencies:
     bootstrap "^5.1.0"
 
