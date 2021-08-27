@@ -1,11 +1,10 @@
 <template>
-  <div :class="{'navbar-vertical-collapsed': collapsed}">
+  <div :class="{'navbar-vertical-collapsed': minibar && !hovered}">
     <BNavbar type="vertical" toggleable="xl" :class="[navbarVariant]">
       <div class="d-flex align-items-center py-3">
         <div class="me-2">
-          <BBtn variant="transparent" target="navbarVerticalCollapse"
-                class="navbar-toggler-humburger-icon navbar-vertical-toggle">
-            <Fontawesome name="bars" />
+          <BBtn variant="circle" class="navbar-toggler-humburger-icon navbar-vertical-toggle" @click="toggleBar">
+            <Fontawesome :name="navbarIcon" />
           </BBtn>
         </div>
         <BNavbarBrand :to="to">
@@ -16,7 +15,7 @@
         </BNavbarBrand>
       </div>
       <BCollapse class="navbar-collapse" id="navbarVerticalCollapse" is-nav>
-        <div class="navbar-vertical-content scrollbar">
+        <div class="navbar-vertical-content scrollbar" @mouseover="hovered = true" @mouseleave="hovered = false">
           <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
             <SidebarMenu v-for="menu in tree" :key="menu.title" v-bind="menu" />
           </ul>
@@ -42,8 +41,23 @@ export default class TheSidebar extends Vue {
   @Prop({ type: [String, Object], default: null }) readonly to!: string
   @Prop({ type: [Boolean], default: false }) readonly collapsed!: boolean
 
+  protected minibar = false
+  protected hovered = false
+
+  mounted () {
+    this.minibar = this.collapsed
+  }
+
   get navbarVariant () {
     return `navbar-${this.variant}`
+  }
+
+  get navbarIcon () {
+    return this.minibar ? 'ellipsis-vertical' : 'bars'
+  }
+
+  toggleBar () {
+    this.minibar = !this.minibar
   }
 }
 </script>

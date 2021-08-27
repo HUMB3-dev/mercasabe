@@ -15,7 +15,7 @@ export default {
     title: 'test',
     to: '/main/page',
     collapsed: false,
-    src: 'http://localhost:6502/_nuxt/static/icon.png',
+    src: 'https://bootstrap-vue.org/_nuxt/icons/icon_512x512.67aef2.png',
     tree: [{
       title: 'Application',
       items: [{
