@@ -16,7 +16,7 @@
               <span class="d-none d-sm-inline-block">Export</span>
             </BBtn>
             <slot name="toolbar" />
-            <BBtn variant="falcon-primary" @click="$parent.$emit('reload')">
+            <BBtn v-if="hasReloadListener" :disabled="busy" variant="falcon-primary" @click="$parent.$emit('reload')">
               <FontAwesome name="rotate" />
             </BBtn>
           </BBtnGroup>
@@ -66,7 +66,7 @@ export default class CardTable extends Vue {
   @Prop({ default: 10, type: Number }) readonly perPage!: number
   @Prop({ type: Number }) readonly totalRows!: number
 
-  get headers () {
+  protected get headers () {
     const header = this.fields
 
     if (this.hasSlotActions) {
@@ -78,6 +78,10 @@ export default class CardTable extends Vue {
 
   protected get hasSlotActions () {
     return !!this.$slots?.actions
+  }
+
+  protected get hasReloadListener () {
+    return !!this.$parent.$listeners.reload
   }
 }
 </script>

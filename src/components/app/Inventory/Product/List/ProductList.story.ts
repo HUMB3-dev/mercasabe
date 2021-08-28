@@ -1,4 +1,5 @@
 import { Meta } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
 import { Vue } from 'vue-property-decorator'
 import { getProducts } from '../../../../../fixture/product.fixture'
 import ProductList from './ProductList.vue'
@@ -27,7 +28,7 @@ export default {
 export const Filled = (args: ProductList) => Vue.extend({
   props: Object.keys(args),
   components: { ProductList },
-  methods: { reload: () => alert('reload') },
+  methods: { reload: action('onReload') },
   template: '<ProductList v-bind="$props" @reload="reload" />'
 })
 Filled.args = {
