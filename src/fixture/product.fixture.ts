@@ -2,16 +2,7 @@ import { PRODUCT_STATUS, PRODUCT_UNIT } from '@merkaly/api/src/inventory/product
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
 import faker from 'faker'
 
-export const getProducts = (count = 10) => {
-
-  const products = []
-
-  for (let index = 0; index < count; index++) {
-    products.push(getProduct())
-  }
-
-  return products
-}
+export const getProducts = (count = 10) => new Array(count).fill(null).map(getProduct)
 
 export const getProduct = () => {
   const product = new ProductReference()
@@ -24,11 +15,6 @@ export const getProduct = () => {
   product.category = { id: faker.commerce.department(), name: faker.vehicle.model() }
   product.brand = { id: faker.vehicle.manufacturer(), name: faker.vehicle.manufacturer() }
   product.hashtags = [faker.commerce.productMaterial(), faker.commerce.color()]
-  product.media = [{
-    id: faker.vehicle.manufacturer(),
-    name: faker.vehicle.manufacturer(),
-    src: faker.image.image() + '?' + faker.datatype.uuid()
-  }]
 
   return product
 }

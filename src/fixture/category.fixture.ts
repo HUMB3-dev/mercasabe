@@ -2,16 +2,7 @@ import { PRODUCT_STATUS } from '@merkaly/api/src/inventory/products/product.enti
 import CategoryReference from '@merkaly/sdk-js/src/inventory/category/category.reference'
 import faker from 'faker'
 
-export const getCategories = (count = 10) => {
-
-  const categories = []
-
-  for (let index = 0; index < count; index++) {
-    categories.push(getCategory())
-  }
-
-  return categories
-}
+export const getCategories = (count = 10) => new Array(count).fill(null).map(getCategory)
 
 export const getCategory = () => {
   const category = new CategoryReference()
