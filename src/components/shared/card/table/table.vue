@@ -16,6 +16,9 @@
               <span class="d-none d-sm-inline-block">Export</span>
             </BBtn>
             <slot name="toolbar" />
+            <BBtn variant="falcon-primary" @click="$emit('reload')">
+              <FontAwesome name="rotate" />
+            </BBtn>
           </BBtnGroup>
         </BCol>
       </BRow>
@@ -53,8 +56,9 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import FontAwesome from '../../icon/fontawesome/fontawesome.vue'
 
-@Component
+@Component({ components: { FontAwesome } })
 export default class CardTable extends Vue {
   @Prop({ required: true, type: String }) readonly title!: string
   @Prop({ required: true, type: Array }) readonly items!: unknown[]

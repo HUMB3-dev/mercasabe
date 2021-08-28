@@ -27,7 +27,8 @@ export default {
 export const Filled = (args: ProductList) => Vue.extend({
   props: Object.keys(args),
   components: { ProductList },
-  template: '<ProductList v-bind="$props" />'
+  methods: { reload: () => alert('reload') },
+  template: '<ProductList v-bind="$props" @reload="reload" />'
 })
 Filled.args = {
   totalRows: 15

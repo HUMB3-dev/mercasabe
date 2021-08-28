@@ -1,10 +1,5 @@
 <template>
-  <CardTable :busy="busy" :fields="fields" :items="items" :per-page="perPage" :title="title" :total-rows="totalRows">
-    <template #toolbar>
-      <BBtn variant="falcon-primary" @click="doReload">
-        <Fontawesome name="rotate" />
-      </BBtn>
-    </template>
+  <CardTable v-bind="{ busy, fields, items, perPage, title, totalRows }">
     <template #field(name)="{ item: {id , name} }">
       <CellName :id="id" :caption="id" :name="name" :src="placeholderImage" :to="to" />
     </template>
