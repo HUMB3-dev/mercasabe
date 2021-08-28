@@ -1,6 +1,6 @@
 <template>
   <div :class="{'ms-3': isChild}">
-    <BNavItem @click.prevent="toggleExpanded" v-bind="bindItemsAttrs">
+    <BNavItem @click.prevent="toggleExpanded" v-bind="bindItemsAttrs" active-class="active">
       <div class="d-flex align-items-center">
       <span v-if="!isChild" class="nav-link-icon">
         <FontAwesome v-if="icon" :name="icon" />

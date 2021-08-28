@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
 import TheFooter from './Footer/Footer.vue'
 import TheHeader from './Header/Header.vue'
 import TheSidebar, { NavbarVariants } from './Sidebar/Sidebar.vue'
@@ -38,6 +38,11 @@ export default class Main extends Vue {
       title: this.title,
       to: this.to
     }
+  }
+
+  @Watch('dark', { immediate: true }) onDarkTheme () {
+    document.body.classList.toggle('dark', this.dark)
+
   }
 }
 </script>
