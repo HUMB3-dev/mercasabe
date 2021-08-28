@@ -1,19 +1,17 @@
 <template>
-  <BNavItem @click.prevent="toggleExpanded" v-bind="bindItemsAttrs" exact-active-class="active">
-    <div class="d-flex align-items-center">
-      <span v-if="!isChild" class="nav-link-icon">
-        <FontAwesome v-if="icon" :name="icon" />
-      </span>
-      <span class="nav-link-text ps-1">
-        <span v-text="title" />
-      </span>
-    </div>
-    <BNavbarNav v-if="hasChildren">
-      <BCollapse v-model="expanded" class="mt-2">
-        <SidebarMenuItem v-for="child in children" :key="child.title" v-bind="child" />
-      </BCollapse>
-    </BNavbarNav>
-  </BNavItem>
+  <div>
+    <BLink class="nav-link" v-bind="bindItemsAttrs" exact-active-class="active" @click.prevent="toggleExpanded">
+      <div class="d-flex align-items-center">
+        <span class="nav-link-icon">
+          <FontAwesome v-show="icon" :name="icon" />
+        </span>
+        <span class="nav-link-text ps-1" v-text="title" />
+      </div>
+    </BLink>
+    <BCollapse v-if="hasChildren" v-model="expanded" tag="ul" class="ps-3">
+      <SidebarMenuItem v-for="child in children" :key="child.title" v-bind="child" />
+    </BCollapse>
+  </div>
 </template>
 
 <script lang="ts">
@@ -41,12 +39,9 @@ export default class SidebarMenuItem extends Vue implements ISidebarMenuItem {
 
   get bindItemsAttrs () {
     return {
-      to: this.hasChildren ? null : this.to,
-      'link-attrs': {
-        'aria-expanded': this.expanded,
-      },
-      'link-classes': {
-        'ps-0': !this.isChild,
+      'to': this.hasChildren ? null : this.to,
+      'aria-expanded': this.expanded,
+      'class': {
         'dropdown-indicator': this.hasChildren
       }
     }
