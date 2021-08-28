@@ -6,9 +6,9 @@
         <hr class="mb-0 navbar-vertical-divider">
       </BCol>
     </BRow>
-    <template v-for="item in items">
+    <BNav v-for="item in items">
       <SidebarMenuItem :key="item.title" v-bind="item" />
-    </template>
+    </BNav>
   </BNavItem>
 </template>
 

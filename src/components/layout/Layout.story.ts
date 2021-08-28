@@ -3,7 +3,7 @@ import Layout from './Layout.vue'
 import { ISidebarMenu } from './Sidebar/SidebarMenu/SidebarMenu.vue'
 
 export default {
-  title: 'Layout',
+  title: 'Layout/Base',
   component: Layout,
   argTypes: {
     variant: {
@@ -25,7 +25,11 @@ export default {
         icon: 'store',
         children: [{
           title: 'Analytics',
-          icon: 'analytics'
+          icon: 'analytics',
+          children: [{
+            title: 'Dashboard',
+            icon: 'dashboard'
+          }]
         }]
       }]
     }] as ISidebarMenu[]

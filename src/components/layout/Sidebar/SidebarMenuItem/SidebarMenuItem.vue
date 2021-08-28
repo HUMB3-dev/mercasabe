@@ -1,20 +1,19 @@
 <template>
-  <div :class="{'ms-3': isChild}">
-    <BNavItem @click.prevent="toggleExpanded" v-bind="bindItemsAttrs" active-class="active">
-      <div class="d-flex align-items-center">
+  <BNavItem @click.prevent="toggleExpanded" v-bind="bindItemsAttrs" exact-active-class="active">
+    <div class="d-flex align-items-center">
       <span v-if="!isChild" class="nav-link-icon">
         <FontAwesome v-if="icon" :name="icon" />
       </span>
-        <span class="nav-link-text ps-1">
+      <span class="nav-link-text ps-1">
         <span v-text="title" />
       </span>
-      </div>
-    </BNavItem>
-
-    <BCollapse v-if="hasChildren" v-model="expanded" class="mt-2">
-      <SidebarMenuItem v-for="child in children" :key="child.title" v-bind="child" />
-    </BCollapse>
-  </div>
+    </div>
+    <BNavbarNav v-if="hasChildren">
+      <BCollapse v-model="expanded" class="mt-2">
+        <SidebarMenuItem v-for="child in children" :key="child.title" v-bind="child" />
+      </BCollapse>
+    </BNavbarNav>
+  </BNavItem>
 </template>
 
 <script lang="ts">
@@ -44,9 +43,10 @@ export default class SidebarMenuItem extends Vue implements ISidebarMenuItem {
     return {
       to: this.hasChildren ? null : this.to,
       'link-attrs': {
-        'aria-expanded': this.expanded
+        'aria-expanded': this.expanded,
       },
       'link-classes': {
+        'ps-0': !this.isChild,
         'dropdown-indicator': this.hasChildren
       }
     }

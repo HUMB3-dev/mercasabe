@@ -18,6 +18,12 @@ export default {
     collapsed: false,
     src: 'https://bootstrap-vue.org/_nuxt/icons/icon_512x512.67aef2.png',
     tree: [{
+      items: [
+        { title: 'Dashboard', icon: 'dashboard', to: '/' },
+        { title: 'Analytics', icon: 'analytics', to: '/' },
+        { title: 'Managment', icon: 'toolbox', to: '/' }
+      ]
+    }, {
       title: 'Application',
       items: [{
         title: 'Calendar',
