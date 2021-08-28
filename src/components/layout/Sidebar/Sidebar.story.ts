@@ -7,7 +7,7 @@ export default {
   component: TheSidebar,
   argTypes: {
     variant: {
-      options: ['transparent', 'inverted', 'card', 'vibrant'],
+      options: ['plain', 'vibrant'],
       control: { type: 'select' }
     }
   },

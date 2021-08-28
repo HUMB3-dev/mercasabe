@@ -1,7 +1,7 @@
 <template>
-  <main class="main" :class="{dark}">
+  <main class="main">
     <div class="container-fluid">
-      <TheSidebar :tree="tree" v-bind="bind" />
+      <TheSidebar :tree="tree" :dark="dark" :variant="variant" v-bind="bind" />
       <div class="content d-flex flex-column pb-0 transition-base">
         <TheHeader v-bind="bind">
           <slot name="header" />
@@ -29,7 +29,7 @@ export default class LayoutMain extends Vue {
   @Prop({ type: [String], required: true }) readonly src!: string
   @Prop({ type: [Array], required: true }) readonly tree!: ISidebarMenu[]
   @Prop({ type: [String, Object], default: null }) readonly to!: string
-  @Prop({ type: [String], default: 'card' }) readonly variant!: NavbarVariants
+  @Prop({ type: [String], default: null }) readonly variant!: NavbarVariants
   @Prop({ type: [Boolean], default: false }) readonly dark!: boolean
 
   get bind () {
@@ -41,7 +41,7 @@ export default class LayoutMain extends Vue {
   }
 
   @Watch('dark', { immediate: true }) onDarkTheme () {
-    if (process.client) {
+    if (document) {
       document.body.classList.toggle('dark', this.dark)
     }
   }

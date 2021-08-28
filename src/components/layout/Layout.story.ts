@@ -5,14 +5,18 @@ import { ISidebarMenu } from './Sidebar/SidebarMenu/SidebarMenu.vue'
 export default {
   title: 'Layout/Base',
   component: Layout,
+  parameters: {
+    backgrounds: { disable: true }
+  },
   argTypes: {
     variant: {
-      options: ['transparent', 'inverted', 'card', 'vibrant'],
+      options: [null, 'plain', 'vibrant'],
       control: { type: 'select' }
     }
   },
   args: {
     title: 'test',
+    variant: null,
     to: '/main/page',
     src: 'https://bootstrap-vue.org/_nuxt/icons/icon_512x512.67aef2.png',
     tree: [{
@@ -49,9 +53,6 @@ ThemeLight.args = {
 }
 
 export const ThemeDark = Template.bind({})
-ThemeDark.parameters = {
-  backgrounds: { default: 'dark' }
-}
 ThemeDark.args = {
   title: 'Dark',
   dark: true

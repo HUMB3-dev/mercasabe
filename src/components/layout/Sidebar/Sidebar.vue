@@ -28,7 +28,7 @@ import { Component, Emit, Prop, Vue } from 'vue-property-decorator'
 import Fontawesome from '../../shared/icon/fontawesome/fontawesome.vue'
 import SidebarMenu, { ISidebarMenu } from './SidebarMenu/SidebarMenu.vue'
 
-export type NavbarVariants = 'transparent' | 'inverted' | 'card' | 'vibrant'
+export type NavbarVariants = 'plain' | 'vibrant' | null
 
 @Component({ components: { SidebarMenu, Fontawesome } })
 export default class TheSidebar extends Vue {
@@ -36,8 +36,9 @@ export default class TheSidebar extends Vue {
   @Prop({ type: [String], required: true }) readonly src!: string
   @Prop({ type: [Array], required: true }) readonly tree!: ISidebarMenu[]
   @Prop({ type: [String, Object], default: null }) readonly to!: string
-  @Prop({ type: [String], default: 'card' }) readonly variant!: NavbarVariants
+  @Prop({ type: [String], default: null }) readonly variant!: NavbarVariants
   @Prop({ type: [Boolean], default: false }) readonly collapsed!: boolean
+  @Prop({ type: [Boolean], default: false }) readonly dark!: boolean
 
   protected minibar = false
   protected hovered = false
@@ -47,7 +48,22 @@ export default class TheSidebar extends Vue {
   }
 
   get navbarVariant () {
-    return `navbar-${this.variant}`
+    let mode = 'card'
+
+    if (this.dark) {
+      mode = `inverted`
+    }
+
+    if (this.variant) {
+      if (this.variant === 'vibrant') {
+        mode = 'vibrant'
+      }
+      if (this.variant === 'plain') {
+        return null
+      }
+    }
+
+    return `navbar-${mode}`
   }
 
   get navbarIcon () {
