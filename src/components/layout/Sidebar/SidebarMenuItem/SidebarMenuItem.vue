@@ -32,7 +32,7 @@ export interface ISidebarMenuItem {
 export default class SidebarMenuItem extends Vue implements ISidebarMenuItem {
   @Prop({ type: [String, Object] }) readonly to!: string
   @Prop({ type: String }) readonly icon!: string
-  @Prop({ type: String, required: true }) readonly title!: boolean
+  @Prop({ type: String, required: true }) readonly title!: string
   @Prop({ type: Array, default: () => [] }) readonly children!: ISidebarMenuItem[]
   protected expanded = false
 
