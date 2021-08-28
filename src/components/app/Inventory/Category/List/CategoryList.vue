@@ -29,7 +29,7 @@
 <script lang="ts">
 import CategoryReference from '@merkaly/sdk-js/src/inventory/category/category.reference'
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import CardTable from '../../../../shared/card/table/table.vue'
+import CardTable from '../../../../shared/Card/Table/CardTable.vue'
 
 @Component({ components: { CardTable } })
 export default class CategoryList extends Vue {

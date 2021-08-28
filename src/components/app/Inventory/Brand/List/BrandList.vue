@@ -29,7 +29,7 @@
 <script lang="ts">
 import BrandReference from '@merkaly/sdk-js/src/inventory/brand/brand.reference'
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import CardTable from '../../../../shared/card/table/table.vue'
+import CardTable from '../../../../shared/Card/Table/CardTable.vue'
 
 @Component({ components: { CardTable } })
 export default class BrandList extends Vue {
