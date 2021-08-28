@@ -1,15 +1,17 @@
 <template>
-  <BNavItem>
-    <BRow v-if="title" class="navbar-vertical-label-wrapper mb-2">
-      <BCol cols="auto" class="navbar-vertical-label" v-text="title" />
-      <BCol class="ps-0">
-        <hr class="mb-0 navbar-vertical-divider">
-      </BCol>
-    </BRow>
+  <li class="nav-item">
+    <template v-if="title">
+      <BRow class="navbar-vertical-label-wrapper mb-2">
+        <BCol cols="auto" class="navbar-vertical-label" v-text="title" />
+        <BCol class="ps-0">
+          <hr class="mb-0 navbar-vertical-divider">
+        </BCol>
+      </BRow>
+    </template>
     <template v-for="item in items">
       <SidebarMenuItem :key="item.title" v-bind="item" />
     </template>
-  </BNavItem>
+  </li>
 </template>
 
 <script lang="ts">

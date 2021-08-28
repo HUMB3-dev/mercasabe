@@ -41,7 +41,7 @@ export default class LayoutMain extends Vue {
   }
 
   @Watch('dark', { immediate: true }) onDarkTheme () {
-    if (document) {
+    if (process.client) {
       document.body.classList.toggle('dark', this.dark)
     }
   }
