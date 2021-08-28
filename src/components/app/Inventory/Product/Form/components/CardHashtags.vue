@@ -21,15 +21,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Emit, ModelSync, Prop, Ref, Vue } from 'vue-property-decorator'
+import { Component, Emit, Prop, Ref, VModel, Vue } from 'vue-property-decorator'
 
 @Component
 export default class CardHashtags extends Vue {
-  @ModelSync('value', 'change', { type: Object }) readonly model!: string[]
+  @VModel({ type: Object }) readonly model!: string[]
   @Prop({ type: Array }) readonly value!: string[]
   @Ref('form') form!: HTMLFormElement
 
-  protected hashtags: string[] = []
   protected hashtag = ''
 
   @Emit('input')

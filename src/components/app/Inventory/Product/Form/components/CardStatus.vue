@@ -9,10 +9,10 @@
     </BCardHeader>
     <BCardBody>
       <BFormGroup label="Initial Status">
-        <BFormSelect v-model="model.state" :options="status" class="form-select" />
+        <BFormSelect v-model="product.state" :options="status" class="form-select" />
       </BFormGroup>
       <BFormGroup label="Available from">
-        <BFormInput v-model="model.availableFrom" type="date" />
+        <BFormInput v-model="product.availableFrom" type="date" />
       </BFormGroup>
     </BCardBody>
   </BCard>
@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { PRODUCT_STATUS } from '@merkaly/api/src/inventory/products/product.entity'
-import { Component, ModelSync, Vue } from 'vue-property-decorator'
+import { Component, VModel, Vue } from 'vue-property-decorator'
 
 export interface ProductStatus {
   state: PRODUCT_STATUS,
@@ -29,7 +29,7 @@ export interface ProductStatus {
 
 @Component
 export default class CardStatus extends Vue {
-  @ModelSync('value', 'change', { type: Object }) readonly model!: ProductStatus
+  @VModel({ type: Object }) readonly product!: ProductStatus
 
   get status () {
     return Object.keys(PRODUCT_STATUS)

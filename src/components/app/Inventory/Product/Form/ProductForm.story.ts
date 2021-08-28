@@ -1,25 +1,20 @@
-import { Vue } from 'vue-property-decorator'
 import { getProduct } from '../../../../../fixture/product.fixture'
+import CategoryForm from '../../Category/Form/CategoryForm.vue'
 import ProductForm from './ProductForm.vue'
 
 export default {
   title: 'App/Inventory/Product/Form',
   component: ProductForm,
   args: {
-    busy: false,
-    product: getProduct(),
-    value: {}
-  },
-  parameters: {
-    backgrounds: {
-      default: 'light'
-    }
+    loading: false,
+    value: getProduct()
   }
 }
 
-export const Empty = (args: ProductForm) => Vue.extend({
+const Template = (args: CategoryForm) => ({
   props: Object.keys(args),
   components: { ProductForm },
-  template: '<ProductForm v-model="product" v-bind="$props" />'
+  template: '<ProductForm v-bind="$props" />'
 })
 
+export const Default = Template.bind({})

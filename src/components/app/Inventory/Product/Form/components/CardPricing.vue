@@ -17,9 +17,9 @@
       <BFormGroup label="Sale Price">
         <BInputGroup class="mt-3">
           <template #append>
-            <BFormSelect v-model="model.unit" :options="units" class="form-select" />
+            <BFormSelect v-model="pricing.unit" :options="units" class="form-select" />
           </template>
-          <BFormInput v-model.number="model.sale" min="0" required type="number" />
+          <BFormInput v-model.number="pricing.sale" min="0" required type="number" />
         </BInputGroup>
       </BFormGroup>
     </BCardBody>
@@ -34,7 +34,7 @@
                   <span v-text="priceProfit.toFixed(2)" />
                 </BInputGroupText>
               </template>
-              <BFormInput v-model.number="model.purchase" min="0" required type="number" />
+              <BFormInput v-model.number="pricing.purchase" min="0" required type="number" />
             </BInputGroup>
           </BFormGroup>
         </BCol>
@@ -45,7 +45,7 @@
 
 <script lang="ts">
 import { PRODUCT_UNIT } from '@merkaly/api/src/inventory/products/product.entity'
-import { Component, ModelSync, Vue } from 'vue-property-decorator'
+import { Component, VModel, Vue } from 'vue-property-decorator'
 
 export interface ProductPricing {
   sale?: number
@@ -53,32 +53,28 @@ export interface ProductPricing {
   unit?: PRODUCT_UNIT
 }
 
-@Component
+@Component({})
 export default class CardPricing extends Vue {
-  @ModelSync('value', 'change', { type: Object }) readonly model!: ProductPricing
+  @VModel({ type: Object }) readonly pricing!: ProductPricing
 
   get units () {
     return Object.keys(PRODUCT_UNIT)
   }
 
   get priceMargin () {
-    if (!this.model.sale || !this.priceProfit) {
+    if (!this.pricing.sale || !this.priceProfit) {
       return null
     }
 
-    const percent = (this.priceProfit / this.model.sale) * 100
-
-    return Number(percent)
+    return (this.priceProfit / this.pricing.sale) * 100
   }
 
   get priceProfit (): null | number {
-    if (!this.model.purchase || !this.model.sale) {
+    if (!this.pricing.purchase || !this.pricing.sale) {
       return null
     }
 
-    const percent = (this.model.sale - this.model.purchase)
-
-    return Number(percent)
+    return (this.pricing.sale - this.pricing.purchase)
   }
 }
 </script>

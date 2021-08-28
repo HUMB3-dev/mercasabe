@@ -20,9 +20,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 import FormDropzone from '../../../../../form/Dropzone/FormDropzone.vue'
 
-@Component({
-  components: { FormDropzone }
-})
+@Component({ components: { FormDropzone } })
 export default class CardMedia extends Vue {
 
 }

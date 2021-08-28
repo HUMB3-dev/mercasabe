@@ -19,15 +19,12 @@
 </template>
 
 <script lang="ts">
-import BrandReference from '@merkaly/sdk-js/src/inventory/brand/brand.reference'
 import CategoryReference from '@merkaly/sdk-js/src/inventory/category/category.reference'
-import { Component, Vue } from 'vue-property-decorator'
-import { Getter } from 'vuex-class'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
-@Component
+@Component({})
 export default class CardRelations extends Vue {
-  @Getter('Inventory/categories') readonly categories!: CategoryReference[]
-  @Getter('Inventory/brands') readonly brands!: BrandReference[]
-
+  @Prop({ default: () => [] }) readonly categories!: CategoryReference[]
+  @Prop({ default: () => [] }) readonly brands!: CategoryReference[]
 }
 </script>
