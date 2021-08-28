@@ -16,7 +16,7 @@
               <span class="d-none d-sm-inline-block">Export</span>
             </BBtn>
             <slot name="toolbar" />
-            <BBtn variant="falcon-primary" @click="$emit('reload')">
+            <BBtn variant="falcon-primary" @click="$parent.$emit('reload')">
               <FontAwesome name="rotate" />
             </BBtn>
           </BBtnGroup>
@@ -24,8 +24,7 @@
       </BRow>
     </BCardHeader>
     <BCardBody class="p-0">
-      <BTable :busy="busy" :fields="headers" :items="items" hover responsive="sm"
-              table-class="mb-0" tbody-tr-class="align-middle" thead-class="sticky-top bg-200">
+      <BTable v-bind="{ busy, items, fields: headers}" hover responsive="sm" table-class="mb-0" tbody-tr-class="align-middle" thead-class="sticky-top bg-200">
         <template #table-busy>
           <div class="text-center py-5">
             <BSpinner variant="primary" />
@@ -56,7 +55,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import FontAwesome from '../../icon/fontawesome/fontawesome.vue'
+import FontAwesome from '../../icon/FontAwesome/FontAwesome.vue'
 
 @Component({ components: { FontAwesome } })
 export default class CardTable extends Vue {

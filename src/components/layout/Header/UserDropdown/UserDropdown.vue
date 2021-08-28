@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import Fontawesome from '../../../shared/icon/fontawesome/fontawesome.vue'
+import Fontawesome from '../../../shared/icon/FontAwesome/FontAwesome.vue'
 
 @Component({ components: { Fontawesome } })
 export default class UserDropdown extends Vue {

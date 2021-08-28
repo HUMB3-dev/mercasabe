@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/vue'
 import { Vue } from 'vue-property-decorator'
-import Fontawesome from '../../shared/icon/fontawesome/fontawesome.vue'
+import Fontawesome from '../../shared/icon/FontAwesome/FontAwesome.vue'
 import TheHeader from './Header.vue'
 import UserDropdown from './UserDropdown/UserDropdown.vue'
 

@@ -1,5 +1,5 @@
 import { Vue } from 'vue-property-decorator'
-import FontAwesome from './fontawesome.vue'
+import FontAwesome from './FontAwesome.vue'
 
 export default {
   title: 'Shared/Icon/FontAwesome',

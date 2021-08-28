@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import Fontawesome from '../../../shared/icon/fontawesome/fontawesome.vue'
+import Fontawesome from '../../../shared/icon/FontAwesome/FontAwesome.vue'
 import SidebarMenuItem, { ISidebarMenuItem } from '../SidebarMenuItem/SidebarMenuItem.vue'
 
 export interface ISidebarMenu {
