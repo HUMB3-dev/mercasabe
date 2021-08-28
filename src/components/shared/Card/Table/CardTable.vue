@@ -7,11 +7,11 @@
         </BCol>
         <BCol class="ms-auto text-end ps-0" cols="8" sm="auto">
           <BBtnGroup size="sm">
-            <BBtn :disabled="busy" variant="falcon-warning">
+            <BBtn :disabled="busy" variant="falcon-warning" @click="$parent.$emit('filter')">
               <span class="fas fa-filter" />
               <span class="d-none d-sm-inline-block">Filter</span>
             </BBtn>
-            <BBtn :disabled="busy" variant="falcon-default">
+            <BBtn :disabled="busy" variant="falcon-default" @click="$parent.$emit('export')">
               <span class="fas fa-external-link-alt" />
               <span class="d-none d-sm-inline-block">Export</span>
             </BBtn>

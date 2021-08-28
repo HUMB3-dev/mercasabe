@@ -39,12 +39,12 @@
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import CardTable from '../../../../shared/Card/Table/CardTable.vue'
-import Fontawesome from '../../../../shared/icon/FontAwesome/FontAwesome.vue'
+import FontAwesome from '../../../../shared/icon/FontAwesome/FontAwesome.vue'
 import CellName from './components/CellName.vue'
 import CellPrice from './components/CellPrice.vue'
 import CellStatus from './components/CellStatus.vue'
 
-@Component({ components: { Fontawesome, CellStatus, CardTable, CellName, CellPrice } })
+@Component({ components: { FontAwesome, CellStatus, CardTable, CellName, CellPrice } })
 export default class ProductList extends Vue {
   @Prop({ required: true, type: Array }) readonly items!: ProductReference[]
   @Prop({ default: false, type: Boolean }) readonly busy!: boolean

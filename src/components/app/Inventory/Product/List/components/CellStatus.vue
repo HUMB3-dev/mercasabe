@@ -1,6 +1,6 @@
 <template>
   <BBadge v-show="status" :variant="variant.variant" pill>
-    <Fontawesome :name="variant.icon" class="me-1" />
+    <FontAwesome :name="variant.icon" class="me-1" />
     <span v-text="status" />
   </BBadge>
 </template>
@@ -8,9 +8,9 @@
 <script lang="ts">
 import { PRODUCT_STATUS } from '@merkaly/api/src/inventory/products/product.entity'
 import { Component, VModel, Vue } from 'vue-property-decorator'
-import Fontawesome from '../../../../../shared/icon/FontAwesome/FontAwesome.vue'
+import FontAwesome from '../../../../../shared/icon/FontAwesome/FontAwesome.vue'
 
-@Component({ components: { Fontawesome } })
+@Component({ components: { FontAwesome } })
 export default class CellStatus extends Vue {
   @VModel({ type: String }) readonly status!: PRODUCT_STATUS
 

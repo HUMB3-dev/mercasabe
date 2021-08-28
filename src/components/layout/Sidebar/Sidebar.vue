@@ -3,7 +3,7 @@
     <div class="d-flex align-items-center py-md-3">
       <div class="me-2">
         <BBtn variant="transparent" class="navbar-toggler-humburger-icon navbar-vertical-toggle" @click="toggleBar">
-          <Fontawesome :name="navbarIcon" />
+          <FontAwesome :name="navbarIcon" />
         </BBtn>
       </div>
       <BNavbarBrand :to="to">
@@ -25,12 +25,12 @@
 
 <script lang="ts">
 import { Component, Emit, Prop, Vue } from 'vue-property-decorator'
-import Fontawesome from '../../shared/icon/FontAwesome/FontAwesome.vue'
+import FontAwesome from '../../shared/icon/FontAwesome/FontAwesome.vue'
 import SidebarMenu, { ISidebarMenu } from './SidebarMenu/SidebarMenu.vue'
 
 export type NavbarVariants = 'plain' | 'vibrant' | null
 
-@Component({ components: { SidebarMenu, Fontawesome } })
+@Component({ components: { SidebarMenu, FontAwesome } })
 export default class TheSidebar extends Vue {
   @Prop({ type: [String], required: true }) readonly title!: string
   @Prop({ type: [String], required: true }) readonly src!: string

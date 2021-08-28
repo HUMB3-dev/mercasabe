@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import Fontawesome from '../../../shared/icon/FontAwesome/FontAwesome.vue'
+import FontAwesome from '../../../shared/icon/FontAwesome/FontAwesome.vue'
 import SidebarMenuItem, { ISidebarMenuItem } from '../SidebarMenuItem/SidebarMenuItem.vue'
 
 export interface ISidebarMenu {
@@ -24,7 +24,7 @@ export interface ISidebarMenu {
   items: ISidebarMenuItem[]
 }
 
-@Component({ components: { SidebarMenuItem, Fontawesome } })
+@Component({ components: { SidebarMenuItem, FontAwesome } })
 export default class SidebarMenu extends Vue implements ISidebarMenu {
   @Prop({ type: String, default: null }) readonly title!: string
   @Prop({ type: Array, required: true }) readonly items!: ISidebarMenuItem[]

@@ -10,9 +10,9 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import Fontawesome from '../../../shared/icon/FontAwesome/FontAwesome.vue'
+import FontAwesome from '../../../shared/icon/FontAwesome/FontAwesome.vue'
 
-@Component({ components: { Fontawesome } })
+@Component({ components: { FontAwesome } })
 export default class UserDropdown extends Vue {
   @Prop({ type: [String], required: true }) readonly name!: string
   @Prop({ type: [String] }) readonly src!: string

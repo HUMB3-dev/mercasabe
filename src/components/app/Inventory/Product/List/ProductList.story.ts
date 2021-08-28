@@ -1,5 +1,5 @@
-import { Meta } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
+import { Meta } from '@storybook/vue'
 import { Vue } from 'vue-property-decorator'
 import { getProducts } from '../../../../../fixture/product.fixture'
 import ProductList from './ProductList.vue'
