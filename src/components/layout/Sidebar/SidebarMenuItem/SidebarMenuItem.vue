@@ -24,8 +24,8 @@ import FontAwesome from '../../../shared/icon/fontawesome/fontawesome.vue'
 export interface ISidebarMenuItem {
   title: string
   icon?: string
-  to?: string | Record<string, unknown>
-  children: ISidebarMenuItem[]
+  to?: string | Record<string, any>
+  children?: ISidebarMenuItem[]
 }
 
 @Component({ components: { FontAwesome, SidebarMenuItem } })
