@@ -1,5 +1,5 @@
 <template>
-  <BOverlay :show="loading">
+  <BOverlay class="rounded" :show="loading">
     <BCard no-body>
       <BCardHeader>
         <BRow align-h="between" align-v="center">
@@ -12,14 +12,14 @@
         <BRow class="pb-3">
           <BCol cols="5">
             <BFormGroup label="Name">
-              <BFormInput v-model.trim="brand.name" required />
+              <BFormInput v-model.trim="category.name" required />
             </BFormGroup>
           </BCol>
         </BRow>
         <BRow>
           <BCol cols="12">
             <BFormGroup label="Description">
-              <BFormTextarea v-model.trim="brand.name" rows="8" required />
+              <BFormTextarea v-model.trim="category.name" rows="8" required />
             </BFormGroup>
           </BCol>
         </BRow>
@@ -29,12 +29,12 @@
 </template>
 
 <script lang="ts">
-import BrandReference from '@merkaly/sdk-js/src/inventory/brand/brand.reference'
+import CategoryReference from '@merkaly/sdk-js/src/inventory/category/category.reference'
 import { Component, Prop, VModel, Vue } from 'vue-property-decorator'
 
 @Component({})
 export default class BrandElementForm extends Vue {
-  @VModel({ required: true, type: Object }) readonly brand!: BrandReference
+  @VModel({ required: true, type: Object }) readonly category!: CategoryReference
   @Prop({ type: Boolean, default: false }) readonly loading!: boolean
 }
 </script>
