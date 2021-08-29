@@ -65,7 +65,7 @@ export default class CardPricing extends Vue {
   }
 
   get priceMargin () {
-    if (!this.priceProfit) {
+    if (!this.priceProfit || !this.pricing.purchase) {
       return null
     }
 

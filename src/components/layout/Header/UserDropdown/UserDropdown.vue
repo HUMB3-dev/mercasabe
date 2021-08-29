@@ -1,11 +1,11 @@
 <template>
-  <BNavItemDropdown menu-class="split-x">
+  <BDropdown menu-class="split-x" toggle-class="btn-sm rounded-pill pe-0 py-0 d-flex align-items-center" variant="falcon-default" no-caret>
     <template #button-content>
-      <BImg rounded="circle" class="rounded-circle" :src="src" alt="User Avatar" width="32" />
-      <span v-text="name"></span>
+      <span v-text="name" />
+      <BImg rounded="circle" class="ms-1 rounded-pill" :src="src" alt="User Avatar" width="32" />
     </template>
-    <slot />
-  </BNavItemDropdown>
+  <slot />
+  </BDropdown>
 </template>
 
 <script lang="ts">
@@ -23,5 +23,11 @@ export default class UserDropdown extends Vue {
 .split-x {
   right: 0;
   left: 0;
+}
+
+.dropdown-toggle-no-caret {
+  &::after {
+    content: unset;
+  }
 }
 </style>
