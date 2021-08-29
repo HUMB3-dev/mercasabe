@@ -33,7 +33,7 @@ import CategoryReference from '@merkaly/sdk-js/src/inventory/category/category.r
 import { Component, Prop, VModel, Vue } from 'vue-property-decorator'
 
 @Component({})
-export default class BrandElementForm extends Vue {
+export default class CategoryForm extends Vue {
   @VModel({ required: true, type: Object }) readonly category!: CategoryReference
   @Prop({ type: Boolean, default: false }) readonly loading!: boolean
 }

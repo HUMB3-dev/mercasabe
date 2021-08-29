@@ -1,21 +1,21 @@
 <template>
   <BRow>
     <BCol cols="12" lg="8">
-      <CardInformation v-model="product.information" class="mb-3" />
+      <CardInformation v-model="product.information" class="mb-3" :loading="loading"  />
 
-      <CardMedia class="mb-3" />
+      <CardMedia class="mb-3" :loading="loading"  />
 
-      <CardCatalog />
+      <CardCatalog :loading="loading"  />
     </BCol>
     <BCol cols="12" lg="4">
       <div :class="{'z-index--1': loading }" class="sticky-top">
-        <CardStatus v-model="product.status" class="mb-3" />
+        <CardStatus v-model="product.status" class="mb-3" :loading="loading"  />
 
-        <CardPricing v-model="product.pricing" class="mb-3" />
+        <CardPricing v-model="product.pricing" class="mb-3" :loading="loading" />
 
-        <CardRelations class="mb-3" />
+        <CardRelations class="mb-3" :loading="loading"  />
 
-        <CardHashtags v-model="model.hashtags" />
+        <CardHashtags v-model="model.hashtags" :loading="loading"  />
       </div>
     </BCol>
   </BRow>

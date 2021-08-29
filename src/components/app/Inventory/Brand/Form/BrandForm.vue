@@ -33,7 +33,7 @@ import BrandReference from '@merkaly/sdk-js/src/inventory/brand/brand.reference'
 import { Component, Prop, VModel, Vue } from 'vue-property-decorator'
 
 @Component({})
-export default class BrandElementForm extends Vue {
+export default class BrandForm extends Vue {
   @VModel({ required: true, type: Object }) readonly brand!: BrandReference
   @Prop({ type: Boolean, default: false }) readonly loading!: boolean
 }
