@@ -22,7 +22,7 @@ export default class CellName extends Vue {
   @Prop({ default: null, type: [String, Object] }) readonly to!: string
   @Prop({ type: String, required: true }) readonly id!: string
   @Prop({ type: String, required: true }) readonly name!: string
-  @Prop({ type: String, default: false }) readonly verified!: boolean
+  @Prop({ type: Boolean, default: false }) readonly verified!: boolean
   @Prop({ type: String, required: true }) readonly email!: string
   @Prop({ type: String, required: false }) readonly src!: string
 
