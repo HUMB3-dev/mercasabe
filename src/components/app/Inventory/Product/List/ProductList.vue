@@ -1,7 +1,7 @@
 <template>
   <CardTable v-bind="{ busy, fields, items, perPage, title, totalRows }">
     <template #field(name)="{ item: {id , name} }">
-      <CellName :id="id" :caption="id" :name="name" :src="placeholderImage" :to="to" />
+      <CellName :id="id" :caption="id" :name="name" :src="placeholderImage" :to="to(id)" />
     </template>
 
     <template #field(price)="{ item: { price } }">

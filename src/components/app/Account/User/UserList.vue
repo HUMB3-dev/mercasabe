@@ -1,7 +1,7 @@
 <template>
   <CardTable v-bind="{ busy, fields, items, perPage, title, totalRows }">
-    <template #field(name)="{ item: {user_id, name, email, picture} }">
-      <CellName :key="user_id" :id="user_id" :name="name" :email="email" :src="picture" :to="to(user_id)" />
+    <template #field(name)="{ item: {user_id, name, email, picture, email_verified} }">
+      <CellName :key="user_id" :id="user_id" :src="picture" :to="to(user_id)" :verified="email_verified" v-bind="{ name, email}"  />
     </template>
     <template #actions>
       <div class="text-end">
@@ -34,7 +34,10 @@ export default class UserList extends Vue {
   @Prop({ default: (id: string) => id, type: Function }) readonly to!: (id: string) => string
 
   protected readonly fields = [
-    { key: 'name', sortable: true }
+    { key: 'name', sortable: true },
+    { key: 'created_at', sortable: true },
+    { key: 'last_login', sortable: true },
+    { key: 'logins_count', sortable: true },
   ]
 
 }

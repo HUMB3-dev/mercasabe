@@ -9,15 +9,15 @@ export const getUser = () => {
   user.given_name = faker.name.firstName()
   user.family_name = `${faker.name.lastName()} ${faker.name.lastName()}`
   user.name = `${user.given_name} ${user.family_name}`
-  user.created_at = String(faker.date.past())
+  user.created_at = faker.date.past().toISOString()
   user.email = faker.internet.email(user.given_name).toLowerCase()
   user.email_verified = faker.datatype.boolean()
   user.last_ip = faker.internet.ip()
-  user.last_login = String(faker.date.past())
+  user.last_login = faker.date.past().toISOString()
   user.logins_count = faker.datatype.number(999)
   user.nickname = faker.internet.userName(user.given_name, user.family_name)
   user.picture = faker.image.avatar()
-  user.updated_at = String(faker.date.past())
+  user.updated_at = faker.date.past().toISOString()
   user.user_id = faker.datatype.uuid()
 
   return user
