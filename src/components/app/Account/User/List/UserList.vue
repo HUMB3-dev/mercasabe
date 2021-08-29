@@ -21,7 +21,7 @@
 <script lang="ts">
 import UserReference from '@merkaly/sdk-js/src/account/user/user.reference'
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import CardTable from '../../../shared/Card/Table/CardTable.vue'
+import CardTable from '../../../../shared/Card/Table/CardTable.vue'
 import CellName from './components/CellName.vue'
 
 @Component({ components: { CellName, CardTable } })

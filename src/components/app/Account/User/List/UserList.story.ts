@@ -1,4 +1,4 @@
-import { getUsers } from '../../../../fixture/user.fixture'
+import { getUsers } from '../../../../../fixture/user.fixture'
 import UserList from './UserList.vue'
 
 export default {

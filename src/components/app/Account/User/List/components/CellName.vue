@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import FontAwesome from '../../../../shared/icon/FontAwesome/FontAwesome.vue'
+import FontAwesome from '../../../../../shared/icon/FontAwesome/FontAwesome.vue'
 
 @Component({ components: { FontAwesome } })
 export default class CellName extends Vue {
@@ -27,7 +27,7 @@ export default class CellName extends Vue {
   @Prop({ type: String, required: false }) readonly src!: string
 
   get picture () {
-    return this.src || require('../../../../../assets/images/product-placeholder.webp')
+    return this.src || require('../../../../../../assets/images/product-placeholder.webp')
   }
 }
 </script>
