@@ -1,15 +1,7 @@
 <template>
   <CardTable v-bind="{ busy, fields, items, perPage, title, totalRows }">
-    <template #field(name)="{ item: user }">
-      <BListGroupItem :to="to(user.id)" class="bg-transparent border-0 p-0">
-        <div class="d-flex align-items-center position-relative">
-          <BImgLazy :height="60" :src="src" :width="60" blank-src="" class="shadow-sm fit-cover p-1" rounded="1" />
-          <div class="ms-3">
-            <div class="mb-1 fw-semi-bold text-nowrap text-900 px-2" v-text="user.name" />
-            <BBadge class="fw-semi-bold mb-0 text-500" variant="soft-light" v-text="user.status" />
-          </div>
-        </div>
-      </BListGroupItem>
+    <template #field(name)="{ item: {user_id, name, email, picture} }">
+      <CellName :key="user_id" :id="user_id" :name="name" :email="email" :src="picture" :to="to(user_id)" />
     </template>
     <template #actions>
       <div class="text-end">
@@ -30,8 +22,9 @@
 import UserReference from '@merkaly/sdk-js/src/account/user/user.reference'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import CardTable from '../../../shared/Card/Table/CardTable.vue'
+import CellName from './components/CellName.vue'
 
-@Component({ components: { CardTable } })
+@Component({ components: { CellName, CardTable } })
 export default class UserList extends Vue {
   @Prop({ required: true, type: Array }) readonly items!: UserReference[]
   @Prop({ default: false, type: Boolean }) readonly busy!: boolean
@@ -44,9 +37,5 @@ export default class UserList extends Vue {
     { key: 'name', sortable: true }
   ]
 
-  get src () {
-    return require('../../../../assets/images/product-placeholder.webp')
-
-  }
 }
 </script>

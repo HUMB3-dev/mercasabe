@@ -10,7 +10,7 @@ export const getUser = () => {
   user.family_name = `${faker.name.lastName()} ${faker.name.lastName()}`
   user.name = `${user.given_name} ${user.family_name}`
   user.created_at = String(faker.date.past())
-  user.email = faker.internet.email(user.given_name, user.family_name)
+  user.email = faker.internet.email(user.given_name).toLowerCase()
   user.email_verified = faker.datatype.boolean()
   user.last_ip = faker.internet.ip()
   user.last_login = String(faker.date.past())
