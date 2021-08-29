@@ -19,7 +19,7 @@ import FontAwesome from '../../../../shared/icon/FontAwesome/FontAwesome.vue'
 
 @Component({ components: { FontAwesome } })
 export default class CellName extends Vue {
-  @Prop({ default: null, type: String }) readonly to!: string
+  @Prop({ default: null, type: [String, Object] }) readonly to!: string
   @Prop({ type: String, required: true }) readonly id!: string
   @Prop({ type: String, required: true }) readonly name!: string
   @Prop({ type: String, default: false }) readonly verified!: boolean
