@@ -9,7 +9,7 @@
         <div class="flex-fill">
           <slot />
         </div>
-        <TheFooter />
+        <TheFooter :version="version" />
       </div>
 
     </div>
@@ -30,6 +30,7 @@ export default class LayoutMain extends Vue {
   @Prop({ type: [Array], required: true }) readonly tree!: ISidebarMenu[]
   @Prop({ type: [String, Object], default: null }) readonly to!: string
   @Prop({ type: [String], default: null }) readonly variant!: NavbarVariants
+  @Prop({ type: [String], default: null }) readonly version!: string
   @Prop({ type: [Boolean], default: false }) readonly dark!: boolean
 
   get bind () {

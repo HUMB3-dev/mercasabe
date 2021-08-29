@@ -20,10 +20,6 @@
       </BNavItem>
     </ul>
     <BNavbarNav class="ms-auto align-items-center">
-      <BNavItem link-classes="fs-1">
-        <FontAwesome name="shopping-cart" />
-      </BNavItem>
-
       <slot />
     </BNavbarNav>
   </BNavbar>

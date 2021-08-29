@@ -17,6 +17,7 @@ export default {
   args: {
     title: 'test',
     variant: null,
+    version: 'v1.6.1',
     to: '/main/page',
     src: 'https://bootstrap-vue.org/_nuxt/icons/icon_512x512.67aef2.png',
     tree: [{
@@ -43,7 +44,18 @@ export default {
 const Template = (args: Layout) => ({
   props: Object.keys(args),
   components: { Layout },
-  template: '<Layout v-bind="$props" />'
+  template: `
+    <Layout v-bind="$props">
+    <BCard>
+      <BRow align-v="center" align-h="center">
+        <BCol lg="auto" class="ps-lg-4 my-5">
+          <h3 class="text-primary">Edit me!</h3>
+          <p class="lead">Create Something Beautiful.</p>
+          <BBtn variant="falcon-primary">Getting started</BBtn>
+        </BCol>
+      </BRow>
+    </BCard>
+    </Layout>`
 })
 
 export const ThemeLight = Template.bind({})
