@@ -24,7 +24,7 @@
       </BRow>
     </BCardHeader>
     <BCardBody class="p-0">
-      <BTable v-bind="{ busy, items, fields: headers}" hover responsive="sm" table-class="mb-0" tbody-tr-class="align-middle" thead-class="sticky-top bg-200">
+      <BTable v-bind="{ busy, items, fields: headers}" hover striped responsive="sm" table-class="mb-0" tbody-tr-class="align-middle" thead-class="sticky-top bg-200">
         <template #table-busy>
           <div class="text-center py-5">
             <BSpinner variant="primary" />
@@ -50,8 +50,10 @@
         <BCol align-self="center">
           <div class="small">
             <span>
-              1 to 10 items of
-              {{ totalRows }}
+              1 to
+              {{ perPage }}
+              items of
+              {{ items.length }}
             </span>
           </div>
         </BCol>
