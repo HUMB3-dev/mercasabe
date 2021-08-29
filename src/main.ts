@@ -1,6 +1,6 @@
 import { BootstrapVue } from 'bootstrap-vue'
 import { VueConstructor } from 'vue'
-import FontAwesome from './components/shared/icon/FontAwesome/FontAwesome.vue'
+import FontAwesome from './components/shared/Icon/FontAwesome/FontAwesome.vue'
 
 namespace MerkalyComponents {
   export const install = (vue: VueConstructor) => {

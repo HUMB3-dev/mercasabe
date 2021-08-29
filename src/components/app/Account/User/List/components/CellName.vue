@@ -16,7 +16,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import Avatar from '../../../../../shared/Avatar/Avatar.vue'
-import FontAwesome from '../../../../../shared/icon/FontAwesome/FontAwesome.vue'
+import FontAwesome from '../../../../../shared/Icon/FontAwesome/FontAwesome.vue'
 
 @Component({ components: { Avatar, FontAwesome } })
 export default class CellName extends Vue {

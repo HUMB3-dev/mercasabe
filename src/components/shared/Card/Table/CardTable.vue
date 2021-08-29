@@ -67,7 +67,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import FontAwesome from '../../icon/FontAwesome/FontAwesome.vue'
+import FontAwesome from '../../Icon/FontAwesome/FontAwesome.vue'
 
 @Component({ components: { FontAwesome } })
 export default class CardTable extends Vue {

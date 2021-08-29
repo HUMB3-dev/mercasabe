@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import { Component, Emit, Prop, Vue } from 'vue-property-decorator'
-import FontAwesome from '../../shared/icon/FontAwesome/FontAwesome.vue'
+import FontAwesome from '../../shared/Icon/FontAwesome/FontAwesome.vue'
 import SidebarMenu, { ISidebarMenu } from './SidebarMenu/SidebarMenu.vue'
 
 export type NavbarVariants = 'plain' | 'vibrant' | null

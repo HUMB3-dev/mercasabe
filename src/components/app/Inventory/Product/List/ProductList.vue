@@ -39,7 +39,7 @@
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import CardTable from '../../../../shared/Card/Table/CardTable.vue'
-import FontAwesome from '../../../../shared/icon/FontAwesome/FontAwesome.vue'
+import FontAwesome from '../../../../shared/Icon/FontAwesome/FontAwesome.vue'
 import CellName from './components/CellName.vue'
 import CellPrice from './components/CellPrice.vue'
 import CellStatus from './components/CellStatus.vue'

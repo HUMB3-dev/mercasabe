@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import { Component, Prop, VModel, Vue } from 'vue-property-decorator'
-import FontAwesome from '../../shared/icon/FontAwesome/FontAwesome.vue'
+import FontAwesome from '../../shared/Icon/FontAwesome/FontAwesome.vue'
 import UserDropdown from './UserDropdown/UserDropdown.vue'
 
 @Component({ components: { UserDropdown, FontAwesome } })
