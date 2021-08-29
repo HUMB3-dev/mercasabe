@@ -1,5 +1,5 @@
 <template>
-  <CardTable :busy="busy" :fields="fields" :items="items" :per-page="perPage" :title="title" :total-rows="totalRows">
+  <CardTable v-bind="{ busy, fields, items, perPage, title, totalRows }">
     <template #field(name)="{ item: brand }">
       <BListGroupItem :to="to(brand.id)" class="bg-transparent border-0 p-0">
         <div class="d-flex align-items-center position-relative">

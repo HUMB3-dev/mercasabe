@@ -17,11 +17,6 @@ export default {
     items: getProducts(15),
     title: 'List of products',
     to: (id: string) => `/test/${id}`
-  },
-  parameters: {
-    backgrounds: {
-      default: 'light'
-    }
   }
 } as Meta<ProductList>
 

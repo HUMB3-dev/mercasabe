@@ -15,11 +15,6 @@ export default {
     items: getBrands(15),
     title: 'List of brands',
     to: (id: string) => `/test/${id}`
-  },
-  parameters: {
-    backgrounds: {
-      default: 'light'
-    }
   }
 }
 

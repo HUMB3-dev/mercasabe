@@ -6,7 +6,7 @@ export const getCategories = (count = 10) => new Array(count).fill(null).map(get
 
 export const getCategory = () => {
   const category = new CategoryReference()
-  category.id = faker.finance.bic()
+  category.id = faker.datatype.uuid()
   category.name = faker.commerce.department()
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

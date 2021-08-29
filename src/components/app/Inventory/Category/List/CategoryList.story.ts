@@ -15,11 +15,6 @@ export default {
     items: getCategories(15),
     title: 'List of categories',
     to: (id: string) => `/test/${id}`
-  },
-  parameters: {
-    backgrounds: {
-      default: 'light'
-    }
   }
 }
 

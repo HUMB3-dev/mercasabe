@@ -6,7 +6,7 @@ export const getProducts = (count = 10) => new Array(count).fill(null).map(getPr
 
 export const getProduct = () => {
   const product = new ProductReference()
-  product.id = faker.finance.bic()
+  product.id = faker.datatype.uuid()
   product.name = faker.vehicle.vehicle()
   product.description = faker.commerce.productDescription()
   product.price = Number(faker.commerce.price())

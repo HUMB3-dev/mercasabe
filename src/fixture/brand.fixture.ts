@@ -6,7 +6,7 @@ export const getBrands = (count = 10) => new Array(count).fill(null).map(getBran
 
 export const getBrand = () => {
   const brand = new BrandReference()
-  brand.id = faker.finance.bic()
+  brand.id = faker.datatype.uuid()
   brand.name = faker.vehicle.manufacturer()
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
