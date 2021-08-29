@@ -46,9 +46,19 @@
     </BCardBody>
 
     <BCardFooter v-show="!busy">
-      <div class="d-flex align-items-center justify-content-center">
-        <BPagination :per-page="perPage" :total-rows="totalRows" class="mb-0" hide-goto-end-buttons size="sm" />
-      </div>
+      <BRow>
+        <BCol align-self="center">
+          <div class="small">
+            <span>
+              1 to 10 items of
+              {{ totalRows }}
+            </span>
+          </div>
+        </BCol>
+        <BCol cols="auto">
+          <BPagination :per-page="perPage" :total-rows="totalRows" class="mb-0" hide-goto-end-buttons size="sm" />
+        </BCol>
+      </BRow>
     </BCardFooter>
   </BCard>
 </template>
