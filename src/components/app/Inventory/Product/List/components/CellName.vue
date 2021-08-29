@@ -1,7 +1,7 @@
 <template>
   <BListGroupItem :to="to" class="bg-transparent border-0 p-0">
     <div class="d-flex align-items-center position-relative">
-      <BImgLazy :height="60" :src="src" :width="60" blank-src="" class="shadow-sm fit-cover p-1" rounded="1" />
+      <Avatar :src="src" icon="box" />
       <div class="flex-1 ms-3">
         <span class="mb-1 fw-semi-bold text-nowrap h6 text-900 stretched-link" v-text="name" />
         <p class="fw-semi-bold mb-0 text-500" v-text="caption" />
@@ -12,8 +12,10 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-
-@Component
+import Avatar from '../../../../../shared/Avatar/Avatar.vue'
+@Component({
+  components: { Avatar }
+})
 export default class CellName extends Vue {
   @Prop({ default: null, type: [String, Object] }) readonly to!: string
   @Prop({ type: String, required: true }) readonly id!: string

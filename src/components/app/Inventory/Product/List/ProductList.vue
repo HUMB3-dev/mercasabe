@@ -1,7 +1,7 @@
 <template>
   <CardTable v-bind="{ busy, fields, items, perPage, title, totalRows }">
     <template #field(name)="{ item: {id , name} }">
-      <CellName :id="id" :caption="id" :name="name" :src="placeholderImage" :to="to(id)" />
+      <CellName :id="id" :caption="id" :name="name" :to="to(id)" />
     </template>
 
     <template #field(price)="{ item: { price } }">
@@ -60,10 +60,6 @@ export default class ProductList extends Vue {
     { key: 'category', sortable: true },
     { key: 'brand', sortable: true }
   ]
-
-  get placeholderImage () {
-    return require('../../../../../assets/images/product-placeholder.webp')
-  }
 
 }
 </script>

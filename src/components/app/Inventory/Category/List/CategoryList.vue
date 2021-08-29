@@ -3,7 +3,7 @@
     <template #field(name)="{ item: category }">
       <BListGroupItem :to="to(category.id)" class="bg-transparent border-0 p-0">
         <div class="d-flex align-items-center position-relative">
-          <BImgLazy :height="60" :src="src" :width="60" blank-src="" class="shadow-sm fit-cover p-1" rounded="1" />
+          <Avatar icon="layer-group" />
           <div class="ms-3">
             <div class="mb-1 fw-semi-bold text-nowrap text-900 px-2" v-text="category.name" />
             <BBadge class="fw-semi-bold mb-0 text-500" variant="soft-light" v-text="category.status" />
@@ -29,9 +29,10 @@
 <script lang="ts">
 import CategoryReference from '@merkaly/sdk-js/src/inventory/category/category.reference'
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import Avatar from '../../../../shared/Avatar/Avatar.vue'
 import CardTable from '../../../../shared/Card/Table/CardTable.vue'
 
-@Component({ components: { CardTable } })
+@Component({ components: { Avatar, CardTable } })
 export default class CategoryList extends Vue {
   @Prop({ required: true, type: Array }) readonly items!: CategoryReference[]
   @Prop({ default: false, type: Boolean }) readonly busy!: boolean
@@ -44,9 +45,5 @@ export default class CategoryList extends Vue {
     { key: 'name', sortable: true }
   ]
 
-  get src () {
-    return require('../../../../../assets/images/product-placeholder.webp')
-
-  }
 }
 </script>

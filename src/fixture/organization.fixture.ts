@@ -9,7 +9,7 @@ export const getOrganization = () => {
   organization.name = faker.internet.domainName()
   organization.display_name = `${faker.company.companyName()} ${faker.company.companySuffix()}`
   organization.branding = {
-    logo_url: `${faker.image.business()}?${faker.datatype.uuid()}`,
+    logo_url: faker.datatype.boolean() ? `${faker.image.business()}?${faker.datatype.uuid()}` : '',
     colors: {
       page_background: faker.internet.color(),
       primary: faker.internet.color()

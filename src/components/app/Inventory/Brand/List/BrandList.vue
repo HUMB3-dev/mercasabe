@@ -3,7 +3,7 @@
     <template #field(name)="{ item: brand }">
       <BListGroupItem :to="to(brand.id)" class="bg-transparent border-0 p-0">
         <div class="d-flex align-items-center position-relative">
-          <BImgLazy :height="60" :src="src" :width="60" blank-src="" class="shadow-sm fit-cover p-1" rounded="1" />
+          <Avatar icon="award" />
           <div class="ms-3">
             <div class="mb-1 fw-semi-bold text-nowrap text-900 px-2" v-text="brand.name" />
             <BBadge class="fw-semi-bold mb-0 text-500" variant="soft-light" v-text="brand.status" />
@@ -29,9 +29,10 @@
 <script lang="ts">
 import BrandReference from '@merkaly/sdk-js/src/inventory/brand/brand.reference'
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import Avatar from '../../../../shared/Avatar/Avatar.vue'
 import CardTable from '../../../../shared/Card/Table/CardTable.vue'
 
-@Component({ components: { CardTable } })
+@Component({ components: { Avatar, CardTable } })
 export default class BrandList extends Vue {
   @Prop({ required: true, type: Array }) readonly items!: BrandReference[]
   @Prop({ default: false, type: Boolean }) readonly busy!: boolean
@@ -44,9 +45,5 @@ export default class BrandList extends Vue {
     { key: 'name', sortable: true }
   ]
 
-  get src () {
-    return require('../../../../../assets/images/product-placeholder.webp')
-
-  }
 }
 </script>

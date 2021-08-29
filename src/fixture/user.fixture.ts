@@ -16,7 +16,7 @@ export const getUser = () => {
   user.last_login = faker.date.past().toISOString()
   user.logins_count = faker.datatype.number(999)
   user.nickname = faker.internet.userName(user.given_name, user.family_name)
-  user.picture = faker.image.avatar()
+  user.picture = faker.datatype.boolean() ? faker.image.avatar() : ''
   user.updated_at = faker.date.past().toISOString()
   user.user_id = faker.datatype.uuid()
 

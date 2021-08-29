@@ -1,7 +1,7 @@
 <template>
   <BListGroupItem :to="to" class="bg-transparent border-0 p-0">
     <div class="d-flex align-items-center position-relative">
-      <BImgLazy class="p-0" :height="60" :src="src" :width="60" thumbnail fluid />
+      <Avatar :src="src" icon="user" />
       <div class="flex-1 ms-3">
         <div>
           <span class="mb-1 fw-semi-bold text-nowrap h6 text-900 stretched-link" v-text="name" />
@@ -15,9 +15,10 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import Avatar from '../../../../../shared/Avatar/Avatar.vue'
 import FontAwesome from '../../../../../shared/icon/FontAwesome/FontAwesome.vue'
 
-@Component({ components: { FontAwesome } })
+@Component({ components: { Avatar, FontAwesome } })
 export default class CellName extends Vue {
   @Prop({ default: null, type: [String, Object] }) readonly to!: string
   @Prop({ type: String, required: true }) readonly id!: string
@@ -26,9 +27,6 @@ export default class CellName extends Vue {
   @Prop({ type: String, required: true }) readonly email!: string
   @Prop({ type: String, required: false }) readonly src!: string
 
-  get picture () {
-    return this.src || require('../../../../../../assets/images/product-placeholder.webp')
-  }
 }
 </script>
 
