@@ -27,7 +27,7 @@ import { Component, Emit, Prop, Ref, VModel, Vue } from 'vue-property-decorator'
 export default class CardHashtags extends Vue {
   @VModel({ type: Object }) readonly model!: string[]
   @Prop({ type: Array }) readonly value!: string[]
-  @Ref('form') form!: HTMLFormElement
+  @Ref('form') readonly form!: HTMLFormElement
 
   protected hashtag = ''
 

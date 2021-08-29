@@ -1,7 +1,7 @@
 <template>
   <BRow>
     <BCol cols="12" lg="8">
-      <CardInformation v-model="information" class="mb-3" />
+      <CardInformation v-model="product.information" class="mb-3" />
 
       <CardMedia class="mb-3" />
 
@@ -9,9 +9,9 @@
     </BCol>
     <BCol cols="12" lg="4">
       <div :class="{'z-index--1': loading }" class="sticky-top">
-        <CardStatus v-model="status" class="mb-3" />
+        <CardStatus v-model="product.status" class="mb-3" />
 
-        <CardPricing v-model="pricing" class="mb-3" />
+        <CardPricing v-model="product.pricing" class="mb-3" />
 
         <CardRelations class="mb-3" />
 
@@ -23,7 +23,7 @@
 
 <script lang="ts">
 import ProductReference from '@merkaly/sdk-js/src/inventory/product/product.reference'
-import { Component, Prop, VModel, Vue } from 'vue-property-decorator'
+import { Component, Prop, VModel, Vue, Watch } from 'vue-property-decorator'
 import CardCatalog from './components/CardCatalog.vue'
 import CardHashtags from './components/CardHashtags.vue'
 import CardInformation, { ProductInformation } from './components/CardInformation.vue'
@@ -39,26 +39,42 @@ export default class ProductForm extends Vue {
   @VModel({ type: Object }) readonly model!: ProductReference
   @Prop({ type: Boolean, default: false }) readonly loading!: boolean
 
-  protected get information(): ProductInformation {
-    return {
+  protected product = {
+    information: {} as ProductInformation,
+    pricing: {} as ProductPricing,
+    status: {} as ProductStatus,
+    hastags: {} as string[]
+  }
+
+  protected mounted () {
+    this.product.information = {
       name: this.model.name,
       description: this.model.description
     }
-  }
 
-  protected get pricing(): ProductPricing {
-    return {
+    this.product.pricing = {
       sale: this.model.price,
       purchase: Number((this.model.price * 0.85).toFixed(2)),
       unit: this.model.unit
     }
-  }
 
-  protected get status (): ProductStatus {
-    return {
+    this.product.status = {
       state: this.model.status,
       availableFrom: new Date().toISOString()
     }
+
+    this.product.hastags = this.model.hashtags
+  }
+
+  @Watch('product', { deep: true }) onProductChange () {
+    this.model.name = this.product.information.name
+    this.model.description = this.product.information.description
+
+    this.model.status = this.product.status.state
+
+    this.model.price = this.product.pricing.sale
+
+    this.model.hashtags = this.product.hastags
   }
 }
 </script>
