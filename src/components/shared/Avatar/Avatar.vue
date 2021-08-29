@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import FontAwesome from '../Icon/FontAwesome/FontAwesome'
+import FontAwesome from '../Icon/FontAwesome/FontAwesome.vue'
 
 @Component({ components: { FontAwesome } })
 export default class Avatar extends Vue {

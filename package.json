@@ -1,6 +1,6 @@
 {
   "name": "@merkaly/components",
-  "version": "0.0.3-18",
+  "version": "0.0.3-19",
   "main": "./src/main.ts",
   "files": [
     "src/assets/*",
