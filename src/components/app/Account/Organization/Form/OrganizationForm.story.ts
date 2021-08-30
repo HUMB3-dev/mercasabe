@@ -1,3 +1,4 @@
+import OrganizationReference from '@merkaly/sdk-js/src/account/organization/organization.reference'
 import { getOrganization } from '../../../../../fixture/organization.fixture'
 import OrganizationForm from './OrganizationForm.vue'
 
@@ -6,7 +7,7 @@ export default {
   component: OrganizationForm,
   args: {
     loading: false,
-    value: getOrganization()
+    value: new OrganizationReference()
   }
 }
 
@@ -16,4 +17,9 @@ const Template = (args: OrganizationForm) => ({
   template: '<OrganizationForm v-bind="$props" />'
 })
 
-export const Default = Template.bind({})
+export const New = Template.bind({})
+
+export const Edit = Template.bind({})
+Edit.args = {
+  value: getOrganization()
+}
