@@ -67,12 +67,12 @@ export default class ProductForm extends Vue {
   }
 
   @Watch('product', { deep: true }) onProductChange () {
-    this.model.name = this.product.information.name
-    this.model.description = this.product.information.description
+    this.model.name = this.product.information.name as  any
+    this.model.description = this.product.information.description as  any
 
     this.model.status = this.product.status.state
 
-    this.model.price = this.product.pricing.sale
+    this.model.price = this.product.pricing.sale as  any
 
     this.model.hashtags = this.product.hastags
   }

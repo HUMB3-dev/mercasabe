@@ -30,5 +30,3 @@ export default class SidebarMenu extends Vue implements ISidebarMenu {
   @Prop({ type: Array, required: true }) readonly items!: ISidebarMenuItem[]
 }
 </script>
-
-<style scoped />

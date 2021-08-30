@@ -35,7 +35,3 @@ export default class CellStatus extends Vue {
 
 }
 </script>
-
-<style scoped>
-
-</style>

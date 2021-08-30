@@ -27,5 +27,3 @@ export default class TheFooter extends Vue {
 
 }
 </script>
-
-<style scoped />

@@ -25,7 +25,3 @@ export default class CellName extends Vue {
 
 }
 </script>
-
-<style scoped>
-
-</style>

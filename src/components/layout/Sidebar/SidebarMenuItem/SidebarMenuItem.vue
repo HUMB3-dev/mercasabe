@@ -56,7 +56,3 @@ export default class SidebarMenuItem extends Vue implements ISidebarMenuItem {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

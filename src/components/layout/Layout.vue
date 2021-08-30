@@ -48,5 +48,3 @@ export default class LayoutMain extends Vue {
   }
 }
 </script>
-
-<style scoped />

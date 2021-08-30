@@ -79,7 +79,3 @@ export default class TheSidebar extends Vue {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

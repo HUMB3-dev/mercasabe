@@ -39,5 +39,3 @@ export default class TheHeader extends Vue {
 
 }
 </script>
-
-<style lang="scss" scoped />

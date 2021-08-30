@@ -13,7 +13,3 @@ export default class CellPrice extends Vue {
   @VModel({ type: Number }) readonly price!: number
 }
 </script>
-
-<style scoped>
-
-</style>
