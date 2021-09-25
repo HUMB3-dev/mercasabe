@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+$bordercolor:#cecdcd;
+$redcolor:#da4a54;
+$orangecolor:#f28c00;
+$yellowcolor:#ffd33c;
+$gray:#f6f7f9;
+
+header {
+    
+
+
+    .header-section {
+       
+
+        .container-logo {
+
+            img {
+                width: 300px;
+            }
+        }
+
+        .icons {
+            
+        }
+
+        .search {
+            
+
+            :first-child {
+                
+
+               
+
+               
+            }
+
+            select {
+                
+            }
+
+            a {
+               
+
+                
+            }
+
+        }
+
+
+
+    }
+
+    
+
+
+
+}
+
+.container-links {
+    
+
+    div {
+        
+        
+
+        a {
+            
+        }
+
+    }
+
+    .iconmenu {
+        
+    }
+}
+
+.slider {
+
+    
+}
+
+.offerscontainer {
+    
+
+    .offerday_desciption {
+        
+       
+
+        p {
+            
+            
+            font-family: 'Bebas Neue', cursive;
+
+        }
+
+    }
+
+    .offers {
+        
+
+        div {
+            
+
+
+
+        }
+
+        .offer_1 {
+            
+
+
+            div {
+                
+
+                h3 {
+                    
+                }
+            }
+
+        }
+    }
+
+}
+
+.product_container {
+   
+
+    .product-item {
+        
+
+
+        .cat_product {
+            
+
+            h1 {
+                
+            }
+
+        }
+
+        .product {
+            
+
+            div {
+
+                
+
+                img {
+                    
+                }
+
+                .product_p {
+                    
+
+                    p {
+                        
+                    }
+                }
+
+                .product_h4 {
+                    
+
+
+                    h4 {
+                        
+                    }
+
+                }
+            }
+
+        }
+    }
+}
+
+.promociones {
+  
+
+
+
+    div {
+        
+
+    }
+
+    .offer_1 {
+        
+
+        .offer-img {
+           
+
+            .buy {
+                
+            }
+
+            img {
+                position: relative;
+                top: -25px;
+            }
+        }
+
+
+    }
+
+    .offer_2 {
+        background-color: $orangecolor;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        div {
+            color: rgb(255, 255, 255);
+            width: 80%;
+
+            h2 {
+                font-family: 'Bebas Neue', cursive;
+                line-height: 36px;
+                font-size: 40px;
+            }
+
+            h3 {
+                font-family: 'Bebas Neue', cursive;
+                line-height: 2px;
+                font-size: 30px;
+            }
+
+        }
+    }
+
+    .offer_3 {
+        border-right: 1px solid $bordercolor;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+
+        .offer-img {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .buy {
+                position: absolute;
+                width: 110px;
+                height: 180px;
+                background-color: $yellowcolor;
+                right: 18px;
+                bottom: 3px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .buy_price {
+                    width: 84%;
+                    height: 45%;
+                    background-color: white;
+                    margin-top: 7%;
+                }
+
+            }
+
+            img {
+                position: relative;
+                top: -25px;
+            }
+        }
+    }
+
+    .offer_4 {
+        height: 90%;
+        display: flex;
+        justify-content: center;
+
+        .offer-img {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .buy {
+                position: absolute;
+                width: 110px;
+                height: 200px;
+                background-color: $yellowcolor;
+                right: 18px;
+                bottom: 3px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .buy_price {
+                    width: 100%;
+                    height: 65%;
+                    background-color: $redcolor;
+
+                }
+
+            }
+
+            img {
+                position: relative;
+                top: -25px;
+            }
+        }
+    }
+
+}
+
+.product_recent-container {
+    
+
+
+    .product_recent-description {
+        
+    }
+
+    .product_recent {
+        
+
+
+
+        .product_recent-rll {
+            
+
+            div {
+
+                img {
+                    object-fit: none;
+                }
+            }
+        }
+
+        .product_recent-priced {
+            
+            h2 {
+                
+            }
+        }
+    }
+
+}
+
+.subscribe-container {
+    
+    
+
+    
+
+    .email_container {
+        
+        div {
+            
+
+
+        }
+
+        .email-description {
+            
+
+            h1 {
+                
+                
+                font-family: 'Bebas Neue', cursive;
+                
+            }
+
+        }
+
+        .email-input {
+            
+           
+
+            .input_email::placeholder {
+                font-size: 14.5px;
+
+
+            }
+
+            .input_email {
+               
+
+
+            }
+
+            .input_confirm {
+                
+            }
+
+
+
+
+
+        }
+
+        .email-switch {
+        
+
+            .email-switch_switch {
+               
+                //** no borrar *//
+                .switch {
+                    position: relative;
+                    display: inline-block;
+                    width: 50px;
+                    height: 16px;
+                    top: 5px;
+                }
+
+                
+                .switch input {
+                    display: none;
+                }
+
+                
+                .slider {
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: gray;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                }
+
+                
+                .slider:before {
+                    position: absolute;
+                    content: "";
+                    height: 22px;
+                    width: 22px;
+                    left: 0px;
+                    bottom: -3px;
+                    background-color: white;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                    border: 1px solid gray;
+                }
+
+                
+                input:checked+.slider {
+                    background-color: $redcolor;
+                }
+
+                
+                input:checked+.slider:before {
+                    -webkit-transform: translateX(29px);
+                    -ms-transform: translateX(29px);
+                    transform: translateX(29px);
+                }
+
+                
+                .slider.round {
+                    border-radius: 34px;
+                }
+
+                .slider.round:before {
+                    border-radius: 50%;
+                }
+
+            }
+
+            .email-switch_text {
+                p {
+                    
+                    
+                }
+            }
+
+
+
+        }
+
+    }
+
+    .skill {
+        
+
+        div {
+
+          
+
+            div {
+               
+
+                p {
+                   
+                }
+            }
+        }
+    }
+}
+
+.join {
+    
+    
+
+    .join_text {
+        
+
+        h1 {
+            
+            font-family: 'Bebas Neue', cursive;
+            
+
+        }
+
+    }
+
+    .join_a {
+        
+
+        a {
+            
+            
+            
+            
+            
+            font-family: 'Bebas Neue', cursive;
+            
+
+
+
+        }
+    }
+}
+
+.footer {
+    
+
+    .footer-info {
+        
+
+        div {
+            
+            
+           
+
+            .contact-whatsapp {
+                
+            }
+
+            .number {
+               
+            }
+
+            .social {
+                
+
+                .download-app {
+                   
+                }
+            }
+
+
+            h5 {
+                
+                
+
+                font-family: 'Bebas Neue', cursive;
+
+            }
+
+            a {
+                
+                
+
+               
+            }
+        }
+    }
+
+}
+
+.footer-end {
+
+    
+
+    div {
+        p {
+
+            
+            
+            
+        }
+    }
+}
+
+
+
+//botones carousel//
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 20px !important;
+    height: 20px !important;
+    padding: 0;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255) !important;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+    border-radius: 50%;
+}
