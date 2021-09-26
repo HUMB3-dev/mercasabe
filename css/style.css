@@ -1,131 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-header .header-section .container-logo img {
-  width: 300px;
-}
-
-.offerscontainer .offerday_desciption p {
-  font-family: 'Bebas Neue', cursive;
-}
-
-.promociones .offer_1 .offer-img img {
-  position: relative;
-  top: -25px;
-}
-
-.promociones .offer_2 {
-  background-color: #f28c00;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.promociones .offer_2 div {
-  color: white;
-  width: 80%;
-}
-
-.promociones .offer_2 div h2 {
-  font-family: 'Bebas Neue', cursive;
-  line-height: 36px;
-  font-size: 40px;
-}
-
-.promociones .offer_2 div h3 {
-  font-family: 'Bebas Neue', cursive;
-  line-height: 2px;
-  font-size: 30px;
-}
-
-.promociones .offer_3 {
-  border-right: 1px solid #cecdcd;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-}
-
-.promociones .offer_3 .offer-img {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.promociones .offer_3 .offer-img .buy {
-  position: absolute;
-  width: 110px;
-  height: 180px;
-  background-color: #ffd33c;
-  right: 18px;
-  bottom: 3px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.promociones .offer_3 .offer-img .buy .buy_price {
-  width: 84%;
-  height: 45%;
-  background-color: white;
-  margin-top: 7%;
-}
-
-.promociones .offer_3 .offer-img img {
-  position: relative;
-  top: -25px;
-}
-
-.promociones .offer_4 {
-  height: 90%;
-  display: flex;
-  justify-content: center;
-}
-
-.promociones .offer_4 .offer-img {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.promociones .offer_4 .offer-img .buy {
-  position: absolute;
-  width: 110px;
-  height: 200px;
-  background-color: #ffd33c;
-  right: 18px;
-  bottom: 3px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.promociones .offer_4 .offer-img .buy .buy_price {
-  width: 100%;
-  height: 65%;
-  background-color: #da4a54;
-}
-
-.promociones .offer_4 .offer-img img {
-  position: relative;
-  top: -25px;
-}
-
-.product_recent-container .product_recent .product_recent-rll div img {
-  object-fit: none;
-}
-
-.subscribe-container .email_container .email-description h1 {
-  font-family: 'Bebas Neue', cursive;
-}
-
-.subscribe-container .email_container .email-input .input_email::placeholder {
-  font-size: 14.5px;
-}
-
-.subscribe-container .email_container .email-switch .email-switch_switch .switch {
+.email-switch .email-switch_switch .switch {
   position: relative;
   display: inline-block;
   width: 50px;
@@ -133,11 +6,11 @@ header .header-section .container-logo img {
   top: 5px;
 }
 
-.subscribe-container .email_container .email-switch .email-switch_switch .switch input {
+.email-switch .email-switch_switch .switch input {
   display: none;
 }
 
-.subscribe-container .email_container .email-switch .email-switch_switch .slider {
+.email-switch .email-switch_switch .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -148,7 +21,7 @@ header .header-section .container-logo img {
   transition: .4s;
 }
 
-.subscribe-container .email_container .email-switch .email-switch_switch .slider:before {
+.email-switch .email-switch_switch .slider:before {
   position: absolute;
   content: "";
   height: 22px;
@@ -160,32 +33,20 @@ header .header-section .container-logo img {
   border: 1px solid gray;
 }
 
-.subscribe-container .email_container .email-switch .email-switch_switch input:checked + .slider {
+.email-switch .email-switch_switch input:checked + .slider {
   background-color: #da4a54;
 }
 
-.subscribe-container .email_container .email-switch .email-switch_switch input:checked + .slider:before {
+.email-switch .email-switch_switch input:checked + .slider:before {
   transform: translateX(29px);
 }
 
-.subscribe-container .email_container .email-switch .email-switch_switch .slider.round {
+.email-switch .email-switch_switch .slider.round {
   border-radius: 34px;
 }
 
-.subscribe-container .email_container .email-switch .email-switch_switch .slider.round:before {
+.email-switch .email-switch_switch .slider.round:before {
   border-radius: 50%;
-}
-
-.join .join_text h1 {
-  font-family: 'Bebas Neue', cursive;
-}
-
-.join .join_a a {
-  font-family: 'Bebas Neue', cursive;
-}
-
-.footer .footer-info div h5 {
-  font-family: 'Bebas Neue', cursive;
 }
 
 .carousel-indicators [data-bs-target] {

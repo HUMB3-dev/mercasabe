@@ -9,59 +9,115 @@
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="public/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
 
 
 </head>
 
 <body>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <header class="w-full h-58 bg-white mx-auto my-0">
-        <div class="h-6 w-auto flex flex-row justify-center">
+    <header class="w-full h-44 bg-white mx-auto my-0">
+        <div class="h-7 w-auto flex flex-row justify-center relative">
             <div class="texto">
-                <a href="#" class="inline-block ">ENVIO GRATIS</a>
-                <p class="inline-block ">en todos los pedidos de RD$ 1,000 o mas (solo pedidos en Santo Domingo)+ Detalles</p>
+                <a href="#" class="inline-block text-redp font-bold font-robotoc ">ENVIO GRATIS</a>
+                <p class="inline-block font-bold text-gray-400 font-robotoc">en todos los pedidos de <span class="text-redp">RD$ 1,000</span> o mas (solo pedidos en Santo Domingo) <span><a href="" class="hover:text-redp"> + Detalles</a></span></p>
+                
             </div>
-
+            <div class="flex absolute right-0 mx-11 my-2 font-robotoc "><img  class="objet-none mx-2" src="img/idioma.png" alt=""><p>EN</p></div>
         </div>
         <div class="flex items-center w-11/12 justify-between mx-auto my-0">
+            <!--logo-->
             <div class="container-logo">
                 <img src="img/logo.png" alt="logo">
             </div>
-            <div class="search flex w-2/6 my-0 mx-12">
-                <input class="w-1/2 rounded-l-xl bg-gray-300 border-none" type="text" placeholder="Buscar...">
-                <select class="bg-gray-300 mx-px w-1/4 border-none" name="" id="" value="Por departamento">
-                    <option value="Option 1">Option 1</option>
-                    <option value="Option 2">Option 2</option>
-                    <option value="Option 3">Option 3</option>
-                    <option value="Option 4">Option 4</option>
-                    <option value="Option 5">Option 5</option>
+            
+            <!--barra de busqueda-->
+            <div class="search flex h-10 w-2/6 my-0 mx-12 font-robotoc">
+                <input class="w-1/2 rounded-l-full py-3 px-6 bg-gray-200 border-none focus:outline-none" type="text" placeholder="Buscar...">
+                <select  class="bg-gray-200 mx-px w-1/4 border-none text-gray-400 text-sm" name="" id="" value="Por departamento">
+                    <option class="bg-white" >Por deparatamento</option>
+                    <option class="bg-white" value="Option 2">Option 2</option>
+                    <option class="bg-white" value="Option 3">Option 3</option>
+                    <option class="bg-white" value="Option 4">Option 4</option>
+                    <option class="bg-white" value="Option 5">Option 5</option>
                 </select>
-                <a  class="w-10 bg-gray-300 rounded-r-xl flex border-none justify-center relative " href=""><img class="scale-150 object-none my-0 mx-auto" src="icon/magnifier_icon-icons.com_48267.ico" alt=""></a>
-            </div>
-            <div class="icons flex">
-                <div>
-                    <img src="img/usser.png" alt="" srcset="">
+                <a  class="w-11 bg-gray-200 rounded-r-full scale-50  flex border-none justify-center relative " href="">
+                    
+                    <img class="w-6 stroke-current  " src="img/lupa.svg" alt="">
+                </a>
+            </div> 
+            
+                <!--barra de usuario-->
+            <div class="icons flex  h-auto justify-around font-robotoc font-semibold">
+                <div class="flex w-30 mx-3 ">
+                    <img class="object-none" src="img/usser.png" alt="" srcset="">
+                   <div class="w-20"><a class=" text-sm " href="">Ingresar <br> Mi Cuenta </a></div> 
+                   
                 </div>
-                <div>
-                    <img src="img/pedidos.png" alt="" srcset="">
+
+                <div class="flex w-30 mx-3 ">
+                    <img class="object-none" src="img/pedidos.png" alt="" srcset="">
+                   <div class="w-14"><p class=" text-sm ">Mis <br> Pedidos </p></div> 
+                    <div class="flex items-end">
+
+                        <nav class="navbar navbar-expand-lg mx-1">
+                            
+                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                              </button>
+                              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                                <ul class="navbar-nav">
+                                  <li class="nav-item dropdown">
+                                    
+                                        <a class="self-end my-1" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="img/arow.png" alt=""></a>
+                                    <ul class="dropdown-menu bg-white" aria-labelledby="navbarDarkDropdownMenuLink">
+                                      <li><a class="dropdown-item" href="#">Action</a></li>
+                                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </nav>
+                        
                 </div>
-                <div>
-                    <img src="img/carrito.png" alt="" srcset="">
+
+                <div class="flex w-30 mx-3 ">
+                    <img class="object-none" src="img/carrito.png" alt="" srcset="">
+                   <div class="w-20"><p class=" text-sm ">Mi Cesta <br> <span class="text-redp">0</span> articulos</p></div> 
+                    <div class="flex items-end">
+
+                       
+                                        <a class="self-end my-1" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="img/arow.png" alt=""></a>
+                                    <ul class="dropdown-menu bg-white" aria-labelledby="navbarDarkDropdownMenuLink">
+                                      <li><a class="dropdown-item" href="#">Action</a></li>
+                                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                
+                              </div>
+                            </div>
+                          </nav>
+                        
                 </div>
             </div>
 
         </div>
-
-        <div class="container-links h-12 border-gray-400 border-solid ring-1 mt-2.5 flex items-center">
+        <!--nav-->
+        <nav class="container-links h-12 border-gray-400 border-solid ring-1 mt-2.5 flex items-center font-roboto">
             <div class="iconmenu ml-16 "><a href=""><img src="img/iconmenu.png" alt="" srcset=""></a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid  "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center" href="">Departamentos</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid  "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center" href="">Lanzamientos</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid  "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center" href="">Promociones y Ofertas</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid  "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center" href="">Vender</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid  "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center" href="">Negocios</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid  "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center" href="">Centro de Ayuda</a></div>
-        </div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center  hover:text-redp" href="">Departamentos</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp" href="">Lanzamientos</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp" href="">Promociones y Ofertas</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp" href="">Vender</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp" href="">Negocios</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp" href="">Centro de Ayuda</a></div>
+        </nav>
     </header>
+    <!--slide-->
     <div class="slider w-full">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -86,163 +142,286 @@
 
         </div>
     </div>
-    <div class="offerscontainer h-80 w-4/5  border-8 border-solid border-blue-300 margin my-10 mx-auto flex "  >
 
-        <div class="offerday_desciption w-1/4 bg-blue-300 text-white flex flex-col justify-center">
-            <p class="text-5xl ml-2.5">Ofertas <br>Semananales </p>
+
+     
+    <div class="offerscontainer h-80 w-4/5  border-8 border-solid border-bluep margin my-10 mx-auto flex "  >
+
+        <div class="offerday_desciption w-1/4 bg-bluep text-white flex flex-col justify-center">
+            <p class="text-4xl ml-2.5 font-bold font-robotoc uppercase">Ofertas <br>Semananales </p>
         </div>
         <div class="offers w-full flex items-center">
-            <div class="offer_1 w-1/3 h-5/6 flex flex-col border border-solid border-gray-400 items-center">
+            <div class="offer_1 w-1/3 h-5/6 flex flex-col  divide-x border-l border-solid border-grayp items-center">
                 <img src="img/1-ofertas-semanales.png" alt="" class="offer_1-img">
                 <div class="w-full flex justify-evenly">
-                    <h3 class="text-sm -mt-2">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
-                    <h4>2 Paq.<br>POR<br>RD$ 1,350</h4>
+                    <h3 class="text-base -mt-2 font-robotoc">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
+                    <div class="flex justify-center flex-col items-center">
+                        <h4 class="text-xl font-semibold">2 Paq</h4><br>
+                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat">POR</h4><br>
+                        <h4 class="text-3xl font-bold font-robotoc">RD$ 1,350</h4>
+                    </div>
                 </div>
 
             </div>
-            <div class="offer_2 w-1/3 h-5/6 flex flex-col border border-solid border-gray-400 items-center">
+            <div class="offer_2 w-1/3 h-5/6 flex flex-col border-l border-solid border-grayp items-center">
                 <img src="img/2-ofertas-semanales.png" alt="" class="offer_1-img">
                 <div class="w-full flex justify-evenly">
-                    <h3 class="text-sm -mt-2">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
-                    <h4>2 Paq.<br>POR<br>RD$ 1,350</h4>
+                    <h3 class="text-base -mt-2 font-robotoc">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
+                    <div class="flex justify-center flex-col items-center">
+                        <h4 class="text-xl font-semibold">2 Paq</h4><br>
+                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat">POR</h4><br>
+                        <h4 class="text-3xl font-bold font-robotoc">RD$ 1,350</h4>
+                    </div>
                 </div>
+               
 
             </div>
-            <div class="offer_3 w-1/3 h-5/6 flex flex-col border border-solid border-gray-400 items-center">
+            <div class="offer_3 w-1/3 h-5/6 flex flex-col border-l border-solid border-grayp items-center">
                 <img src="img/3-ofertas-semanales.png" alt="" class="offer_1-img">
                 <div class="w-full flex justify-evenly">
-                    <h3 class="text-sm -mt-2">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
-                    <h4>2 Paq.<br>POR<br>RD$ 1,350</h4>
+                    <h3 class="text-base -mt-2 font-robotoc">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
+                    <div class="flex justify-center flex-col items-center">
+                        <h4 class="text-xl font-semibold">2 Paq</h4><br>
+                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat">POR</h4><br>
+                        <h4 class="text-3xl font-bold font-robotoc">RD$ 1,350</h4>
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
-    <div class="product_container flex h-80 w-4/5 my-0 mx-auto justify-between">
-        <div class="product-item w-5/12 flex h-full flex-col items-center bg-gray-200">
-            <div class="cat_product w-4/5 h-1/5 -ml-20">
-                <h1 class="text-2xl text-red-500 ">PRODUCTOS MAS VALORADOS</h1>
+
+
+    <!--Productos mas valorados-->
+    <section class="product_container flex h- w-4/5 my-0 mx-auto justify-between">
+        <div class="product-item w-xrxr flex  h-h344 flex-col  bg-gray-200">
+            <div class="cat_product w-full h-14 flex items-center ">
+                <div>
+                    <h1 class=" text-redp ml-8 font-bold text-3xl font-robotoc">PRODUCTOS MAS VALORADOS</h1>
+                </div> 
 
             </div>
-            <div class="product h-full w-full flex">
+            <div class="product h-full w-full flex justify-evenly">
                 <div class="h-full w-1/3 flex flex-col items-center">
-                    <img class="" src="img/Untitled.png" alt="">
+                   <div class="bg-white">
+                        <img  src="img/Untitled2.png" alt="">
+                   </div>
                     <div class="product_h4 w-full">
                         <h4 class="inline-block relative left-0"></h4>
                     </div>
                     <div class="product_p w-full">
-                        <p class="inline-block p-0">Paquete de 5 monos de mangas cortas </p>
+                        <h1 class="ml-8 font-black text-3xl font-robotoc">$RD 600</h1> 
+                        <div class="ml-8"><img src="img/star.png" alt=""></div>
+                        <p class="inline-block p-0 ml-8 font-robotoc">Paquete de 5 monos de mangas cortas </p>
                     </div>
 
                 </div>
-                <div >
-                    <img src="img/Untitled2.png" alt="">
+                <div class="h-full w-1/3 flex flex-col items-center">
+                    <img  src="img/Untitled3.png" alt="">
+                    <div class="product_p w-full">
+                        <h1 class="ml-8 font-black text-3xl font-robotoc">$RD 1,200</h1> 
+                        <div class="ml-8"><img src="img/star.png" alt=""></div>
+                        <p class="inline-block p-0 ml-8 font-robotoc">Alimento para pajaros guacamayos </p>
+                    </div>
+
                 </div>
-                <div >
-                    <img src="img/Untitled3.png" alt="">
+                <div class="h-full w-1/3 flex flex-col items-center">
+                    <img  src="img/Untitled.png" alt="">
+                    <div class="product_p w-full">
+                        <h1 class="ml-8 font-black text-3xl font-robotoc">$RD 460</h1> 
+                        <div class="ml-8"><img src="img/star.png" alt=""></div>
+                        <p class="inline-block p-0 ml-8 font-robotoc">12 Pañuelos para el pelo </p>
+                    </div>
+
                 </div>
             </div>
         </div>
-        <div class="product-item product-item w-5/12 flex h-full flex-col items-center bg-gray-200"></div>
-    </div>
+        <div class="product-item w-xrxr flex  h-h344 flex-col  bg-gray-200">
+            <div class="cat_product w-full h-14 flex items-center ">
+                <div>
+                    <h1 class=" text-redp ml-8 font-bold text-3xl font-robotoc">PRODUCTOS QUE TE PUEDEN INTERESAR</h1>
+                </div>
+
+            </div>
+            <div class="product h-full w-full flex justify-evenly">
+                <div class="h-full w-1/3 flex flex-col items-center">
+                    <img  src="img/Untitled4.png" alt="">
+                    <div class="product_h4 w-full">
+                        <h4 class="inline-block relative left-0"></h4>
+                    </div>
+                    <div class="product_p w-full">
+                        <h1 class="ml-8 font-black text-3xl font-robotoc">$RD 1,800</h1> 
+                        
+                        <p class="inline-block p-0 ml-8 font-robotoc">Paquete de 5 monos de mangas cortas </p>
+                    </div>
+
+                </div>
+                <div class="h-full w-1/3 flex flex-col items-center">
+                    <div class="bg-white w-44 h-44 flex justify-center">
+                        <img  src="img/Untitled5.png" alt="">
+                    </div>
+                    <div class="product_p w-full">
+                        <h1 class="ml-8 font-black text-3xl font-robotoc">$RD 25,999</h1> 
+                        
+                        <p class="inline-block p-0 ml-8 font-robotoc">Paquete de 5 monos de mangas cortas </p>
+                    </div>
+
+                </div>
+                <div class="h-full w-1/3 flex flex-col items-center">
+                    <img  src="img/Untitled6.png" alt="">
+                    <div class="product_p w-full">
+                        <h2 class="text-gray-400 line-through text-2xl font-black leading-3 ml-8 mt-2 font-robotoc">$RD 58,000</h2>
+                        <h1 class="ml-8 font-black text-3xl font-robotoc">$RD 48,000</h1> 
+                        
+                        <p class="inline-block p-0 ml-8 leading-3 font-robotoc">Paquete de 5 mos </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-
-    <div class="promociones h-80 w-4/5  border-8 border-solid border-yellow-500 margin my-10 mx-auto flex items-center">
-        <div class="offer_1 w-1/4 flex justify-center relative h-5/6">
-            <div class="offer-img w-4/5 flex justify-center items-center ">
-                <img class=" relative -top-6" src="img/1-descuentos.png" alt="">
-                <div class="buy absulute w-32 h-36 bg-red-200 right-12 bottom-1"></div>
+    <!--Promociones-->
+    <section class="promociones h-80 w-4/5  border-8 border-solid border-yellowp  my-10 mx-auto flex items-center">
+        <div class="offer_1 w-1/4 flex justify-center relative h-promoh">
+                <div class="flex items-center w-full h-full justify-center">
+                    <div class="relative  flex-col flex w-auto h-auto">
+                        <img class="inline-block" src="img/1-descuentos.png" alt="">
+                        <div class="buy inline-block absolute w-32 h-36  bottom-0 left-32 bg-redp "></div>
+                        <div class="w-3/6 h-16 text-sm font-robotoc font-medium -ml-4" >
+                            <p>Lay's de queso y <br> crema agria y Sal y <br> Vinagre 28.3 g</p>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
 
 
         </div>
-        <div class="offer_2 w-1/4 flex justify-center relative h-full bg-orange-300 items-center">
-            <div>
-                <h2>APROBECHA</h2>
-                <h3>NUESTROS DESCUENTOS</h3>
+        <div class="offer_2 w-1/4 flex justify-center relative h-full bg-yellowp items-center">
+            <div class="font-robotoc flex flex-col justify-center font-bold">
+                <div>
+                    <h2 class="text-white text-4xl">APROBECHA</h2>
+                </div>
+               <div>
+                    <h3 class="text-white text-2xl">NUESTROS DESCUENTOS</h3>
+               </div>
             </div>
  
         </div>
-        <div class="offer_3 w-1/4">
-            <div class="offer-img offer-img w-4/5 flex justify-center items-center relative">
-                <img src="img/2-descuentos.png" alt="">
-                <div class="buy">
-                    <div class="buy_price"></div>
-                    <div class="buy_offer"></div>
+        <div class="offer_1 w-1/4 flex justify-center relative h-promoh">
+            <div class="flex items-center w-full h-full justify-center">
+                <div class="relative  flex-col flex w-auto h-auto">
+                    <img class="inline-block" src="img/2-descuentos.png" alt="">
+                    <div class="buy inline-block absolute w-32 h-48  bottom-0 left-24 bg-yellows ">
+                        <div class="h-2/4 w-5/6 bg-white my-2 mx-auto"></div>
+                    </div>
+                    <div class="w-4/5 h-16 text-sm font-robotoc font-medium -ml-10" >
+                        <p>Cerveza Presidente <br> Light Pequeña <br> 12 onzas</p>
+                    </div>
                 </div>
+                
+            </div>
+            </div>
+                
             </div>
         </div>
-        <div class="offer_4 w-1/4">
-            <div class="offer-img">
-                <img src="img/3-descuentos.png" alt="">
-                <div class="buy">
-                    <div class="buy_price"></div>
-                    <div class="buy_offer"></div>
+        <div class="offer_1 w-1/4 flex justify-center relative h-promoh">
+            <div class="flex items-center w-full h-full justify-center">
+                <div class="relative  flex-col flex w-auto h-auto">
+                    <img class="inline-block" src="img/3-descuentos.png" alt="">
+                    <div class="buy inline-block absolute w-32 h-52  bottom-0 left-28 bg-yellows ">
+                        <div class="w-full h-2/3 bg-redp" ></div>
+                    </div>
+                    <div class="w-4/5 h-16 text-sm font-robotoc font-medium -ml-10" >
+                        <p>Cerveza Presidente <br> Light Pequeña <br> 12 onzas</p>
+                    </div>
                 </div>
+                
             </div>
         </div>
-    </div>
-
-    <div class="product_recent-container h-96 w-4/5 my-10 mx-auto border-solid border-gray-300 border-2">
+    </section>
+     <!--Productos Recientes-->
+    <section class="product_recent-container h-96 w-4/5 my-10 mx-auto border-solid border-gray-300 border-2">
         <div class="product_recent-description  w-full h-1/6 flex justify-between">
-            <div class="m-2.5"><h1 class="text-red-500 text-3xl uppercase font-bold">productos recien llegados</h1></div>
-            <div class="m-4 font-semibold"><a class="uppercase" href="">ver mas</a></div>
+            <div class="m-2.5"><h1 class="text-redp text-3xl uppercase font-bold font-robotoc">productos recien llegados</h1></div>
+            <div class="m-4 font-roboto"><a class="uppercase" href="">ver mas</a></div>
         </div>
-        <div class="product_recent w-full h-5/6 flex ">
-            <div class="product_recent-rll w-2/12 h-5/6 border-solid border-r-2 border-gray-300 flex-col items-center flex ">
+        <div class="product_recent w-full h-80 flex ">
+            <div class="product_recent-rll w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex ">
                 <div><img class="object-none" src="img/rll1.png" alt=""></div>
-                <div class="product_recent-priced ml-2 mt-2">
-                    <h2 class="font-black text-3xl">RD$299</h2>
-                    <p class="font-medium">Lorem ipsum dolor sit amet consectetur</p>
+                <div class="product_recent-priced  mt-2 w-44 font-robotoc">
+                    <h2 class="font-black text-3xl ">RD$ 299</h2>
+                    <p class="text-sm ">Mascarillas faciales no medicas de 3 capas para ninos (50 unidades)</p>
                 </div>
             </div>
-            <div class="product_recent-rll  w-2/12 h-5/6 border-solid border-r-2 border-gray-300 flex-col items-center flex">
+            <div class="product_recent-rll  w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex">
                 <div><img class="object-none" src="img/rll2.png" alt=""></div>
-                <div class="product_recent-priced ml-2 mt-2">
-                    <h2 class="font-black text-3xl">RD$299</h2>
-                    <p class="font-medium">Lorem ipsum dolor sit amet consectetur</p>
+                <div class="product_recent-priced mt-2 w-44 font-robotoc">
+                    <h2 class="font-black text-3xl">RD$ 2,400</h2>
+                    <p class="font-medium text-sm">Camara de Seguridad 1080P Full HD IR con vision nocturna</p>
                 </div>
             </div>
-            <div class="product_recent-rll w-2/12 h-5/6 border-solid border-r-2 border-gray-300 flex-col items-center flex">
+            <div class="product_recent-rll w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex">
                 <div><img class="object-none" src="img/rll3.png" alt=""></div>
-                <div class="product_recent-priced  ml-2 mt-2">
-                    <h2 class="font-black text-3xl">RD$299</h2>
-                    <p class="font-medium">Lorem ipsum dolor sit amet consectetur</p>
+                <div class="product_recent-priced  mt-2 w-44 font-robotoc">
+                    <h2 class="text-gray-400 line-through text-2xl font-black leading-3">RD$ 260</h2>
+                    <h2 class="font-black text-3xl">RD$ 160</h2>
+                    <p class="font-medium text-sm">Juegos de tohallas de cocina de 16.0 in 25.1 in de algodon</p>
                 </div>
             </div>
-            <div class="product_recent-rll w-2/12 h-5/6 border-solid border-r-2 border-gray-300 flex-col  items-center flex">
-                <div><img class="object-none" src="img/rll4.png" alt=""></div>
-                <div class="product_recent-priced ml-2 mt-2">
-                    <h2 class="font-black text-3xl">RD$299</h2>
-                    <p class="font-medium">Lorem ipsum dolor sit amet consectetur</p>
+            <div class="product_recent-rll w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col  items-center flex">
+                <div class="relative w-9/12 flex justify-center"><img class="object-none" src="img/rll4.png" alt=""> 
+                    <div class="absolute w-28 h-24 bg-redp  right-0 bottom-0 m-auto flex flex-col ">
+                        <div class="h-2/3 bg-yellow-400 flex items-center justify-center text-white">
+                            <div class="w-2/3">
+                                <h3 class="text-6xl font-bold">25</h3>
+                            </div>
+                            <div class="flex flex-col w-1/3 h-1/3">
+                                <div><h3 class="font-bold  text-2xl text-center leading-3">%</h3></div>
+                                <div><h3 class="uppercase font-bold text-lg  ">off</h3></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center h-1/3" >
+                        <div>
+                            <h3 class="font-semibold uppercase text-base">!aprobrecha!</h3>
+                        
+                        </div>
+                        
+                    </div>
+               
+            </div>
+        </div>
+                <div class="product_recent-priced mt-2 w-44">
+                    <h2 class="font-black text-3xl">RD$ 2,135</h2>
+                    <p class="font-medium text-sm">Smart Watch Fitness Tracker 1.4 para telefonos Android</p>
                 </div>
             </div>
-            <div class="product_recent-rll  w-2/12 h-5/6 border-solid border-r-2 border-gray-300 flex-col items-center flex">
+            <div class="product_recent-rll  w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex">
                 <div><img class="object-none" src="img/rll5.png" alt=""></div>
-                <div class="product_recent-priced ml-2 mt-2">
-                    <h2 class="font-black text-3xl">RD$299</h2>
-                    <p class="font-medium">Lorem ipsum dolor sit amet consectetur</p>
+                <div class="product_recent-priced mt-2 w-44 font-robotoc">
+                    <h2 class="font-black text-3xl">RD$ 210</h2>
+                    <p class="font-medium text-sm">Paquete de 5 protectores faciales para niño</p>
                 </div>
             </div>
-            <div class="product_recent-rll w-2/12 h-5/6  flex-col  items-center flex">
+            <div class="product_recent-rll w-2/12 h-72  flex-col  items-center flex">
                 <div><img class="object-none" src="img/rll6.png" alt=""></div>
-                <div class="product_recent-priced ml-2 mt-2">
-                    <h2 class="font-black text-3xl">RD$299</h2>
-                    <p class="font-medium">Lorem ipsum dolor sit amet consectetur</p>
+                <div class="product_recent-priced mt-2 w-44 font-robotoc">
+                    <h2 class="font-black text-3xl">RD$ 599</h2>
+                    <p class="font-medium text-sm">Paleta de sombra de ojos profesional de 40 colores</p>
                 </div>
             </div>
         </div>
-    </div>
-
+    </section>
+    <!--Email Subscribe-->
     <div class="subscribe-container bg-gray-200 w-full h-44 flex">
         <div class="email_container w-1/2 flex flex-col justify-center items-center">
             <div class="email-description w-4/5 h-10">
-                <h1 class="uppercase text-3xl leading-snug text-red-500">!mantente al dia, suscribete!</h1>
+                <h1 class="uppercase text-3xl  text-redp font-robotoc font-bold">!mantente al dia, suscribete!</h1>
             </div>
             <div class="email-input w-4/5 h-12 flex items-center">
-                <input class="input_email   focus:ring-1 rounded w-5/12 border border-solid  border-gray-900 h-9" type="email" placeholder="Correo electronico">
-                <input class="input_confirm outline-none rounded w-1/5 text-white h-8 bg-red-500 ml-2 border-0 text-sm" type="submit" value="Confirmar Suscripcion">
+                <input class="input_email   focus:ring-1 rounded w-5/12 border border-solid  border-gray-900 h-9 font-roboto " type="email" placeholder="Correo electronico">
+                <input class="input_confirm outline-none rounded w-1/5 text-white h-8 bg-redp ml-2 border-0 text-sm" type="submit" value="Confirmar Suscripcion">
             </div>
             <div class="email-switch h-12 flex w-4/5">
                 <div class="email-switch_switch w-16">
@@ -253,15 +432,16 @@
                 </div>
 
                 <div class="email-switch_text">
-                    <p class="text-base text-gray-500">Si me gustaria recibir informacion de las ultimas novedades y <br>promociones exclusivas por
+                    <p class="text-base text-gray-500 font-roboto">Si, me gustaria recibir informacion de las ultimas novedades y <br>promociones exclusivas por
                         parte del equipo de MERCASABE </p>
                 </div>
 
             </div>
 
         </div>
-        <div class="skill w-1/2 flex justify-center items-center">
-            <div  class="w-1/4 mx-2 my-5 flex flex-col items-center">
+        <!--skill-->
+        <div class="skill w-1/2 flex justify-center items-center font-robotoc">
+            <div  class="w-1/4 mx-2 my-5 flex flex-col items-center ">
                 <div  class="m-1.5 w-auto">
                     <img src="img/iconfast.png" alt="" srcset="">
                 </div>
@@ -287,84 +467,88 @@
             </div>
         </div>
     </div>
-    <div class="join h-14 bg-red-500 w-full flex justify-center items-center">
+    <!--Susbscribe-->
+    <div class="join h-14 bg-redp w-full flex justify-center items-center font-robotoc font-bold">
         <div class="join_text text-white h-10">
-            <h1 class="text-4xl uppercase tracking-wide">¿Aun no perteneces a MERCASABE?</h1>
+            <h1 class="text-4xl uppercase ">¿Aun no perteneces a MERCASABE?</h1>
         </div>
-        <div class="join_a text-4xl m-1.5 tracking-wide text-yellow-500">
+        <div class="join_a text-4xl m-1.5 tracking-wide text-yellows uppercase">
             <a href="#">Unete hoy!</a>
         </div>
     </div>
-    <div class="footer w-full h-96 flex justify-center">
-        <div class="footer-info flex justify-around relative top-6 h-4/5 w-11/12">
-            <div class="flex flex-col w-80 h-full">
-                <h5 class="uppercase text-gray-900 text-lg" >Mercasabe</h4>
-                    <a  class="text-gray-500 text-sm" href="">Registrate</a>
-                    <a class="text-gray-500 text-sm" href="">Mi Cuenta</a>
-                    <a class="text-gray-500 text-sm" href="">Mis Pedidos</a>
-                    <a class="text-gray-500 text-sm" href="">Envios y Entregas</a>
-                    <a class="text-gray-500 text-sm" href="">Formas de pago</a>
-                    <a  class="text-gray-500 text-sm"href="">Devoluciones y Reembolso</a>
-                    <a class="text-gray-500 text-sm" href="">Preguntas Frecuentes</a>
-            </div>
-            <div class="flex flex-col w-80 h-full">
-                <h5 class="uppercase text-gray-900 text-lg" >vende en Mercasabe</h4>
-                    <a  class="text-gray-500 text-sm"href="">Iniciar sesion como Vendedor</a>
-                    <a class="text-gray-500 text-sm" href="">Registrarme como Vendedor</a>
-                    <a  class="text-gray-500 text-sm"href="">Como Vender</a>
-                    <a  class="text-gray-500 text-sm"href="">Comisiones y Tarifas</a>
-                    <a class="text-gray-500 text-sm" href="">Centro de Ayuda para Vendedores</a>
-                    <a  class="text-gray-500 text-sm"href="">Acuerdos de Servicios</a>
-
-            </div>
-            <div class="flex flex-col w-80 h-full">
-                <h5 class="uppercase text-gray-900 text-lg" >informacion</h4>
-                    <a class="text-gray-500 text-sm" href="">Contactenos y Centro de Ayuda</a>
-                    <a  class="text-gray-500 text-sm"href="">Sobre Nosotros</a>
-                    <a class="text-gray-500 text-sm" href="">Terminos y Condiciones</a>
-                    <a class="text-gray-500 text-sm" href="">Politica de Privacidad</a>
-
-                    <a class="contact-whatsapp flex" href=""><img src="img/whatsapp.png" alt="">+1 (809) 000-0000</a>
-
-            </div>
-            <div class="flex flex-col w-80 h-full">
-                <h5 class="uppercase text-gray-900 text-lg" >servicio al cliente</h4>
-                    <a href="">Obtenga ayuda de nuestros expertos 24/7</a>
-                    <a class="number text-gray-500 text-xl" href="">1 (809) 000-0000</a>
-                    <div class="social relative top-3 w-full mb-2.5">
-                        <h5>siguenos por</h4>
-                            <a  class="text-gray-500 text-sm"href=""><img src="img/social.png" alt=""></a>
-                            <a  class="text-gray-500 text-sm"href="">Envios y Entregas</a>
-                            <a  class="text-gray-500 text-sm"href="">Formas de pago</a>
-                            <a  class="text-gray-500 text-sm"href="">Devoluciones y Reembolso</a>
-                            <a  class="text-gray-500 text-sm"href="">Preguntas Frecuentes</a>
-                    </div>
-                    <div class="social">
-                        <h5 class="uppercase text-gray-900 text-lg" >meracasabe app</h4>
-                            <a class="text-gray-500 text-sm" href="">Descargas nuestras app</a>
-                            <div class="download-app flex relative top-2.5">
-                                <div class="w-2/5"> <a href=""><img src="img/appstore.png" alt=""></a></div>
-                                <div class="w-2/5"><a href=""><img src="img/playstore.png" alt=""></a></div>
-
-
-                            </div>
-
-
-
-                    </div>
-
+    <!--fotter-->
+    <fotter>
+        <div class="footer w-full h-96 flex justify-center">
+            <div class="footer-info flex justify-around relative top-6 h-4/5 w-11/12">
+                <div class="flex flex-col w-80 h-full font-robotoc">
+                    <h5 class="uppercase text-lg font-bold" >Mercasabe</h4>
+                        <a  class="text-gray-500 text-sm" href="">Registrate</a>
+                        <a class="text-gray-500 text-sm" href="">Mi Cuenta</a>
+                        <a class="text-gray-500 text-sm" href="">Mis Pedidos</a>
+                        <a class="text-gray-500 text-sm" href="">Envios y Entregas</a>
+                        <a class="text-gray-500 text-sm" href="">Formas de pago</a>
+                        <a  class="text-gray-500 text-sm"href="">Devoluciones y Reembolso</a>
+                        <a class="text-gray-500 text-sm" href="">Preguntas Frecuentes</a>
+                </div>
+                <div class="flex flex-col w-80 h-full font-robotoc">
+                    <h5 class="uppercase  text-lg font-bold" >vende en Mercasabe</h4>
+                        <a  class="text-gray-500 text-sm"href="">Iniciar sesion como Vendedor</a>
+                        <a class="text-gray-500 text-sm" href="">Registrarme como Vendedor</a>
+                        <a  class="text-gray-500 text-sm"href="">Como Vender</a>
+                        <a  class="text-gray-500 text-sm"href="">Comisiones y Tarifas</a>
+                        <a class="text-gray-500 text-sm" href="">Centro de Ayuda para Vendedores</a>
+                        <a  class="text-gray-500 text-sm"href="">Acuerdos de Servicios</a>
+        
+                </div>
+                <div class="flex flex-col w-80 h-full font-robotoc">
+                    <h5 class="uppercase  text-lg  font-bold" >informacion</h4>
+                        <a class="text-gray-500 text-sm" href="">Contactenos y Centro de Ayuda</a>
+                        <a  class="text-gray-500 text-sm"href="">Sobre Nosotros</a>
+                        <a class="text-gray-500 text-sm" href="">Terminos y Condiciones</a>
+                        <a class="text-gray-500 text-sm" href="">Politica de Privacidad</a>
+        
+                        <a class="contact-whatsapp flex" href=""><img src="img/whatsapp.png" alt="">+1 (809) 000-0000</a>
+        
+                </div>
+                <div class="flex flex-col w-80 h-full font-robotoc">
+                    <h5 class="uppercase text-gray-900 text-lg font-bold" >servicio al cliente</h4>
+                        <a href="">Obtenga ayuda de nuestros expertos 24/7</a>
+                        <a class="number text-gray-900 text-xl" href="">1 (809) 000-0000</a>
+                        <div class="social relative top-3 w-full mb-2.5">
+                            <h5>siguenos por</h4>
+                                <a  class="text-gray-500 text-sm"href=""><img src="img/social.png" alt=""></a>
+                                <a  class="text-gray-500 text-sm"href="">Envios y Entregas</a>
+                                <a  class="text-gray-500 text-sm"href="">Formas de pago</a>
+                                <a  class="text-gray-500 text-sm"href="">Devoluciones y Reembolso</a>
+                                <a  class="text-gray-500 text-sm"href="">Preguntas Frecuentes</a>
+                        </div>
+                        <div class="social">
+                            <h5 class="uppercase text-gray-900 text-lg font-bold" >meracasabe app</h4>
+                                <a class="text-gray-500 text-sm" href="">Descargas nuestras app</a>
+                                <div class="download-app flex relative top-2.5">
+                                    <div class="w-2/5"> <a href=""><img src="img/appstore.png" alt=""></a></div>
+                                    <div class="w-2/5"><a href=""><img src="img/playstore.png" alt=""></a></div>
+        
+        
+                                </div>
+        
+        
+        
+                        </div>
+        
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="footer-end w-full h-5 flex flex-col items-center justify-self-end">
-        <div>
-            <img src="img/pago.png" alt="">
+        
+        <div class="footer-end w-full h-5 flex flex-col items-center justify-self-end">
+            <div>
+                <img src="img/pago.png" alt="">
+            </div>
+            <div>
+                <p class="text-gray-500 text-sm">Copyright 2021 MERCASABE. Todos los derechos reservados</p>
+            </div>
         </div>
-        <div>
-            <p class="text-gray-500 text-sm">Copyright 2021 MERCASABE. Todos los derechos reservados</p>
-        </div>
-    </div>
+    </fotter>
 </body>
 
 </html>
