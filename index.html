@@ -1,4 +1,4 @@
-<html lang="es">
+<html lang="es" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -16,21 +16,22 @@
 
 </head>
 
-<body>
+<body class="">
     <script src="js/bootstrap.bundle.min.js"></script>
-    <header class="w-full h-44 bg-white mx-auto my-0">
+    <header class="w-full h-44 bg-white mx-auto my-0 mobile:h-auto">
         <div class="h-7 w-auto flex flex-row justify-center relative">
-            <div class="texto">
+            <div class="texto mobile:text-xs">
                 <a href="#" class="inline-block text-redp font-bold font-robotoc ">ENVIO GRATIS</a>
                 <p class="inline-block font-bold text-gray-400 font-robotoc">en todos los pedidos de <span class="text-redp">RD$ 1,000</span> o mas (solo pedidos en Santo Domingo) <span><a href="" class="hover:text-redp"> + Detalles</a></span></p>
                 
             </div>
             <div class="flex absolute right-0 mx-11 my-2 font-robotoc "><img  class="objet-none mx-2" src="img/idioma.png" alt=""><p>EN</p></div>
         </div>
-        <div class="flex items-center w-11/12 justify-between mx-auto my-0">
-            <!--logo-->
-            <div class="container-logo">
-                <img src="img/logo.png" alt="logo">
+         <!--logo-->
+        <div class="flex items-center w-11/12 justify-between mx-auto my-0 mobile:w-full mobile:flex-col mobile:items-center mobile:justify-center">
+           
+            <div class="container-logo ">
+                <img class="mobile:w-5/12" src="img/logo.png" alt="logo">
             </div>
             
             <!--barra de busqueda-->
@@ -50,16 +51,16 @@
             </div> 
             
                 <!--barra de usuario-->
-            <div class="icons flex  h-auto justify-around font-robotoc font-semibold">
-                <div class="flex w-30 mx-3 ">
+            <div class="icons flex  h-auto justify-around font-robotoc font-semibold ">
+                <div class="flex w-30 mx-3 mobile:text-xs ">
                     <img class="object-none" src="img/usser.png" alt="" srcset="">
-                   <div class="w-20"><a class=" text-sm " href="">Ingresar <br> Mi Cuenta </a></div> 
+                   <div class="w-20"><a class=" text-sm mobile:text-xs" href="">Ingresar <br> Mi Cuenta </a></div> 
                    
                 </div>
 
                 <div class="flex w-30 mx-3 ">
                     <img class="object-none" src="img/pedidos.png" alt="" srcset="">
-                   <div class="w-14"><p class=" text-sm ">Mis <br> Pedidos </p></div> 
+                   <div class="w-14"><p class=" text-sm mobile:text-xs">Mis <br> Pedidos </p></div> 
                     <div class="flex items-end">
 
                         <nav class="navbar navbar-expand-lg mx-1">
@@ -87,7 +88,7 @@
 
                 <div class="flex w-30 mx-3 ">
                     <img class="object-none" src="img/carrito.png" alt="" srcset="">
-                   <div class="w-20"><p class=" text-sm ">Mi Cesta <br> <span class="text-redp">0</span> articulos</p></div> 
+                   <div class="w-20"><p class=" text-sm mobile:text-xs">Mi Cesta <br> <span class="text-redp">0</span> articulos</p></div> 
                     <div class="flex items-end">
 
                        
@@ -107,7 +108,7 @@
 
         </div>
         <!--nav-->
-        <nav class="container-links h-12 border-gray-400 border-solid ring-1 mt-2.5 flex items-center font-roboto">
+        <nav class="container-links h-12 border-gray-400 border-solid ring-1 mt-2.5 flex items-center font-roboto mobile:hidden ">
             <div class="iconmenu ml-16 "><a href=""><img src="img/iconmenu.png" alt="" srcset=""></a></div>
             <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center  hover:text-redp" href="">Departamentos</a></div>
             <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp" href="">Lanzamientos</a></div>
@@ -145,13 +146,13 @@
 
 
      
-    <div class="offerscontainer h-80 w-4/5  border-8 border-solid border-bluep margin my-10 mx-auto flex "  >
+    <div class="offerscontainer h-80 w-4/5  border-8 border-solid border-bluep margin my-10 mx-auto flex mobile:w-11/12 mobile:h-auto mobile:flex-col "  >
 
-        <div class="offerday_desciption w-1/4 bg-bluep text-white flex flex-col justify-center">
+        <div class="offerday_desciption w-1/4 bg-bluep text-white flex flex-col justify-center mobile:w-full">
             <p class="text-4xl ml-2.5 font-bold font-robotoc uppercase">Ofertas <br>Semananales </p>
         </div>
-        <div class="offers w-full flex items-center">
-            <div class="offer_1 w-1/3 h-5/6 flex flex-col  divide-x border-l border-solid border-grayp items-center">
+        <div class="offers w-full flex items-center mobile:flex-col ">
+            <div class="offer_1 w-1/3 h-5/6 flex flex-col  divide-x border-l border-solid border-grayp items-center mobile:w-full">
                 <img src="img/1-ofertas-semanales.png" alt="" class="offer_1-img">
                 <div class="w-full flex justify-evenly">
                     <h3 class="text-base -mt-2 font-robotoc">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
@@ -163,7 +164,7 @@
                 </div>
 
             </div>
-            <div class="offer_2 w-1/3 h-5/6 flex flex-col border-l border-solid border-grayp items-center">
+            <div class="offer_2 w-1/3 h-5/6 flex flex-col border-l border-solid border-grayp items-center mobile:w-full">
                 <img src="img/2-ofertas-semanales.png" alt="" class="offer_1-img">
                 <div class="w-full flex justify-evenly">
                     <h3 class="text-base -mt-2 font-robotoc">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
@@ -176,7 +177,7 @@
                
 
             </div>
-            <div class="offer_3 w-1/3 h-5/6 flex flex-col border-l border-solid border-grayp items-center">
+            <div class="offer_3 w-1/3 h-5/6 flex flex-col border-l border-solid border-grayp items-center mobile:w-full mobile:border-l">
                 <img src="img/3-ofertas-semanales.png" alt="" class="offer_1-img">
                 <div class="w-full flex justify-evenly">
                     <h3 class="text-base -mt-2 font-robotoc">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
