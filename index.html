@@ -19,107 +19,85 @@
 <body class="">
     <script src="js/bootstrap.bundle.min.js"></script>
     <header class="w-full h-44 bg-white mx-auto my-0 mobile:h-auto">
-        <div class="h-7 w-auto flex flex-row justify-center relative">
-            <div class="texto mobile:text-xs">
-                <a href="#" class="inline-block text-redp font-bold font-robotoc ">ENVIO GRATIS</a>
-                <p class="inline-block font-bold text-gray-400 font-robotoc">en todos los pedidos de <span class="text-redp">RD$ 1,000</span> o mas (solo pedidos en Santo Domingo) <span><a href="" class="hover:text-redp"> + Detalles</a></span></p>
+        <div class="h-7 w-auto flex flex-row justify-center relative ">
+            <div class="texto mt-1 ">
+                <a href="#" class="inline-block text-redp font-bold font-robotoc mobile:text-xs ">ENVIO GRATIS</a>
+                <p class="inline-block font-bold text-gray-400 font-robotoc mobile:text-xs">en todos los pedidos de <span class="text-redp">RD$ 1,000</span> o mas (solo pedidos en Santo Domingo) <span><a href="" class="hover:text-redp"> + Detalles</a></span></p>
                 
             </div>
             <div class="flex absolute right-0 mx-11 my-2 font-robotoc "><img  class="objet-none mx-2" src="img/idioma.png" alt=""><p>EN</p></div>
         </div>
          <!--logo-->
-        <div class="flex items-center w-11/12 justify-between mx-auto my-0 mobile:w-full mobile:flex-col mobile:items-center mobile:justify-center">
+        <div class="grid-cols-3 grid mx-10 mobile:grid-cols-1 mobile:auto-rows-min mobile:mx-0 mobile:gap-3">
            
-            <div class="container-logo ">
-                <img class="mobile:w-5/12" src="img/logo.png" alt="logo">
+            <div class="container-logo mobile:my-3 mobile:col-span-full mobile:mx-auto mobile:w-1/2 ">
+                <img class="" src="img/logo.png" alt="logo">
             </div>
             
             <!--barra de busqueda-->
-            <div class="search flex h-10 w-2/6 my-0 mx-12 font-robotoc">
-                <input class="w-1/2 rounded-l-full py-3 px-6 bg-gray-200 border-none focus:outline-none" type="text" placeholder="Buscar...">
-                <select  class="bg-gray-200 mx-px w-1/4 border-none text-gray-400 text-sm" name="" id="" value="Por departamento">
-                    <option class="bg-white" >Por deparatamento</option>
-                    <option class="bg-white" value="Option 2">Option 2</option>
-                    <option class="bg-white" value="Option 3">Option 3</option>
-                    <option class="bg-white" value="Option 4">Option 4</option>
-                    <option class="bg-white" value="Option 5">Option 5</option>
-                </select>
-                <a  class="w-11 bg-gray-200 rounded-r-full scale-50  flex border-none justify-center relative " href="">
-                    
-                    <img class="w-6 stroke-current  " src="img/lupa.svg" alt="">
-                </a>
+            <div class="search flex  my-0 mx-12 font-robotoc justify-center mobile:mx-2 ">
+
+                <div class="w-full flex items-center justify-center">
+                    <input class="w-80 h-11  rounded-l-full px-6 bg-gray-200 border-none focus:outline-none text-based  mobile:h-8" type="text" placeholder="Buscar...">
+                    <select   name="" id="" value="Por departamento" class="bg-gray-200 h-11 w-40 px-1 mx-px  border-none text-gray-400  mobile:w-12 mobile:h-8">
+                        <option class="bg-white" >Por deparatamento</option>
+                        <option class="bg-white" value="Option 2">Option 2</option>
+                        <option class="bg-white" value="Option 3">Option 3</option>
+                        <option class="bg-white" value="Option 4">Option 4</option>
+                        <option class="bg-white" value="Option 5">Option 5</option>
+                    </select>
+                    <a  class="w-11 bg-gray-200 rounded-r-full scale-50 h-11  flex border-none justify-center relative items-center mobile:h-8 " href="">
+                        
+                        <img class="w-6 stroke-current mobile:w-4  " src="img/lupa.svg" alt="">
+                    </a>
+                </div>
             </div> 
             
                 <!--barra de usuario-->
-            <div class="icons flex  h-auto justify-around font-robotoc font-semibold ">
-                <div class="flex w-30 mx-3 mobile:text-xs ">
-                    <img class="object-none" src="img/usser.png" alt="" srcset="">
-                   <div class="w-20"><a class=" text-sm mobile:text-xs" href="">Ingresar <br> Mi Cuenta </a></div> 
-                   
-                </div>
-
-                <div class="flex w-30 mx-3 ">
-                    <img class="object-none" src="img/pedidos.png" alt="" srcset="">
-                   <div class="w-14"><p class=" text-sm mobile:text-xs">Mis <br> Pedidos </p></div> 
-                    <div class="flex items-end">
-
-                        <nav class="navbar navbar-expand-lg mx-1">
-                            
-                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                              </button>
-                              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                                <ul class="navbar-nav">
-                                  <li class="nav-item dropdown">
-                                    
-                                        <a class="self-end my-1" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="img/arow.png" alt=""></a>
-                                    <ul class="dropdown-menu bg-white" aria-labelledby="navbarDarkDropdownMenuLink">
-                                      <li><a class="dropdown-item" href="#">Action</a></li>
-                                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </nav>
+            <div class="icons flex  h-auto justify-around font-robotoc font-semibold self-center mobile:mx-auto text-sm ml-0.5 mobile:text-xs ">
+                <div class="flex justify-end w-full">
+                    <div class="flex w-30">
+                        <img class="object-none" src="img/usser.png" alt="" srcset="">
+                       <div class="w-20 ml-1 flex">
+                           <a class="  " href="">Ingresar <br> Mi Cuenta </a>
+                           <div class="flex items-end  "><a href="" class=" "><img src="img/arow.png" alt=""></a></div>
+                        </div> 
                         
-                </div>
-
-                <div class="flex w-30 mx-3 ">
-                    <img class="object-none" src="img/carrito.png" alt="" srcset="">
-                   <div class="w-20"><p class=" text-sm mobile:text-xs">Mi Cesta <br> <span class="text-redp">0</span> articulos</p></div> 
-                    <div class="flex items-end">
-
                        
-                                        <a class="self-end my-1" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="img/arow.png" alt=""></a>
-                                    <ul class="dropdown-menu bg-white" aria-labelledby="navbarDarkDropdownMenuLink">
-                                      <li><a class="dropdown-item" href="#">Action</a></li>
-                                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                
-                              </div>
-                            </div>
-                          </nav>
-                        
+                    </div>
+                    <div class="flex w-30   ">
+                        <img class="object-none" src="img/usser.png" alt="" srcset="">
+                       <div class="w-20 ml-1"><a class=" " href="">Ingresar <br> Mi Cuenta </a>
+                    </div> 
+                       
+                    </div>
+                    <div class="flex w-30   ">
+                        <img class="object-none" src="img/usser.png" alt="" srcset="">
+                       <div class="w-20 ml-1"><a class="  " href="">Ingresar <br> Mi Cuenta </a>
+                    </div> 
+                       
+                    </div>
+                    
+                    
+                    </div>
+                    
                 </div>
-            </div>
 
         </div>
         <!--nav-->
-        <nav class="container-links h-12 border-gray-400 border-solid ring-1 mt-2.5 flex items-center font-roboto mobile:hidden ">
-            <div class="iconmenu ml-16 "><a href=""><img src="img/iconmenu.png" alt="" srcset=""></a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center  hover:text-redp" href="">Departamentos</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp" href="">Lanzamientos</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp" href="">Promociones y Ofertas</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp" href="">Vender</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp" href="">Negocios</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp" href="">Centro de Ayuda</a></div>
+        <nav class="container-links h-12 border-grayp border-2 border-solid  mt-2.5 flex items-center font-roboto mobile:overflow-x-scroll mobile:text-xs mobile:w-full   ">
+            <div class="iconmenu ml-16 mobile:ml-3 mobile:w-full mobile:mr-0 "><a href=""><img src="img/iconmenu.png" alt="" srcset=""></a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r  "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center  hover:text-redp" href="">Departamentos</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r  mobile:w-auto"><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp" href="">Lanzamientos</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r  mobile:w-auto"><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Promociones y Ofertas</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r  mobile:w-auto"><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Vender</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r  mobile:w-auto"><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Negocios</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r  mobile:w-auto"><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Centro de Ayuda</a></div>
         </nav>
     </header>
-    <!--slide-->
-    <div class="slider w-full">
+   <!--slide-->
+  
+    <div class="slider w-full ">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -144,46 +122,46 @@
         </div>
     </div>
 
-
+      
      
-    <div class="offerscontainer h-80 w-4/5  border-8 border-solid border-bluep margin my-10 mx-auto flex mobile:w-11/12 mobile:h-auto mobile:flex-col "  >
+    <div class="offerscontainer h-80 w-4/5  border-8 border-solid border-bluep margin my-10 mx-auto flex mobile:flex-col mobile:h-96 mobile:w-11/12 "  >
 
-        <div class="offerday_desciption w-1/4 bg-bluep text-white flex flex-col justify-center mobile:w-full">
-            <p class="text-4xl ml-2.5 font-bold font-robotoc uppercase">Ofertas <br>Semananales </p>
+        <div class="offerday_desciption w-1/4 bg-bluep text-white flex flex-col justify-center mobile:w-full h-auto  ">
+            <p class="text-4xl ml-2.5 font-bold font-robotoc uppercase mobile:text-3xl mobile:text-center">Ofertas <br>Semananales </p>
         </div>
-        <div class="offers w-full flex items-center mobile:flex-col ">
-            <div class="offer_1 w-1/3 h-5/6 flex flex-col  divide-x border-l border-solid border-grayp items-center mobile:w-full">
+        <div class="offers w-full flex items-center  ">
+            <div class="offer_1 w-1/3 h-5/6 flex flex-col  divide-x border-l border-solid border-grayp items-center mobile:w-full ">
                 <img src="img/1-ofertas-semanales.png" alt="" class="offer_1-img">
                 <div class="w-full flex justify-evenly">
                     <h3 class="text-base -mt-2 font-robotoc">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
                     <div class="flex justify-center flex-col items-center">
-                        <h4 class="text-xl font-semibold">2 Paq</h4><br>
-                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat">POR</h4><br>
+                        <h4 class="text-xl font-semibold">2 Paq</h4>
+                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat">POR</h4>
                         <h4 class="text-3xl font-bold font-robotoc">RD$ 1,350</h4>
                     </div>
                 </div>
 
             </div>
-            <div class="offer_2 w-1/3 h-5/6 flex flex-col border-l border-solid border-grayp items-center mobile:w-full">
+            <div class="offer_2 w-1/3 h-5/6 flex flex-col border-l border-solid border-grayp items-center mobile:hidden">
                 <img src="img/2-ofertas-semanales.png" alt="" class="offer_1-img">
                 <div class="w-full flex justify-evenly">
                     <h3 class="text-base -mt-2 font-robotoc">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
                     <div class="flex justify-center flex-col items-center">
-                        <h4 class="text-xl font-semibold">2 Paq</h4><br>
-                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat">POR</h4><br>
+                        <h4 class="text-xl font-semibold">2 Paq</h4>
+                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat">POR</h4>
                         <h4 class="text-3xl font-bold font-robotoc">RD$ 1,350</h4>
                     </div>
                 </div>
                
 
             </div>
-            <div class="offer_3 w-1/3 h-5/6 flex flex-col border-l border-solid border-grayp items-center mobile:w-full mobile:border-l">
+            <div class="offer_3 w-1/3 h-5/6 flex flex-col border-l border-solid border-grayp items-center mobile:hidden ">
                 <img src="img/3-ofertas-semanales.png" alt="" class="offer_1-img">
                 <div class="w-full flex justify-evenly">
                     <h3 class="text-base -mt-2 font-robotoc">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
                     <div class="flex justify-center flex-col items-center">
-                        <h4 class="text-xl font-semibold">2 Paq</h4><br>
-                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat">POR</h4><br>
+                        <h4 class="text-xl font-semibold">2 Paq</h4>
+                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat">POR</h4>
                         <h4 class="text-3xl font-bold font-robotoc">RD$ 1,350</h4>
                     </div>
                 </div>
@@ -193,30 +171,31 @@
 
 
     <!--Productos mas valorados-->
-    <section class="product_container flex h- w-4/5 my-0 mx-auto justify-between">
-        <div class="product-item w-xrxr flex  h-h344 flex-col  bg-gray-200">
-            <div class="cat_product w-full h-14 flex items-center ">
+    
+    <section class="product_container flex h- w-4/5 my-0 mx-auto justify-between mobile:flex-col">
+        <div class="product-item w-xrxr flex  h-h344 flex-col  bg-gray-200 mobile:w-full">
+            <div class="cat_product w-full h-14 flex items-center mobile:text-center mobile:my-3 ">
                 <div>
-                    <h1 class=" text-redp ml-8 font-bold text-3xl font-robotoc">PRODUCTOS MAS VALORADOS</h1>
+                    <h1 class=" text-redp ml-8 font-bold text-3xl font-robotoc mobile:text-2xl mobile:ml-auto mobile:mr-auto ">PRODUCTOS MAS VALORADOS</h1>
                 </div> 
 
             </div>
-            <div class="product h-full w-full flex justify-evenly">
-                <div class="h-full w-1/3 flex flex-col items-center">
+            <div class="product h-full w-full flex justify-evenly mobile:flex-col ">
+                <div class="h-full w-1/3 flex flex-col items-center mobile:w-full">
                    <div class="bg-white">
                         <img  src="img/Untitled2.png" alt="">
                    </div>
                     <div class="product_h4 w-full">
                         <h4 class="inline-block relative left-0"></h4>
                     </div>
-                    <div class="product_p w-full">
-                        <h1 class="ml-8 font-black text-3xl font-robotoc">$RD 600</h1> 
+                    <div class="product_p w-full mobile:text-center">
+                        <h1 class="ml-8 font-black text-3xl font-robotoc mobile:text-2xl">$RD 600</h1> 
                         <div class="ml-8"><img src="img/star.png" alt=""></div>
-                        <p class="inline-block p-0 ml-8 font-robotoc">Paquete de 5 monos de mangas cortas </p>
+                        <p class="inline-block p-0 ml-8 font-robotoc mobile:text-sm">Paquete de 5 monos de mangas cortas </p>
                     </div>
 
                 </div>
-                <div class="h-full w-1/3 flex flex-col items-center">
+                <div class="h-full w-1/3 flex flex-col items-center mobile:w-full">
                     <img  src="img/Untitled3.png" alt="">
                     <div class="product_p w-full">
                         <h1 class="ml-8 font-black text-3xl font-robotoc">$RD 1,200</h1> 
@@ -225,7 +204,7 @@
                     </div>
 
                 </div>
-                <div class="h-full w-1/3 flex flex-col items-center">
+                <div class="h-full w-1/3 flex flex-col items-center mobile:w-full">
                     <img  src="img/Untitled.png" alt="">
                     <div class="product_p w-full">
                         <h1 class="ml-8 font-black text-3xl font-robotoc">$RD 460</h1> 
@@ -236,15 +215,15 @@
                 </div>
             </div>
         </div>
-        <div class="product-item w-xrxr flex  h-h344 flex-col  bg-gray-200">
+        <div class="product-item w-xrxr flex  h-h344 flex-col  bg-gray-200 mobile:my-5 mobile:w-full ">
             <div class="cat_product w-full h-14 flex items-center ">
                 <div>
                     <h1 class=" text-redp ml-8 font-bold text-3xl font-robotoc">PRODUCTOS QUE TE PUEDEN INTERESAR</h1>
                 </div>
 
             </div>
-            <div class="product h-full w-full flex justify-evenly">
-                <div class="h-full w-1/3 flex flex-col items-center">
+            <div class="product h-full w-full flex justify-evenly mobile:flex-col">
+                <div class="h-full w-1/3 flex flex-col items-center mobile:w-full">
                     <img  src="img/Untitled4.png" alt="">
                     <div class="product_h4 w-full">
                         <h4 class="inline-block relative left-0"></h4>
@@ -256,7 +235,7 @@
                     </div>
 
                 </div>
-                <div class="h-full w-1/3 flex flex-col items-center">
+                <div class="h-full w-1/3 flex flex-col items-center mobile:w-full">
                     <div class="bg-white w-44 h-44 flex justify-center">
                         <img  src="img/Untitled5.png" alt="">
                     </div>
@@ -267,7 +246,7 @@
                     </div>
 
                 </div>
-                <div class="h-full w-1/3 flex flex-col items-center">
+                <div class="h-full w-1/3 flex flex-col items-center mobile:w-full">
                     <img  src="img/Untitled6.png" alt="">
                     <div class="product_p w-full">
                         <h2 class="text-gray-400 line-through text-2xl font-black leading-3 ml-8 mt-2 font-robotoc">$RD 58,000</h2>
@@ -283,8 +262,9 @@
 
 
     <!--Promociones-->
-    <section class="promociones h-80 w-4/5  border-8 border-solid border-yellowp  my-10 mx-auto flex items-center">
-        <div class="offer_1 w-1/4 flex justify-center relative h-promoh">
+    
+    <section class="promociones h-80 w-4/5  border-8 border-solid border-yellowp  my-10 mx-auto flex items-center mobile:flex-col mobile:h-auto">
+        <div class="offer_1 w-1/4 flex justify-center relative h-promoh mobile:w-full mobile:my-2">
                 <div class="flex items-center w-full h-full justify-center">
                     <div class="relative  flex-col flex w-auto h-auto">
                         <img class="inline-block" src="img/1-descuentos.png" alt="">
@@ -299,7 +279,7 @@
 
 
         </div>
-        <div class="offer_2 w-1/4 flex justify-center relative h-full bg-yellowp items-center">
+        <div class="offer_2 w-1/4 flex justify-center relative h-full bg-yellowp items-center mobile:w-full">
             <div class="font-robotoc flex flex-col justify-center font-bold">
                 <div>
                     <h2 class="text-white text-4xl">APROBECHA</h2>
@@ -310,7 +290,7 @@
             </div>
  
         </div>
-        <div class="offer_1 w-1/4 flex justify-center relative h-promoh">
+        <div class="offer_1 w-1/4 flex justify-center relative h-promoh mobile:w-full mobile:my-2">
             <div class="flex items-center w-full h-full justify-center">
                 <div class="relative  flex-col flex w-auto h-auto">
                     <img class="inline-block" src="img/2-descuentos.png" alt="">
@@ -327,7 +307,7 @@
                 
             </div>
         </div>
-        <div class="offer_1 w-1/4 flex justify-center relative h-promoh">
+        <div class="offer_1 w-1/4 flex justify-center relative h-promoh mobile:w-full mobile:my-2">
             <div class="flex items-center w-full h-full justify-center">
                 <div class="relative  flex-col flex w-auto h-auto">
                     <img class="inline-block" src="img/3-descuentos.png" alt="">
@@ -343,27 +323,28 @@
         </div>
     </section>
      <!--Productos Recientes-->
-    <section class="product_recent-container h-96 w-4/5 my-10 mx-auto border-solid border-gray-300 border-2">
+     
+    <section class="product_recent-container h-96 w-4/5 my-10 mx-auto border-solid border-gray-300 border-2 mobile:h-auto">
         <div class="product_recent-description  w-full h-1/6 flex justify-between">
             <div class="m-2.5"><h1 class="text-redp text-3xl uppercase font-bold font-robotoc">productos recien llegados</h1></div>
             <div class="m-4 font-roboto"><a class="uppercase" href="">ver mas</a></div>
         </div>
-        <div class="product_recent w-full h-80 flex ">
-            <div class="product_recent-rll w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex ">
+        <div class="product_recent w-full h-80 flex mobile:flex-col ">
+            <div class="product_recent-rll w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex  mobile:w-full mobile:my-2">
                 <div><img class="object-none" src="img/rll1.png" alt=""></div>
                 <div class="product_recent-priced  mt-2 w-44 font-robotoc">
                     <h2 class="font-black text-3xl ">RD$ 299</h2>
                     <p class="text-sm ">Mascarillas faciales no medicas de 3 capas para ninos (50 unidades)</p>
                 </div>
             </div>
-            <div class="product_recent-rll  w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex">
+            <div class="product_recent-rll  w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex mobile:w-full mobile:my-2 mobile:hidden">
                 <div><img class="object-none" src="img/rll2.png" alt=""></div>
                 <div class="product_recent-priced mt-2 w-44 font-robotoc">
                     <h2 class="font-black text-3xl">RD$ 2,400</h2>
                     <p class="font-medium text-sm">Camara de Seguridad 1080P Full HD IR con vision nocturna</p>
                 </div>
             </div>
-            <div class="product_recent-rll w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex">
+            <div class="product_recent-rll w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex mobile:w-full mobile:my-2 mobile:hidden">
                 <div><img class="object-none" src="img/rll3.png" alt=""></div>
                 <div class="product_recent-priced  mt-2 w-44 font-robotoc">
                     <h2 class="text-gray-400 line-through text-2xl font-black leading-3">RD$ 260</h2>
@@ -371,7 +352,7 @@
                     <p class="font-medium text-sm">Juegos de tohallas de cocina de 16.0 in 25.1 in de algodon</p>
                 </div>
             </div>
-            <div class="product_recent-rll w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col  items-center flex">
+            <div class="product_recent-rll w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col  items-center flex mobile:w-full mobile:my-2 mobile:hidden">
                 <div class="relative w-9/12 flex justify-center"><img class="object-none" src="img/rll4.png" alt=""> 
                     <div class="absolute w-28 h-24 bg-redp  right-0 bottom-0 m-auto flex flex-col ">
                         <div class="h-2/3 bg-yellow-400 flex items-center justify-center text-white">
@@ -398,14 +379,14 @@
                     <p class="font-medium text-sm">Smart Watch Fitness Tracker 1.4 para telefonos Android</p>
                 </div>
             </div>
-            <div class="product_recent-rll  w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex">
+            <div class="product_recent-rll  w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex mobile:w-full mobile:my-2 mobile:hidden">
                 <div><img class="object-none" src="img/rll5.png" alt=""></div>
                 <div class="product_recent-priced mt-2 w-44 font-robotoc">
                     <h2 class="font-black text-3xl">RD$ 210</h2>
                     <p class="font-medium text-sm">Paquete de 5 protectores faciales para niño</p>
                 </div>
             </div>
-            <div class="product_recent-rll w-2/12 h-72  flex-col  items-center flex">
+            <div class="product_recent-rll w-2/12 h-72  flex-col  items-center flex mobile:w-full mobile:my-2 mobile:hidden">
                 <div><img class="object-none" src="img/rll6.png" alt=""></div>
                 <div class="product_recent-priced mt-2 w-44 font-robotoc">
                     <h2 class="font-black text-3xl">RD$ 599</h2>
@@ -415,13 +396,14 @@
         </div>
     </section>
     <!--Email Subscribe-->
-    <div class="subscribe-container bg-gray-200 w-full h-44 flex">
-        <div class="email_container w-1/2 flex flex-col justify-center items-center">
-            <div class="email-description w-4/5 h-10">
-                <h1 class="uppercase text-3xl  text-redp font-robotoc font-bold">!mantente al dia, suscribete!</h1>
+     
+    <div class="subscribe-container bg-gray-200 w-full h-44 flex mobile:flex-col mobile:h-auto">
+        <div class="email_container w-1/2 flex flex-col justify-center items-center mobile:w-full">
+            <div class="email-description w-4/5 h-10 mobile:w-full">
+                <h1 class="uppercase text-3xl  text-redp font-robotoc font-bold mobile:text-2xl">!mantente al dia, suscribete!</h1>
             </div>
-            <div class="email-input w-4/5 h-12 flex items-center">
-                <input class="input_email   focus:ring-1 rounded w-5/12 border border-solid  border-gray-900 h-9 font-roboto " type="email" placeholder="Correo electronico">
+            <div class="email-input w-4/5 h-12 flex items-center mobile:w-auto mobile:">
+                <input class="input_email   focus:ring-1 rounded w-5/12 border border-solid  border-gray-900 h-9 font-roboto mobile:w-4/5" type="email" placeholder="Correo electronico">
                 <input class="input_confirm outline-none rounded w-1/5 text-white h-8 bg-redp ml-2 border-0 text-sm" type="submit" value="Confirmar Suscripcion">
             </div>
             <div class="email-switch h-12 flex w-4/5">
@@ -433,7 +415,7 @@
                 </div>
 
                 <div class="email-switch_text">
-                    <p class="text-base text-gray-500 font-roboto">Si, me gustaria recibir informacion de las ultimas novedades y <br>promociones exclusivas por
+                    <p class="text-base text-gray-500 font-roboto mobile:text-sm">Si, me gustaria recibir informacion de las ultimas novedades y <br class="mobile:hidden">promociones exclusivas por
                         parte del equipo de MERCASABE </p>
                 </div>
 
@@ -441,12 +423,13 @@
 
         </div>
         <!--skill-->
-        <div class="skill w-1/2 flex justify-center items-center font-robotoc">
+        
+        <div class="skill w-1/2 flex justify-center items-center font-robotoc mobile:w-full mobile:text-xs">
             <div  class="w-1/4 mx-2 my-5 flex flex-col items-center ">
                 <div  class="m-1.5 w-auto">
                     <img src="img/iconfast.png" alt="" srcset="">
                 </div>
-                <div>
+                <div class="mobile:h-auto">
                     <p   class="text-center uppercase font-bold">en tu casa en<br>24/48 horas</p>
                 </div>
             </div>
@@ -454,7 +437,7 @@
                 <div class="m-1.5 w-auto">
                     <img src="img/iconbuysecure.png" alt="" srcset="">
                 </div>
-                <div>
+                <div class="mobile:h-auto">
                     <p  class="text-center uppercase font-bold">compra 100%<br>seguras</p>
                 </div>
             </div>
@@ -462,22 +445,24 @@
                 <div class="m-1.5 w-auto">
                     <img src="img/iconhelp.png" alt="" srcset="">
                 </div>
-                <div>
+                <div class="mobile:h-auto">
                     <p class="text-center uppercase font-bold">centro de ayuda <br>preguntas frecuentes</p>
                 </div>
             </div>
         </div>
     </div>
     <!--Susbscribe-->
-    <div class="join h-14 bg-redp w-full flex justify-center items-center font-robotoc font-bold">
-        <div class="join_text text-white h-10">
-            <h1 class="text-4xl uppercase ">¿Aun no perteneces a MERCASABE?</h1>
+    
+    <div class="join h-14 bg-redp w-full flex justify-center items-center font-robotoc font-bold mobile:h-10">
+        <div class="join_text text-white h-10 mobile:h-auto">
+            <h1 class="text-4xl uppercase mobile:text-sm ">¿Aun no perteneces a MERCASABE?</h1>
         </div>
-        <div class="join_a text-4xl m-1.5 tracking-wide text-yellows uppercase">
+        <div class="join_a text-4xl m-1.5 tracking-wide text-yellows uppercase mobile:text-lg">
             <a href="#">Unete hoy!</a>
         </div>
     </div>
     <!--fotter-->
+   
     <fotter>
         <div class="footer w-full h-96 flex justify-center">
             <div class="footer-info flex justify-around relative top-6 h-4/5 w-11/12">
@@ -515,19 +500,14 @@
                     <h5 class="uppercase text-gray-900 text-lg font-bold" >servicio al cliente</h4>
                         <a href="">Obtenga ayuda de nuestros expertos 24/7</a>
                         <a class="number text-gray-900 text-xl" href="">1 (809) 000-0000</a>
-                        <div class="social relative top-3 w-full mb-2.5">
-                            <h5>siguenos por</h4>
+                        <div class="social relative top-3 w-full ">
                                 <a  class="text-gray-500 text-sm"href=""><img src="img/social.png" alt=""></a>
-                                <a  class="text-gray-500 text-sm"href="">Envios y Entregas</a>
-                                <a  class="text-gray-500 text-sm"href="">Formas de pago</a>
-                                <a  class="text-gray-500 text-sm"href="">Devoluciones y Reembolso</a>
-                                <a  class="text-gray-500 text-sm"href="">Preguntas Frecuentes</a>
                         </div>
                         <div class="social">
                             <h5 class="uppercase text-gray-900 text-lg font-bold" >meracasabe app</h4>
                                 <a class="text-gray-500 text-sm" href="">Descargas nuestras app</a>
-                                <div class="download-app flex relative top-2.5">
-                                    <div class="w-2/5"> <a href=""><img src="img/appstore.png" alt=""></a></div>
+                                <div class="download-app flex relative top-2.5 ">
+                                    <div class="w-2/5 mr-4"> <a href=""><img src="img/appstore.png" alt=""></a></div>
                                     <div class="w-2/5"><a href=""><img src="img/playstore.png" alt=""></a></div>
         
         
