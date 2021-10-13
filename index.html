@@ -189,12 +189,12 @@
                 </div> 
 
             </div>
-            <div class="grid grid-cols-3 mobile:grid-cols-2 mobile:grid-rows-2 ">
+            <div class="grid grid-cols-3 mobile:grid-cols-2 mobile:grid-rows-2 mobile:gap-2">
                 <div class="h-full  flex flex-col items-center mobile:w-full">
-                   <div class="bg-white">
-                        <img  src="img/Untitled2.png" alt="">
+                   <div class="bg-white flex-shrink-0 ">
+                        <img class="" src="img/Untitled2.png" alt="">
                    </div>
-                    <div class="product_h4 w-full">
+                    <div class="product_h4 w-full ">
                         <h4 class="inline-block relative left-0"></h4>
                     </div>
                     <div class="product_p w-full mobile:text-center">
@@ -205,7 +205,9 @@
 
                 </div>
                 <div class="h-full  flex flex-col items-center mobile:w-full">
-                    <img  src="img/Untitled3.png" alt="">
+                    <div class="flex-shrink-0 ">
+                        <img  src="img/Untitled3.png" alt="">
+                    </div>
                     <div class="product_p w-full">
                         <h1 class="ml-8 font-black text-3xl font-robotoc">$RD 1,200</h1> 
                         <div class="ml-8"><img src="img/star.png" alt=""></div>
@@ -214,7 +216,9 @@
 
                 </div>
                 <div class="h-full  flex flex-col items-center mobile:w-full">
-                    <img  src="img/Untitled.png" alt="">
+                    <div class="flex-shrink-0 ">
+                        <img  src="img/Untitled.png" alt="">
+                    </div>
                     <div class="product_p w-full">
                         <h1 class="ml-8 font-black text-3xl font-robotoc">$RD 460</h1> 
                         <div class="ml-8"><img src="img/star.png" alt=""></div>
@@ -408,14 +412,14 @@
      
     <div class="subscribe-container bg-gray-200 w-full h-44 flex mobile:flex-col mobile:h-auto">
         <div class="email_container w-1/2 flex flex-col justify-center items-center mobile:w-full">
-            <div class="email-description w-4/5 h-10 mobile:w-full">
+            <div class="email-description w-4/5 h-10 mobile:w-full mobile:h-auto mobile:ml-4">
                 <h1 class="uppercase text-3xl  text-redp font-robotoc font-bold mobile:text-2xl">!mantente al dia, suscribete!</h1>
             </div>
-            <div class="email-input w-4/5 h-12 flex items-center mobile:w-auto mobile:">
-                <input class="input_email   focus:ring-1 rounded w-5/12 border border-solid  border-gray-900 h-9 font-roboto mobile:w-4/5" type="email" placeholder="Correo electronico">
-                <input class="input_confirm outline-none rounded w-1/5 text-white h-8 bg-redp ml-2 border-0 text-sm" type="submit" value="Confirmar Suscripcion">
+            <div class="email-input w-4/5 h-12 flex items-center mobile:w-full mobile:">
+                <input class="input_email   focus:ring-1 rounded w-5/12 border border-solid  border-gray-900 h-9 font-roboto mobile:w-3/5 mobile:ml-1 mobile:p-1" type="email" placeholder="Correo electronico">
+                <input class="input_confirm outline-none rounded w-1/5 text-white h-8 bg-redp ml-2 border-0 text-sm mobile:w-auto mobile:p-1 mobile:ml-1 mobile:mr-1" type="submit" value="Confirmar Suscripcion">
             </div>
-            <div class="email-switch h-12 flex w-4/5">
+            <div class="email-switch h-12 flex w-4/5 mobile:w-full mobile:mx-1">
                 <div class="email-switch_switch w-16">
                     <label class="switch">
                         <input type="checkbox">
@@ -423,7 +427,7 @@
                     </label>
                 </div>
 
-                <div class="email-switch_text">
+                <div class="email-switch_text mobile:ml-1">
                     <p class="text-base text-gray-500 font-roboto mobile:text-sm">Si, me gustaria recibir informacion de las ultimas novedades y <br class="mobile:hidden">promociones exclusivas por
                         parte del equipo de MERCASABE </p>
                 </div>
@@ -433,8 +437,8 @@
         </div>
         <!--skill-->
         
-        <div class="skill w-1/2 flex justify-center items-center font-robotoc mobile:w-full mobile:text-xs">
-            <div  class="w-1/4 mx-2 my-5 flex flex-col items-center ">
+        <div class="skill w-1/2 grid grid-cols-3 content-center mobile:w-full mobile:text-xs mobile:h-48 mobile:mt-3">
+            <div  class=" mx-2 my-5 flex flex-col items-center ">
                 <div  class="m-1.5 w-auto">
                     <img src="img/iconfast.png" alt="" srcset="">
                 </div>
@@ -442,7 +446,7 @@
                     <p   class="text-center uppercase font-bold">en tu casa en<br>24/48 horas</p>
                 </div>
             </div>
-            <div class="w-1/4 mx-2 my-5 flex flex-col items-center">
+            <div class=" mx-2 my-5 flex flex-col items-center">
                 <div class="m-1.5 w-auto">
                     <img src="img/iconbuysecure.png" alt="" srcset="">
                 </div>
@@ -450,7 +454,7 @@
                     <p  class="text-center uppercase font-bold">compra 100%<br>seguras</p>
                 </div>
             </div>
-            <div class="w-1/4 mx-2 my-5 flex flex-col items-center">
+            <div class=" mx-2 my-5 flex flex-col items-center">
                 <div class="m-1.5 w-auto">
                     <img src="img/iconhelp.png" alt="" srcset="">
                 </div>
@@ -473,8 +477,8 @@
     <!--fotter-->
    
     <fotter>
-        <div class="footer w-full h-96 flex justify-center">
-            <div class="footer-info flex justify-around relative top-6 h-4/5 w-11/12">
+        <div class="footer w-full h-96 flex justify-center mobile:h-auto">
+            <div class="footer-info grid grid-cols-4 top-6 h-4/5 w-11/12 mobile:grid-cols-2 mobile:grid-rows-2 mobile:gap-2 mobile:w-full mobile:mx-2">
                 <div class="flex flex-col w-80 h-full font-robotoc">
                     <h5 class="uppercase text-lg font-bold" >Mercasabe</h4>
                         <a  class="text-gray-500 text-sm" href="">Registrate</a>
