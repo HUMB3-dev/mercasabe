@@ -19,18 +19,23 @@
 <body class="">
     <script src="js/bootstrap.bundle.min.js"></script>
     <header class="w-full h-44 bg-white mx-auto my-0 mobile:h-auto">
-        <div class="h-7 w-auto flex flex-row justify-center relative ">
-            <div class="texto mt-1 ">
-                <a href="#" class="inline-block text-redp font-bold font-robotoc mobile:text-xs ">ENVIO GRATIS</a>
-                <p class="inline-block font-bold text-gray-400 font-robotoc mobile:text-xs">en todos los pedidos de <span class="text-redp">RD$ 1,000</span> o mas (solo pedidos en Santo Domingo) <span><a href="" class="hover:text-redp"> + Detalles</a></span></p>
-                
+        <div class="h-7 w-auto flex flex-row justify-center relative flex-nowrap ">
+            <div class="texto mt-1 flex ">
+               <div class="flex-shrink-0 mobile:w-20 mobile:h-3 mobile:ml-1 ">
+                    <a href="#" class="inline-block text-redp font-bold font-robotoc mobile:text-xs ">ENVIO GRATIS</a>
+               </div>
+
+                <div>
+                    <p class="inline-block font-bold text-gray-400 font-robotoc mobile:text-xs">en todos los pedidos de <span class="text-redp">RD$ 1,000</span> o mas (solo pedidos en Santo Domingo) <span><a href="" class="hover:text-redp"> + Detalles</a></span></p>
+                    
+                </div>
             </div>
-            <div class="flex absolute right-0 mx-11 my-2 font-robotoc "><img  class="objet-none mx-2" src="img/idioma.png" alt=""><p>EN</p></div>
+            <div class="flex absolute right-0 mx-11 my-2 font-robotoc mobile:top-7 mobile:left-40  hidden"><img  class="objet-none mx-2" src="img/idioma.png" alt=""><p>EN</p></div>
         </div>
          <!--logo-->
-        <div class="grid-cols-3 grid mx-10 mobile:grid-cols-1 mobile:auto-rows-min mobile:mx-0 mobile:gap-3">
+        <div class="grid-cols-3 grid mx-10 mobile:grid-cols-1 mobile:auto-rows-min mobile:mx-0 mobile:gap-3 mobile:mt-3">
            
-            <div class="container-logo mobile:my-3 mobile:col-span-full mobile:mx-auto mobile:w-1/2 ">
+            <div class="container-logo  mobile:col-span-full mobile:mx-auto mobile:w-56 mobile:flex-shrink-0 ">
                 <img class="" src="img/logo.png" alt="logo">
             </div>
             
@@ -39,7 +44,7 @@
 
                 <div class="w-full flex items-center justify-center">
                     <input class="w-80 h-11  rounded-l-full px-6 bg-gray-200 border-none focus:outline-none text-based  mobile:h-8" type="text" placeholder="Buscar...">
-                    <select   name="" id="" value="Por departamento" class="bg-gray-200 h-11 w-40 px-1 mx-px  border-none text-gray-400  mobile:w-12 mobile:h-8">
+                    <select   name="" id="" value="Por departamento" class="bg-gray-200 h-11 w-40 px-1 mx-px  border-none text-gray-400  mobile:w-12 mobile:h-8 mobile:hidden">
                         <option class="bg-white" >Por deparatamento</option>
                         <option class="bg-white" value="Option 2">Option 2</option>
                         <option class="bg-white" value="Option 3">Option 3</option>
@@ -54,26 +59,26 @@
             </div> 
             
                 <!--barra de usuario-->
-            <div class="icons flex  h-auto justify-around font-robotoc font-semibold self-center mobile:mx-auto text-sm ml-0.5 mobile:text-xs ">
+            <div class="icons flex  h-auto justify-around font-robotoc font-semibold self-center mobile:mx-auto text-sm ml-0.5 mobile:text-xs mobile:w-full mobile:justify-between ">
                 <div class="flex justify-end w-full">
-                    <div class="flex w-30">
+                    <div class="flex w-30 mobile:mx-2">
                         <img class="object-none" src="img/usser.png" alt="" srcset="">
-                       <div class="w-20 ml-1 flex">
-                           <a class="  " href="">Ingresar <br> Mi Cuenta </a>
-                           <div class="flex items-end  "><a href="" class=" "><img src="img/arow.png" alt=""></a></div>
+                       <div class="w-20 ml-1 flex mobile:hidden ">
+                           <a class=" " href="">Ingresar <br> Mi Cuenta </a>
+                           
                         </div> 
                         
                        
                     </div>
-                    <div class="flex w-30   ">
-                        <img class="object-none" src="img/usser.png" alt="" srcset="">
-                       <div class="w-20 ml-1"><a class=" " href="">Ingresar <br> Mi Cuenta </a>
+                    <div class="flex w-30 mobile:mx-2 ">
+                        <img class="object-none" src="img/pedidos.png" alt="" srcset="">
+                       <div class="w-20 ml-1 mobile:hidden"><a class=" " href="">Ingresar <br> Mi Cuenta </a>
                     </div> 
                        
                     </div>
-                    <div class="flex w-30   ">
-                        <img class="object-none" src="img/usser.png" alt="" srcset="">
-                       <div class="w-20 ml-1"><a class="  " href="">Ingresar <br> Mi Cuenta </a>
+                    <div class="flex w-30 mobile:ml-2 mobile:mr-4 ">
+                        <img class="object-none" src="img/carrito.png" alt="" srcset="">
+                       <div class="w-20 ml-1 mobile:hidden"><a class="  " href="">Ingresar <br> Mi Cuenta </a>
                     </div> 
                        
                     </div>
@@ -85,21 +90,25 @@
 
         </div>
         <!--nav-->
-        <nav class="container-links h-12 border-grayp border-2 border-solid  mt-2.5 flex items-center font-roboto mobile:overflow-x-scroll mobile:text-xs mobile:w-full   ">
-            <div class="iconmenu ml-16 mobile:ml-3 mobile:w-full mobile:mr-0 "><a href=""><img src="img/iconmenu.png" alt="" srcset=""></a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r  "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center  hover:text-redp" href="">Departamentos</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r  mobile:w-auto"><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp" href="">Lanzamientos</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r  mobile:w-auto"><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Promociones y Ofertas</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r  mobile:w-auto"><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Vender</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r  mobile:w-auto"><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Negocios</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r  mobile:w-auto"><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Centro de Ayuda</a></div>
+        <nav class="container-links h-12 border-grayp border-2 border-solid  mt-2.5 flex items-center font-roboto mobile:overflow-x-auto mobile:text-xs mobile:w-full   ">
+            
+                <div class="iconmenu ml-16 mobile:ml-3  flex-shrink-0   "><a href=""><img src="img/iconmenu.png" alt="" srcset="" class=""></a>
+                
+                </div>
+            
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r  flex-shrink-0 "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center  hover:text-redp" href="">Departamentos</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r flex-shrink-0 "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Lanzamientos</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r flex-shrink-0 "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Promociones y Ofertas</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r flex-shrink-0 "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Vender</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r flex-shrink-0 "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Negocios</a></div>
+            <div class="my-auto mx-0 border-gray-400 border-solid border-r  flex-shrink-0"><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Centro de Ayuda</a></div>
         </nav>
     </header>
    <!--slide-->
   
     <div class="slider w-full ">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
+            <div class="carousel-indicators mobile:hidden">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
@@ -109,13 +118,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/Slide-show-2.jpg" class="d-block w-100" alt="...">
+                    <img src="img/Slide-show-2.jpg" class="d-block w-100 mobile:h-40 mobile:object-fill" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/Slide-show.jpg" class="d-block w-100" alt="...">
+                    <img src="img/Slide-show.jpg" class="d-block w-100 mobile:h-40 mobile:object-fill" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/Slide-show-2.jpg" class="d-block w-100" alt="...">
+                    <img src="img/Slide-show-2.jpg" class="d-block w-100 mobile:h-40 mobile:object-fill" alt="...">
                 </div>
             </div>
 
@@ -123,21 +132,21 @@
     </div>
 
       
-     
-    <div class="offerscontainer h-80 w-4/5  border-8 border-solid border-bluep margin my-10 mx-auto flex mobile:flex-col mobile:h-96 mobile:w-11/12 "  >
+     <!--offer1-->
+    <div class="offerscontainer h-80 w-4/5  border-8 border-solid border-bluep margin my-10 mx-auto flex mobile:flex-col mobile:h-80 mobile:w-10/12 "  >
 
         <div class="offerday_desciption w-1/4 bg-bluep text-white flex flex-col justify-center mobile:w-full h-auto  ">
-            <p class="text-4xl ml-2.5 font-bold font-robotoc uppercase mobile:text-3xl mobile:text-center">Ofertas <br>Semananales </p>
+            <p class="text-4xl ml-2.5 font-bold font-robotoc uppercase mobile:text-xl mobile:text-center">Ofertas <br>Semananales </p>
         </div>
         <div class="offers w-full flex items-center  ">
             <div class="offer_1 w-1/3 h-5/6 flex flex-col  divide-x border-l border-solid border-grayp items-center mobile:w-full ">
-                <img src="img/1-ofertas-semanales.png" alt="" class="offer_1-img">
+                <img src="img/1-ofertas-semanales.png" alt="" class="offer_1-img mobile:w-56">
                 <div class="w-full flex justify-evenly">
-                    <h3 class="text-base -mt-2 font-robotoc">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
+                    <h3 class="text-base -mt-2 font-robotoc mobile:text-xs">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
                     <div class="flex justify-center flex-col items-center">
-                        <h4 class="text-xl font-semibold">2 Paq</h4>
-                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat">POR</h4>
-                        <h4 class="text-3xl font-bold font-robotoc">RD$ 1,350</h4>
+                        <h4 class="text-xl font-semibold mobile:text-lg">2 Paq</h4>
+                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat ">POR</h4>
+                        <h4 class="text-3xl font-bold font-robotoc mobile:text-xl">RD$ 1,350</h4>
                     </div>
                 </div>
 
