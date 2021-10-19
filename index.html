@@ -12,111 +12,128 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
 
 </head>
 
-<body class="">
+<body class="body relative">
     <script src="js/bootstrap.bundle.min.js"></script>
-    <header class="w-full h-44 bg-white mx-auto my-0 mobile:h-auto">
-        <div class="h-7 w-auto flex flex-row justify-center relative flex-nowrap ">
-            <div class="texto mt-1 flex ">
-               <div class="flex-shrink-0 mobile:w-20 mobile:h-3 mobile:ml-1 ">
-                    <a href="#" class="inline-block text-redp font-bold font-robotoc mobile:text-xs ">ENVIO GRATIS</a>
+    <header class="w-full h-header bg-white mx-auto my-0 mobile:h-auto fixed top-0 z-50">
+        <div class="h-8 bg-grays flex flex-row justify-center relative flex-nowrap w-full">
+            <div class="texto  flex my-auto ">
+               <div class="flex-shrink-0 mobile:w-20 mobile:h-3 mobile:ml-1">
+                    <a href="#" class="inline-block text-redp font-bold font-roboto text-xs mx-1">OFERTA POR TIEMPO LIMITADO:</a>
                </div>
 
-                <div>
-                    <p class="inline-block font-bold text-gray-400 font-robotoc mobile:text-xs">en todos los pedidos de <span class="text-redp">RD$ 1,000</span> o mas (solo pedidos en Santo Domingo) <span><a href="" class="hover:text-redp"> + Detalles</a></span></p>
+                <div class="my-auto">
+                    <p class="inline-block font-semibold  font-roboto text-xs"> 20% de descuento en todos los productos <span class="text-ogroffer">Finaliza en: 1 día 04.14.03</span></p>
                     
                 </div>
+                <div class="my-auto mx-1.5"><a href=""><img src="img/iconclose.png" alt=""></a></div>
             </div>
-            <div class="flex absolute right-0 mx-11 my-2 font-robotoc mobile:top-7 mobile:left-40  mobile:hidden"><img  class="objet-none mx-2" src="img/idioma.png" alt=""><p>EN</p></div>
+           
         </div>
          <!--logo-->
-        <div class="grid-cols-3 grid mx-10 mobile:grid-cols-1 mobile:auto-rows-min mobile:mx-0 mobile:gap-3 mobile:mt-3">
+        <div class="grid-cols-3 h-clogo grid mx-mlogo mobile:grid-cols-1 mobile:auto-rows-min mobile:mx-0 mobile:gap-3 mobile:mt-3">
+
            
-            <div class="container-logo  mobile:col-span-full mobile:mx-auto mobile:w-56 mobile:flex-shrink-0 ">
+            <div class="container-logo my-auto  mobile:col-span-full mobile:mx-auto mobile:w-56 mobile:flex-shrink-0 ">
                 <img class="" src="img/logo.png" alt="logo">
             </div>
             
             <!--barra de busqueda-->
             <div class="search flex  my-0 mx-12 font-robotoc justify-center mobile:mx-2 ">
 
-                <div class="w-full flex items-center justify-center">
-                    <input class="w-80 h-11  rounded-l-full px-6 bg-gray-200 border-none focus:outline-none text-based  mobile:h-8" type="text" placeholder="Buscar...">
-                    <select   name="" id="" value="Por departamento" class="bg-gray-200 h-11 w-40 px-1 mx-px  border-none text-gray-400  mobile:w-12 mobile:h-8 mobile:hidden">
-                        <option class="bg-white" >Por deparatamento</option>
-                        <option class="bg-white" value="Option 2">Option 2</option>
-                        <option class="bg-white" value="Option 3">Option 3</option>
-                        <option class="bg-white" value="Option 4">Option 4</option>
-                        <option class="bg-white" value="Option 5">Option 5</option>
-                    </select>
-                    <a  class="w-11 bg-gray-200 rounded-r-full scale-50 h-11  flex border-none justify-center relative items-center mobile:h-8 " href="">
+                <div class="w-search h-search flex items-center justify-center my-auto">
+                    <input class="w-full h-search rounded-l-lg px-6 pl-4 border-t-2 border-l-2 border-b-2 focus:outline-none text-based  mobile:h-8" type="text" placeholder="Buscar...">
+                   
+                  <div class="border-t-2 border-r-2 border-b-2  rounded-r-lg  h-search  w-11 flex justify-center    ">
                         
-                        <img class="w-6 stroke-current mobile:w-4  " src="img/lupa.svg" alt="">
-                    </a>
+                            <a  class="self-center " href=""> 
+                                <img class="my-auto" src="img/iconsearch.png" alt="">
+                            </a>
+                        
+                  </div>
                 </div>
+                
             </div> 
             
                 <!--barra de usuario-->
-            <div class="icons flex  h-auto justify-around font-robotoc font-semibold self-center mobile:mx-auto text-sm ml-0.5 mobile:text-xs mobile:w-full mobile:justify-end ">
-                <div class="flex justify-end w-full mobile:w-3/6 mr-4">
-                    <div class="flex w-32 mobile:mx-2 mobile:w-auto">
-                        <img class="object-none" src="img/usser.png" alt="" srcset="">
-                       <div class="w-auto ml-1 flex  ">
-                           <a class=" mobile:hidden" href="">Ingresar <br> Mi Cuenta </a>
-                           <div class="mt-7 ml-1"><a href=""><img src="img/arow.png" alt=""></a></div>
+            <div class="icons flex  h-7 justify-around font-roboto  self-center mobile:mx-auto text-sm leading-none   ">
+                <div class="flex justify-end w-full mobile:w-3/6 ">
+                    <div class="flex mobile:mx-2 mobile:w-auto">
+                        <div>
+                            <img class="object-none" src="img/usser.png" alt="" srcset="">
+                        </div>
+                       <div class="w-auto ml-2 flex  ">
+                           <p class=" mobile:hidden" href="">Ingresar <br> Mi Cuenta </p>
+                           <div class="self-end ml-2"><a href=""><img src="img/arow.png" alt=""></a></div>
                            
                            
                         </div> 
                         
                        
                     </div>
-                    <div class="flex w-32 mobile:mx-2 mobile:w-auto">
-                        <img class="object-none" src="img/pedidos.png" alt="" srcset="">
-                       <div class="w-auto ml-1 flex  ">
-                           <a class="mobile:hidden " href="">Mis <br> Pedidos </a>
-                           <div class="mt-7 ml-1"><a href=""><img src="img/arow.png" alt=""></a></div>
-                           
-                           
-                        </div> 
+                    <div class="flex ml-30 mobile:mx-2 mobile:w-auto">
+                        <div>
+                            <img class="object-none" src="img/pedidos.png" alt="" srcset="">
+                        </div>
+                       <div class="w-auto ml-2 flex  ">
+                           <div class="self-end">
+                               <p class=" mobile:hidden self-end" href="">Mis  <br> Pedidos </p>
+                           </div>
+                           <div class="self-end ml-2"><a href=""><img src="img/arow.png" alt=""></a></div>         
+                                </div> 
                         
                        
                     </div>
-                    <div class="flex w-32 mobile:mx-2 mobile:w-auto relative right-2">
-                        <img class="object-none" src="img/carrito.png" alt="" srcset="">
-                       <div class="w-auto ml-1 flex  ">
-                           <a class="mobile:hidden " href="">Mi Cesta <br><span class="text-redp">0</span> articulos</a>
-                           <div class="mt-7 ml-1"><a href=""><img src="img/arow.png" alt=""></a></div>
-                           
-                           
-                        </div> 
-                        
-                    
-                    
+                    <div class="flex ml-30 mobile:mx-2 mobile:w-auto">
+                        <div>
+                            <img class="object-none" src="img/carrito.png" alt="" srcset="">
+                        </div>
+                       <div class="w-auto ml-2 flex  ">
+                           <p class=" mobile:hidden" href="">Mi Cesta<br><span class="text-redp">0 </span>artículos</p>
+                           <div class="self-end ml-2"><a href=""><img src="img/arow.png" alt=""></a></div>  
+                        </div>     
                     </div>
                     
                 </div>
-
+                
         </div>
+            <div class="w-mlogo 123 h-clogo absolute right-0 flex justify-center">
+                <div class="flex mt-2">
+                    <div class=" flex h-6"><img src="img/idioma.png" alt="">
+                        <div class="ml-1">
+                        <p  class="uppercase">en</p>
+                    </div></div>
+                </div>
+        </div>
+        </div>
+
+
+        
+
         <!--nav-->
-        <nav class="container-links h-12 border-grayp border-2 border-solid  mt-2.5 flex items-center font-roboto mobile:overflow-x-auto mobile:text-xs mobile:w-full   ">
-            
-                <div class="iconmenu ml-16 mobile:ml-3  flex-shrink-0   "><a href=""><img src="img/iconmenu.png" alt="" srcset="" class=""></a>
+        <nav class="container-links h-navlinks border-grayp  border-t-2 border-b-2 border-solid w-full   flex items-center font-roboto mobile:overflow-x-auto mobile:text-xs mobile:w-full   ">
+            <div class="ml-mlogo w-auto flex content-center uppercase">
+                <div class="iconmenu  mobile:ml-3  flex-shrink-0 content-center my-auto  "><a href=""><img src="img/iconmenu.png" alt="" srcset="" class=""></a>
                 
                 </div>
             
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r  flex-shrink-0 "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center  hover:text-redp" href="">Departamentos</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r flex-shrink-0 "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Lanzamientos</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r flex-shrink-0 "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Promociones y Ofertas</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r flex-shrink-0 "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Vender</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r flex-shrink-0 "><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Negocios</a></div>
-            <div class="my-auto mx-0 border-gray-400 border-solid border-r  flex-shrink-0"><a class="no-underline text-gray-500 my-0 mx-2.5 text-center hover:text-redp " href="">Centro de Ayuda</a></div>
+            <div class="my-auto mr-navlinks ml-navlinks  flex-shrink-0 "><a class="no-underline   text-center  hover:text-redp" href="">Departamentos</a></div>
+            <div class="my-auto mr-navlinks  flex-shrink-0 "><a class="no-underline   text-center hover:text-redp " href="">Lanzamientos</a></div>
+            <div class="my-auto mr-navlinks  flex-shrink-0 "><a class="no-underline   text-center hover:text-redp " href="">Promociones y Ofertas</a></div>
+            <div class="my-auto mr-navlinks   flex-shrink-0 "><a class="no-underline    text-center hover:text-redp " href="">Vender</a></div>
+            <div class="my-auto mr-navlinks flex-shrink-0 "><a class="no-underline    text-center hover:text-redp " href="">Negocios</a></div>
+            <div class="my-auto mr-navlinks   flex-shrink-0"><a class="no-underline    text-center hover:text-redp " href="">Centro de Ayuda</a></div>
+          </div>
         </nav>
+        
     </header>
    <!--slide-->
   
-    <div class="slider w-full ">
+    <div class="slider w-full mt-header ">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators mobile:hidden">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -128,13 +145,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/Slide-show-2.jpg" class="d-block w-100 mobile:h-40 mobile:object-fill" alt="...">
+                    <img src="img/Slide-show.png" class="d-block w-100 mobile:h-40 mobile:object-fill" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/Slide-show.jpg" class="d-block w-100 mobile:h-40 mobile:object-fill" alt="...">
+                    <img src="img/Slide-show.png" class="d-block w-100 mobile:h-40 mobile:object-fill" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/Slide-show-2.jpg" class="d-block w-100 mobile:h-40 mobile:object-fill" alt="...">
+                    <img src="img/Slide-show.png" class="d-block w-100 mobile:h-40 mobile:object-fill" alt="...">
                 </div>
             </div>
 
@@ -142,407 +159,767 @@
     </div>
 
       
-     <!--offer1-->
-    <div class="offerscontainer h-80 w-4/5  border-8 border-solid border-bluep margin my-10 mx-auto flex mobile:flex-col mobile:h-80 mobile:w-10/12 "  >
-           
-        <div class="offerday_desciption w-1/4 bg-bluep text-white flex flex-col justify-center mobile:w-full h-auto  ">
-            <p class="text-4xl ml-2.5 font-bold font-robotoc uppercase mobile:text-xl mobile:text-center">Ofertas <br>Semananales </p>
-        </div>
-        <div class="offers w-full flex items-center relative ">
-            <div class="btnc absolute my-auto h-11 w-7 -left-3 bg-white bg-opacity-50  backdrop-blur-xl flex items-center justify-center shadow-2xl rounded-l-md"> <a href=""><img src="img/btnci.png" alt=""></a></div>
-            <div class="btnc absolute  my-auto h-11 w-7 bg-white -right-4 flex items-center  justify-center shadow-2xl rounded-r-md"> <a href=""><img src="img/btncd.png" alt="" class=""></a></div>
-            <div class="offer_1 w-1/3 h-5/6 flex flex-col  divide-x border-l border-solid border-grayp items-center mobile:w-full ">
-                <img src="img/1-ofertas-semanales.png" alt="" class="offer_1-img mobile:w-56">
-                <div class="w-full flex justify-evenly">
-                    <h3 class="text-base -mt-2 font-robotoc mobile:text-xs">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
-                    <div class="flex justify-center flex-col items-center">
-                        <h4 class="text-xl font-semibold mobile:text-lg">2 Paq</h4>
-                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat ">POR</h4>
-                        <h4 class="text-3xl font-bold font-robotoc mobile:text-xl">RD$ 1,350</h4>
-                    </div>
-                </div>
-
-            </div>
-            <div class="offer_2 w-1/3 h-5/6 flex flex-col border-l border-solid border-grayp items-center mobile:hidden">
-                <img src="img/2-ofertas-semanales.png" alt="" class="offer_1-img">
-                <div class="w-full flex justify-evenly">
-                    <h3 class="text-base -mt-2 font-robotoc">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
-                    <div class="flex justify-center flex-col items-center">
-                        <h4 class="text-xl font-semibold">2 Paq</h4>
-                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat">POR</h4>
-                        <h4 class="text-3xl font-bold font-robotoc">RD$ 1,350</h4>
-                    </div>
-                </div>
-               
-
-            </div>
-            <div class="offer_3 w-1/3 h-5/6 flex flex-col border-l border-solid border-grayp items-center mobile:hidden ">
-                <img src="img/3-ofertas-semanales.png" alt="" class="offer_1-img">
-                <div class="w-full flex justify-evenly">
-                    <h3 class="text-base -mt-2 font-robotoc">Paquetes de 10 mini<br> latas de pepsi<br>7.5 Onzas</h3>
-                    <div class="flex justify-center flex-col items-center">
-                        <h4 class="text-xl font-semibold">2 Paq</h4>
-                        <h4 class="text-xs font-semibold text-gray-500 font-montserrat">POR</h4>
-                        <h4 class="text-3xl font-bold font-robotoc">RD$ 1,350</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!--Productos mas valorados-->
+     <!--ofertas semanales-->
     
-    <section class="product_container flex  w-4/5 my-0 mx-auto justify-between mobile:flex-col mobile:w-full ">
-        <div class="product-item w-xrxr flex  h-h344 flex-col  bg-gray-200 mobile:w-full">
-            <div class="cat_product w-full h-14 flex items-center mobile:text-center mobile:h-auto mobile:text-base mobile:m-1 ">
-                <div>
-                    <h1 class=" text-redp ml-8 font-bold text-3xl font-robotoc mobile:text-2xl mobile:ml-auto mobile:mr-auto ">PRODUCTOS MAS VALORADOS</h1>
-                </div> 
-
-            </div>
-            <div class="grid grid-cols-3 mobile:grid-cols-2 mobile:grid-rows-2 mobile:gap-1 ">
-                <div class="h-full  flex flex-col items-center mobile:w-full mobile:p-2">
-                   <div class="bg-white flex-shrink-0 mobile:h-44 mobile:w-44 ">
-                        <img class="" src="img/Untitled2.png" alt="">
-                   </div>
-                    <div class="product_h4 w-full ">
-                        <h4 class="inline-block relative left-0"></h4>
-                    </div>
-                    <div class="product_p w-full mobile:w-44">
-                        <h1 class="ml-8 font-black text-3xl font-robotoc mobile:text-xl mobile:ml-0">$RD 600</h1> 
-                        <div class="ml-8 mobile:ml-0"><img src="img/star.png" alt=""></div>
-                        <p class="inline-block p-0 ml-8 font-robotoc mobile:text-sm mobile:ml-0">Paquete de 5 monos de mangas cortas </p>
-                    </div>
-
-                </div>
-                <div class="h-full  flex flex-col items-center mobile:w-full mobile:p-2">
-                    <div class="flex-shrink-0 bg-white  mobile:h-44 mobile:w-44">
-                        <img  src="img/Untitled3.png" alt="">
-                    </div>
-                    <div class="product_p w-full mobile:w-44">
-                        <h1 class="ml-8 font-black text-3xl font-robotoc mobile:text-xl mobile:ml-0">$RD 1,200</h1> 
-                        <div class="ml-8 mobile:ml-0"><img src="img/star.png" alt=""></div>
-                        <p class="inline-block p-0 ml-8 font-robotoc mobile:ml-0 mobile:text-sm">Alimento para pajaros guacamayos </p>
-                    </div>
-
-                </div>
-                <div class="h-full  flex flex-col items-center mobile:w-full mobile:p-2">
-                    <div class="bg-white flex-shrink-0 mobile:h-44 mobile:w-44 ">
-                        <img  src="img/Untitled.png" alt="">
-                    </div>
-                    <div class="product_p w-full mobile:w-44">
-                        <h1 class="ml-8 font-black text-3xl font-robotoc mobile:text-xl mobile:ml-0">$RD 460</h1> 
-                        <div class="ml-8 mobile:ml-0"><img src="img/star.png" alt=""></div>
-                        <p class="inline-block p-0 ml-8 font-robotoc mobile:ml-0 mobile:text-sm">12 Pañuelos para el pelo </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!--productos de interes-->
-        <div class="product-item w-xrxr flex  h-h344 flex-col  bg-gray-200 mobile:my-5 mobile:w-full ">
-            <div class="cat_product w-full h-14 flex items-center mobile:h-auto mobile:pt-2 mobile:pb-2 ">
-                <div>
-                    <h1 class=" text-redp ml-8 font-bold text-3xl font-robotoc mobile:text-2xl mobile:ml-1 mobile:mr-auto">PRODUCTOS QUE TE PUEDEN INTERESAR</h1>
-                </div>
-
-            </div>
-            <div class="grid grid-cols-3 mobile:grid-cols-2 mobile:grid-rows-2 mobile:gap-1">
-                <div class="h-full flex flex-col items-center mobile:w-full ">
-                    <div class="bg-white w-44 h-44 flex justify-center mobile:w-44 mobile:h-44 ">
-                        <img  src="img/Untitled4.png" alt="">
-                    </div>
-                    <div class="product_p w-full mobile:w-44">
-                        <h1 class="ml-8 font-black text-3xl font-robotoc mobile:text-xl  mobile:ml-0 ">$RD 1,800</h1> 
+       <div class="w-full  ">
+            <div class="mx-10 relative">
+                <div class=" bg-white pt-14 pb-px22" >
+                   
                         
-                        <p class="inline-block p-0 ml-8 font-robotoc  mobile:ml-0 mobile:text-sm ">Paquete de 5 monos de mangas cortas </p>
-                    </div>
-
-                </div>
-                <div class="h-full  flex flex-col items-center mobile:w-full">
-                    <div class="bg-white w-44 h-44 flex justify-center mobile:w-44 mobile:h-44 ">
-                        <img  src="img/Untitled5.png" alt="">
-                    </div>
-                    <div class="product_p w-full mobile:w-44">
-                        <h1 class="ml-8 font-black text-3xl font-robotoc mobile:text-xl mobile:w-44 mobile:ml-0">$RD 25,999</h1> 
-                        
-                        <p class="inline-block p-0 ml-8 font-robotoc mobile:ml-0 mobile:text-sm">Paquete de 5 monos de mangas cortas </p>
-                    </div>
-
-                </div>
-                <div class="h-full  flex flex-col items-center mobile:w-full ">
-                    <div class="bg-white w-44 h-44 flex justify-center mobile:w-44 mobile:h-44">
-                        <img  src="img/Untitled6.png" alt="">
-                    </div>
-                    <div class="product_p w-full mobile:w-44">
-                        <h2 class="text-gray-400 line-through text-2xl font-black leading-3 ml-8 mt-2 font-robotoc mobile:ml-0 mobile:text-xl mobile:mt-0 mobile:leading-none">$RD 58,000</h2>
-                        <h1 class="ml-8 font-black text-3xl font-robotoc mobile:text-xl mobile:w-44 mobile:ml-0">$RD 48,000</h1> 
-                        
-                        <p class="inline-block p-0 ml-8 leading-3 font-robotoc mobile:ml-0 mobile:text-sm">Paquete de 5 mos </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!--Promociones-->
-    
-    <section class="promociones h-80 w-4/5  border-8 border-solid border-yellowp  my-10 mx-auto flex items-center mobile:flex-col-reverse mobile:h-auto relative">
-            <div class="btnc absolute my-auto h-11 w-7 -left-4 bg-white bg-opacity-50  backdrop-blur-xl flex items-center justify-center shadow-2xl rounded-l-md mobile:top-2/4"> <a href=""><img src="img/btnci.png" alt=""></a></div>
-            <div class="btnc absolute  my-0 h-11 w-7 bg-white -right-4 flex items-center  justify-center shadow-2xl rounded-r-md mobile:top-2/4"> <a href=""><img src="img/btncd.png" alt="" class=""></a></div>
-        <div class="offer_1 w-1/4 flex justify-center relative h-promoh mobile:w-full mobile:my-2">
-            
-                <div class="flex items-center w-full h-full justify-center">
-                    
-                    <div class="relative  flex-col flex w-auto h-auto">
-                        <img class="inline-block" src="img/1-descuentos.png" alt="">
-                        <div class="buy inline-block absolute w-32 h-36  bottom-0 left-32 bg-redp "></div>
-                        <div class="w-3/6 h-16 text-sm font-robotoc font-medium -ml-4" >
-                            <p>Lay's de queso y <br> crema agria y Sal y <br> Vinagre 28.3 g</p>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-
-
-        </div>
-        <div class="offer_2 w-1/4 flex justify-center relative h-full bg-yellowp items-center mobile:w-full ">
-            <div class="font-robotoc flex flex-col justify-center font-bold">
-                <div>
-                    <h2 class="text-white text-4xl">APROBECHA</h2>
-                </div>
-               <div>
-                    <h3 class="text-white text-2xl">NUESTROS DESCUENTOS</h3>
-               </div>
-            </div>
+                      <div class="">
+                            <div class="w-auto  border-4 border-solid border-bluec1 bg-white  relative flex h-c1 px-px19">
+                                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item active ">
+                                        <div class="grid grid-cols-5 grid-rows-2 mt-38 mb-4 gap-y-30px ">
+                                            <div class="row-span-full pr-3"><img src="img/motts.png" alt=""></div>
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-2 col-end-7 row-start-1 row-end-5"><img src="img/gillte.png" alt="" class="object-none"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                          
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-3 col-end-8 row-start-1 row-end-6 "><img src="img/h-dazs-helado.png" alt="" class="object-none ml-auto"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-2 col-end-8 row-start-1 row-end-6"><img src="img/nutella.png" alt="" class="object-none ml-auto"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 mx-22px mb-13px relative">
+                                                <div class="col-start-1 col-end-8 row-start-1 row-end-6 absolute"><img src="img/fileteimp.png" alt="" class="object-none"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-4 col-end-8 row-start-1 row-end-6 flex "><img src="img/pampers.png" alt="" class="object-none self-end"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-4 col-end-8 row-start-1 row-end-6 flex"><img src="img/iphone12.png" alt="" class="object-none self-end"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-3 col-end-8 row-start-1 row-end-6 ml-auto mt-auto"><img src="img/triciclomickey.png" alt="" class="object-none"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-3 col-end-8 row-start-1 row-end-6 ml-auto mt-auto"><img src="img/carretep.png" alt="" class="object-none"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        
+                                        
+                                        
+                                    </div>
+                                      </div>
+                                   
+                                      <div class="carousel-item ">
+                                        <div class="grid grid-cols-5 grid-rows-2 mt-38 mb-4 gap-y-30px  ">
+                                            <div class="row-span-full relative  ml-22px mb-13px ">
+                                                <div class="absolute">
+                                                    <div class="absolute w-offerw h-px91 bg-gray-900 z-20 bottom-0 m-auto ml-22px mb-13px"></div>
+                                                </div>
+                                                <div class="px-2 mb-13px ">
+                                                    <div>
+                                                        <img src="img/juicem.png" alt="" class="">
+                                                        
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-2 col-end-7 row-start-1 row-end-5"><img src="img/gillte.png" alt="" class="object-none"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-3 col-end-8 row-start-1 row-end-6 "><img src="img/h-dazs-helado.png" alt="" class="object-none ml-auto"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-2 col-end-8 row-start-1 row-end-6"><img src="img/nutella.png" alt="" class="object-none ml-auto"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 mx-22px mb-13px relative">
+                                                <div class="col-start-1 col-end-8 row-start-1 row-end-6 absolute"><img src="img/fileteimp.png" alt="" class="object-none"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-4 col-end-8 row-start-1 row-end-6 flex "><img src="img/pampers.png" alt="" class="object-none self-end"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-4 col-end-8 row-start-1 row-end-6 flex"><img src="img/iphone12.png" alt="" class="object-none self-end"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-3 col-end-8 row-start-1 row-end-6 ml-auto mt-auto"><img src="img/triciclomickey.png" alt="" class="object-none"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        <div class=" border-l-2 border-dotted border-gray-400 ">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-3 col-end-8 row-start-1 row-end-6 ml-auto mt-auto"><img src="img/carretep.png" alt="" class="object-none"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                          
+                                        
+                                        
+                                        
+                                    </div>
+                                      </div>
  
-        </div>
-        <div class="offer_1 w-1/4 flex justify-center relative h-promoh mobile:w-full mobile:my-2 mobile:hidden >
-            <div class="flex items-center w-full h-full justify-center">
-                <div class="relative  flex-col flex w-auto h-auto">
-                    <img class="inline-block" src="img/2-descuentos.png" alt="">
-                    <div class="buy inline-block absolute w-32 h-48  bottom-0 left-24 bg-yellows ">
-                        <div class="h-2/4 w-5/6 bg-white my-2 mx-auto"></div>
-                    </div>
-                    <div class="w-4/5 h-16 text-sm font-robotoc font-medium -ml-10" >
-                        <p>Cerveza Presidente <br> Light Pequeña <br> 12 onzas</p>
-                    </div>
-                </div>
-                
-            </div>
-            </div>
-                
-            </div>
-        </div>
-        <div class="offer_1 w-1/4 flex justify-center relative h-promoh mobile:w-full mobile:my-2 mobile:hidden">
-            <div class="flex items-center w-full h-full justify-center">
-                <div class="relative  flex-col flex w-auto h-auto">
-                    <img class="inline-block" src="img/3-descuentos.png" alt="">
-                    <div class="buy inline-block absolute w-32 h-52  bottom-0 left-28 bg-yellows ">
-                        <div class="w-full h-2/3 bg-redp" ></div>
-                    </div>
-                    <div class="w-4/5 h-16 text-sm font-robotoc font-medium -ml-10" >
-                        <p>Cerveza Presidente <br> Light Pequeña <br> 12 onzas</p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-     <!--Productos Recientes-->
-     
-    <section class="product_recent-container h-96 w-4/5 my-10 mx-auto border-solid  border-gray-300 border-2 mobile:h-auto relative" >
-        <div class="btnc absolute top-2/4 h-11 w-7 -left-3 bg-white bg-opacity-50  backdrop-blur-xl flex items-center justify-center shadow-2xl rounded-l-md"> <a href=""><img src="img/btnci.png" alt=""></a></div>
-        <div class="btnc absolute  top-2/4 h-11 w-7 bg-white -right-4 flex items-center  justify-center shadow-2xl rounded-r-md"> <a href=""><img src="img/btncd.png" alt="" class=""></a></div>
-        <div class="product_recent-description  w-full h-1/6 flex justify-between mobile:h-14 mobile:justify-around">
-            <div class="m-2.5"><h1 class="text-redp text-3xl uppercase font-bold font-robotoc mobile:text-lg">productos recien llegados</h1></div>
-            <div class="m-4 font-roboto mobile:text-xs mobile:m-0"><a class="uppercase" href="">ver mas</a></div>
-            
-        </div>
-        <div class="product_recent w-full h-80 flex mobile:flex-col ">
-           
-            <div class="product_recent-rll w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex  mobile:w-full mobile:my-2 mobile:border-none">
-                <div><img class="object-none" src="img/rll1.png" alt=""></div>
-                <div class="product_recent-priced  mt-2 w-44 font-robotoc">
-                    <h2 class="font-black text-3xl mobile:text-xl ">RD$ 299</h2>
-                    <p class="text-sm  mobile:text-sm">Mascarillas faciales no medicas de 3 capas para ninos (50 unidades)</p>
-                </div>
-            </div>
-            <div class="product_recent-rll  w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex mobile:w-full mobile:my-2 mobile:hidden">
-                <div><img class="object-none" src="img/rll2.png" alt=""></div>
-                <div class="product_recent-priced mt-2 w-44 font-robotoc">
-                    <h2 class="font-black text-3xl">RD$ 2,400</h2>
-                    <p class="font-medium text-sm">Camara de Seguridad 1080P Full HD IR con vision nocturna</p>
-                </div>
-            </div>
-            <div class="product_recent-rll w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex mobile:w-full mobile:my-2 mobile:hidden">
-                <div><img class="object-none" src="img/rll3.png" alt=""></div>
-                <div class="product_recent-priced  mt-2 w-44 font-robotoc">
-                    <h2 class="text-gray-400 line-through text-2xl font-black leading-3">RD$ 260</h2>
-                    <h2 class="font-black text-3xl">RD$ 160</h2>
-                    <p class="font-medium text-sm">Juegos de tohallas de cocina de 16.0 in 25.1 in de algodon</p>
-                </div>
-            </div>
-            <div class="product_recent-rll w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col  items-center flex mobile:w-full mobile:my-2 mobile:hidden">
-                <div class="relative w-9/12 flex justify-center"><img class="object-none" src="img/rll4.png" alt=""> 
-                    <div class="absolute w-28 h-24 bg-redp  right-0 bottom-0 m-auto flex flex-col ">
-                        <div class="h-2/3 bg-yellow-400 flex items-center justify-center text-white">
-                            <div class="w-2/3">
-                                <h3 class="text-6xl font-bold">25</h3>
+                                    </div>
+                                    
+                                    <button class="carousel-control-next  bg-white w-px34 h-px54 my-auto  opacity-100 rounded-tr-lg rounded-br-lg shadow-sm" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                      <span  aria-hidden="true"><img src="img/btncd.png" alt=""></span>
+                                      <span class="visually-hidden">Next</span>
+                                    </button>
+                                  </div>
+                                <div class="w-w428px  mx-auto left-0 right-0 absolute bg-white -top-6 flex justify-center">
+                                    <div>
+                                        <h1 class="uppercase font-opensans text-bluec1 text-37.5px "><span class="font-bold">ofertas</span class="font-medium"> semanales</h1>
+                                    </div>
+                                    
+                                </div>
+                               
+                                
+                                    
+                                
                             </div>
-                            <div class="flex flex-col w-1/3 h-1/3">
-                                <div><h3 class="font-bold  text-2xl text-center leading-3">%</h3></div>
-                                <div><h3 class="uppercase font-bold text-lg  ">off</h3></div>
+                      </div>
+                   
+                      <div class="w-full gap-3.5 h-px368 mt-8 grid grid-cols-2 ">
+                       <div class="flex  flex-col">
+                        <div class="w-full bg-white h-px52 flex">
+                            <h2 class="uppercase font-opensans  self-center text-32px font-normal text-gray-400">productos <span class="font-bold">más valorados</span> </h2>
                         </div>
-                    </div>
-                    <div class="flex items-center justify-center h-1/3" >
-                        <div>
-                            <h3 class="font-semibold uppercase text-base">!aprobrecha!</h3>
-                        
+                        <div class="w-full h-px316 bg-gray-500 flex p-px19">
+                            
+                                <div class="grid  grid-cols-3 grid-rows-1 gap-19px w-full h-full ">
+                                   <div class="flex flex-col bg-white">
+                                       <div><img src="img/panb.png" alt=""></div>
+                                       <div class="flex ml-5px mt-6px">
+                                           <div><p class="font-roboto font-extrabold text-10.41px flex leading-none text-gray-400 "><span class="font-robotoc leading-snug">RD$</span><span class="text-20.83px">79</span></p></div>
+                                           <div class="ml-2.5"><p class="font-roboto font-bold text-10.41px flex leading-none text-red-600  "><span class="font-robotoc leading-snug">RD$</span><span class="text-20.83px">63</span><span class="leading-snug">.20</span></p></div>
+
+                                       </div>
+                                       <div class="flex ml-5px mt-5px">
+                                           <div><img src="img/staron.png" alt=""></div>
+                                           <div><img src="img/staron.png" alt=""></div>
+                                           <div><img src="img/staron.png" alt=""></div>
+                                           <div><img src="img/staron.png" alt=""></div>
+                                           <div class="relative">
+                                               <div class=" ">
+                                               <img src="img/staroff.png" alt="">
+                                               </div>
+                                               <div class="absolute top-0"><img src="img/starmitad.png" alt="" class="relative"></div>
+                                           </div>
+                                           <div class="ml-px font-roboto text-12.5px"><p class="leading-none">9,456</p></div>
+                                           <div class="self-center ml-px"><a href=""><img src="img/arow.png" alt=""></a></div>
+                                       </div>
+                                       <div class="ml-5px font-robotoc font-bold text-12.5px uppercase mt-6px"><p class="leading-none">Pan Bolin para sándwich, Picaderas y tostadas 20 lonjas</p></div>
+                                   </div>
+                                   <div class="flex flex-col bg-white">
+                                    <div><img src="img/panb.png" alt=""></div>
+                                    <div class="flex ml-5px mt-6px">
+                                        <div><p class="font-roboto font-extrabold text-10.41px flex leading-none text-gray-400 "><span class="font-robotoc leading-snug">RD$</span><span class="text-20.83px">79</span></p></div>
+                                        <div class="ml-2.5"><p class="font-roboto font-bold text-10.41px flex leading-none text-red-600  "><span class="font-robotoc leading-snug">RD$</span><span class="text-20.83px">63</span><span class="leading-snug">.20</span></p></div>
+
+                                    </div>
+                                    <div class="flex ml-5px mt-5px">
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div class="relative">
+                                            <div class=" ">
+                                            <img src="img/staroff.png" alt="">
+                                            </div>
+                                            <div class="absolute top-0"><img src="img/starmitad.png" alt="" class="relative"></div>
+                                        </div>
+                                        <div class="ml-px font-roboto text-12.5px"><p class="leading-none">9,456</p></div>
+                                        <div class="self-center ml-px"><a href=""><img src="img/arow.png" alt=""></a></div>
+                                    </div>
+                                    <div class="ml-5px font-robotoc font-bold text-12.5px uppercase mt-6px"><p class="leading-none">Pan Bolin para sándwich, Picaderas y tostadas 20 lonjas</p></div>
+                                </div>
+                                <div class="flex flex-col bg-white">
+                                    <div><img src="img/panb.png" alt=""></div>
+                                    <div class="flex ml-5px mt-6px">
+                                        <div><p class="font-roboto font-extrabold text-10.41px flex leading-none text-gray-400 "><span class="font-robotoc leading-snug">RD$</span><span class="text-20.83px">79</span></p></div>
+                                        <div class="ml-2.5"><p class="font-roboto font-bold text-10.41px flex leading-none text-red-600  "><span class="font-robotoc leading-snug">RD$</span><span class="text-20.83px">63</span><span class="leading-snug">.20</span></p></div>
+
+                                    </div>
+                                    <div class="flex ml-5px mt-5px">
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div class="relative">
+                                            <div class=" ">
+                                            <img src="img/staroff.png" alt="">
+                                            </div>
+                                            <div class="absolute top-0"><img src="img/starmitad.png" alt="" class="relative"></div>
+                                        </div>
+                                        <div class="ml-px font-roboto text-12.5px"><p class="leading-none">9,456</p></div>
+                                        <div class="self-center ml-px"><a href=""><img src="img/arow.png" alt=""></a></div>
+                                    </div>
+                                    <div class="ml-5px font-robotoc font-bold text-12.5px uppercase mt-6px"><p class="leading-none">Pan Bolin para sándwich, Picaderas y tostadas 20 lonjas</p></div>
+                                </div>
+                                   
+                                </div>
+                            
                         </div>
-                        
+                       </div>
+                       <div class="flex  flex-col">
+                        <div class="w-full bg-white h-px52 flex">
+                            <h2 class="uppercase font-opensans  self-center text-32px font-normal text-gray-400">productos <span class="font-bold">que te pueden interesar</span> </h2>
+                        </div>
+                        <div class="w-full h-px316 bg-gray-500 flex p-px19">
+                            
+                                <div class="grid  grid-cols-3 grid-rows-1 gap-19px w-full h-full ">
+                                   <div class="flex flex-col bg-white">
+                                       <div><img src="img/panb.png" alt=""></div>
+                                       <div class="flex ml-5px mt-6px">
+                                           <div><p class="font-roboto font-extrabold text-10.41px flex leading-none text-gray-400 "><span class="font-robotoc leading-snug">RD$</span><span class="text-20.83px">79</span></p></div>
+                                           <div class="ml-2.5"><p class="font-roboto font-bold text-10.41px flex leading-none text-red-600  "><span class="font-robotoc leading-snug">RD$</span><span class="text-20.83px">63</span><span class="leading-snug">.20</span></p></div>
+
+                                       </div>
+                                       <div class="flex ml-5px mt-5px">
+                                           <div><img src="img/staron.png" alt=""></div>
+                                           <div><img src="img/staron.png" alt=""></div>
+                                           <div><img src="img/staron.png" alt=""></div>
+                                           <div><img src="img/staron.png" alt=""></div>
+                                           <div class="relative">
+                                               <div class=" ">
+                                               <img src="img/staroff.png" alt="">
+                                               </div>
+                                               <div class="absolute top-0"><img src="img/starmitad.png" alt="" class="relative"></div>
+                                           </div>
+                                           <div class="ml-px font-roboto text-12.5px"><p class="leading-none">9,456</p></div>
+                                           <div class="self-center ml-px"><a href=""><img src="img/arow.png" alt=""></a></div>
+                                       </div>
+                                       <div class="ml-5px font-robotoc font-bold text-12.5px uppercase mt-6px"><p class="leading-none">Pan Bolin para sándwich, Picaderas y tostadas 20 lonjas</p></div>
+                                   </div>
+                                   <div class="flex flex-col bg-white">
+                                    <div><img src="img/panb.png" alt=""></div>
+                                    <div class="flex ml-5px mt-6px">
+                                        <div><p class="font-roboto font-extrabold text-10.41px flex leading-none text-gray-400 "><span class="font-robotoc leading-snug">RD$</span><span class="text-20.83px">79</span></p></div>
+                                        <div class="ml-2.5"><p class="font-roboto font-bold text-10.41px flex leading-none text-red-600  "><span class="font-robotoc leading-snug">RD$</span><span class="text-20.83px">63</span><span class="leading-snug">.20</span></p></div>
+
+                                    </div>
+                                    <div class="flex ml-5px mt-5px">
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div class="relative">
+                                            <div class=" ">
+                                            <img src="img/staroff.png" alt="">
+                                            </div>
+                                            <div class="absolute top-0"><img src="img/starmitad.png" alt="" class="relative"></div>
+                                        </div>
+                                        <div class="ml-px font-roboto text-12.5px"><p class="leading-none">9,456</p></div>
+                                        <div class="self-center ml-px"><a href=""><img src="img/arow.png" alt=""></a></div>
+                                    </div>
+                                    <div class="ml-5px font-robotoc font-bold text-12.5px uppercase mt-6px"><p class="leading-none">Pan Bolin para sándwich, Picaderas y tostadas 20 lonjas</p></div>
+                                </div>
+                                <div class="flex flex-col bg-white">
+                                    <div><img src="img/panb.png" alt=""></div>
+                                    <div class="flex ml-5px mt-6px">
+                                        <div><p class="font-roboto font-extrabold text-10.41px flex leading-none text-gray-400 "><span class="font-robotoc leading-snug">RD$</span><span class="text-20.83px">79</span></p></div>
+                                        <div class="ml-2.5"><p class="font-roboto font-bold text-10.41px flex leading-none text-red-600  "><span class="font-robotoc leading-snug">RD$</span><span class="text-20.83px">63</span><span class="leading-snug">.20</span></p></div>
+
+                                    </div>
+                                    <div class="flex ml-5px mt-5px">
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div><img src="img/staron.png" alt=""></div>
+                                        <div class="relative">
+                                            <div class=" ">
+                                            <img src="img/staroff.png" alt="">
+                                            </div>
+                                            <div class="absolute top-0"><img src="img/starmitad.png" alt="" class="relative"></div>
+                                        </div>
+                                        <div class="ml-px font-roboto text-12.5px"><p class="leading-none">9,456</p></div>
+                                        <div class="self-center ml-px"><a href=""><img src="img/arow.png" alt=""></a></div>
+                                    </div>
+                                    <div class="ml-5px font-robotoc font-bold text-12.5px uppercase mt-6px"><p class="leading-none">Pan Bolin para sándwich, Picaderas y tostadas 20 lonjas</p></div>
+                                </div>
+                                   
+                                </div>
+                            
+                        </div>
+                       </div>
+                      </div>
+
+                      <div class="my-22px flex-col flex w-full bg-white px-px19 ">
+                          <div>
+                            <div class="flex justify-center">
+                                <h2 class="uppercase font-opensans  self-center text-32px font-normal text-red-800 py-px25">productos <span class="font-bold">recien llegados</span> </h2>
+                            </div>
+                          </div>
+                          <div class="w-full h-px243">
+                              <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                              
+                                  <div class="carousel-item  ">
+                                    <div class="w-full h-px243 grid grid-cols-5 grid-rows-1 ">
+                                        <div class="border-dashed border-gray-400 border-r-2">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-2 col-end-7 row-start-1 row-end-5"><img src="img/gillte.png" alt="" class="object-none"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="border-dashed border-gray-400 border-r-2">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-2 col-end-7 row-start-1 row-end-5"><img src="img/gillte.png" alt="" class="object-none"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="border-dashed border-gray-400 border-r-2">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-2 col-end-7 row-start-1 row-end-5"><img src="img/gillte.png" alt="" class="object-none"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="border-dashed border-gray-400 border-r-2">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-2 col-end-7 row-start-1 row-end-5"><img src="img/gillte.png" alt="" class="object-none"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                <div class="col-start-2 col-end-7 row-start-1 row-end-5"><img src="img/gillte.png" alt="" class="object-none"></div>
+                                                <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                    <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                   <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                        <div></div>
+                                                        <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                   </div>
+                                                    <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    </div>
+                              
+                                    
+                                    <div class="carousel-item active ">
+                                        <div class="w-full h-px243 grid grid-cols-5 grid-rows-1 ">
+                                            <div class="border-dashed border-gray-400 border-r-2">
+                                                <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                    <div class="col-start-2 col-end-7 row-start-1 row-end-5"><img src="img/gillte.png" alt="" class="object-none"></div>
+                                                    <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                        <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                       <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                            <div></div>
+                                                            <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                       </div>
+                                                        <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-dashed border-gray-400 border-r-2">
+                                                <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                    <div class="col-start-2 col-end-7 row-start-1 row-end-5"><img src="img/gillte.png" alt="" class="object-none"></div>
+                                                    <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                        <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                       <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                            <div></div>
+                                                            <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                       </div>
+                                                        <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-dashed border-gray-400 border-r-2">
+                                                <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                    <div class="col-start-2 col-end-7 row-start-1 row-end-5"><img src="img/gillte.png" alt="" class="object-none"></div>
+                                                    <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                        <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                       <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                            <div></div>
+                                                            <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                       </div>
+                                                        <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-dashed border-gray-400 border-r-2">
+                                                <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                    <div class="col-start-2 col-end-7 row-start-1 row-end-5"><img src="img/gillte.png" alt="" class="object-none"></div>
+                                                    <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                        <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                       <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                            <div></div>
+                                                            <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                       </div>
+                                                        <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <div class="grid grid-cols-7 grid-rows-5 ml-22px mr-3.5 mb-13px">
+                                                    <div class="col-start-2 col-end-7 row-start-1 row-end-5"><img src="img/gillte.png" alt="" class="object-none"></div>
+                                                    <div class="h-offerh w-offerw bg-redp rounded-md grid grid-rows-3 grid-cols-1 relative row-start-3 row-end-6 z-10">
+                                                        <div class="absolute -right-1 mx-auto"><img src="img/efect-e.png" alt=""></div>
+                                                       <div class=" row-start-1 row-end-3 flex flex-col justify-between">
+                                                            <div></div>
+                                                            <div class="mx-5px mb-5px w-auto   bg-white rounded-md h-px45"></div>
+                                                       </div>
+                                                        <div class="w-full bg-yellow-400 rounded-br-md rounded-bl-md"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        </div>
+                                    
+                                </div>
+                                <button class="carousel-control-next  bg-white w-px34 h-px54 my-auto  opacity-100 rounded-tr-lg rounded-br-lg shadow-sm" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+                                    <span  aria-hidden="true"><img src="img/btncd.png" alt=""></span>
+                                    <span class="visually-hidden">Next</span>
+                                  </button>
+                               
+                                  </div>
+                                  
+                                  
+                                
+                                
+                          </div class="w-full h-px243"v>
+                          </div>
+                          
+                          <div class="w-full h-px17 border-dashed border-gray-400 border-b-2"></div>
+                      </div>
                     </div>
-               
+
             </div>
-        </div>
-                <div class="product_recent-priced mt-2 w-44">
-                    <h2 class="font-black text-3xl">RD$ 2,135</h2>
-                    <p class="font-medium text-sm">Smart Watch Fitness Tracker 1.4 para telefonos Android</p>
-                </div>
-            </div>
-            <div class="product_recent-rll  w-2/12 h-72 border-solid border-r-2 border-gray-300 flex-col items-center flex mobile:w-full mobile:my-2 mobile:hidden">
-                <div><img class="object-none" src="img/rll5.png" alt=""></div>
-                <div class="product_recent-priced mt-2 w-44 font-robotoc">
-                    <h2 class="font-black text-3xl">RD$ 210</h2>
-                    <p class="font-medium text-sm">Paquete de 5 protectores faciales para niño</p>
-                </div>
-            </div>
-            <div class="product_recent-rll w-2/12 h-72  flex-col  items-center flex mobile:w-full mobile:my-2 mobile:hidden">
-                <div><img class="object-none" src="img/rll6.png" alt=""></div>
-                <div class="product_recent-priced mt-2 w-44 font-robotoc">
-                    <h2 class="font-black text-3xl">RD$ 599</h2>
-                    <p class="font-medium text-sm">Paleta de sombra de ojos profesional de 40 colores</p>
-                </div>
-            </div>
-        </div>
-    </section>
+       </div>
+       
+       
+
+        
+        
+         
+        
+    </div>
     <!--Email Subscribe-->
      
-    <div class="subscribe-container bg-gray-200 w-full h-44 flex mobile:flex-col mobile:h-auto">
-        <div class="email_container w-1/2 flex flex-col justify-center items-center mobile:w-full">
-            <div class="email-description w-4/5 h-10 mobile:w-full mobile:h-auto mobile:ml-4">
-                <h1 class="uppercase text-3xl  text-redp font-robotoc font-bold mobile:text-2xl">!mantente al dia, suscribete!</h1>
+    <div class="subscribe-container bg-gray-200 w-full h-px142 flex justify-center py-px10  mobile:flex-col mobile:h-auto ">
+        <div class="email_container w-px497 flex flex-col   mobile:w-full">
+            <div class="email-description   mobile:w-full mobile:h-auto mobile:ml-4">
+                <h1 class="uppercase text-25px  text-redp font-robotoc font-bold mobile:text-2xl">¡MANTENTE AL DÍA, SUSCRÍBETE!</h1>
             </div>
-            <div class="email-input w-4/5 h-12 flex items-center mobile:w-full mobile:">
-                <input class="input_email   focus:ring-1 rounded w-5/12 border border-solid  border-gray-900 h-9 font-roboto mobile:w-3/5 mobile:ml-1 mobile:p-1" type="email" placeholder="Correo electronico">
-                <input class="input_confirm outline-none rounded w-1/5 text-white h-8 bg-redp ml-2 border-0 text-sm mobile:w-auto mobile:p-1 mobile:ml-1 mobile:mr-1" type="submit" value="Confirmar Suscripcion">
+            <div class="email-input mt-7px  flex items-center mobile:w-full mobile:">
+                <input class="input_email pl-px7  rounded border border-solid  border-gray-900  font-roboto h-px35 w-px319 " type="email" placeholder="Correo electronico">
+                <input class="input_confirm outline-none rounded w-px166  text-white h-px34 bg-redp ml-3 border-0 text-15px " type="submit" value="Confirmar Suscripcion">
             </div>
-            <div class="email-switch h-12 flex w-4/5 mobile:w-full mobile:mx-1">
-                <div class="email-switch_switch w-16">
-                    <label class="switch">
-                        <input type="checkbox">
-                        <div class="slider round"></div>
-                    </label>
-                </div>
-
-                <div class="email-switch_text mobile:ml-1">
-                    <p class="text-base text-gray-500 font-roboto mobile:text-sm">Si, me gustaria recibir informacion de las ultimas novedades y <br class="mobile:hidden">promociones exclusivas por
-                        parte del equipo de MERCASABE </p>
-                </div>
+            <div class="mt-2">
+                <div class="email-switch h-12 flex  mobile:w-full mobile:mx-1">
+                    <div class="email-switch_switch ">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+                
+                    <div class="email-switch_text  flex ml-2">
+                        <div class="w-full">
+                            <p class=" text-gray-500 font-roboto text-15px">Si, me gustaría recibir información de las últimas novedades y  
+                                <br class="mobile:hidden">promociones exclusivas por parte del equipo de MERCASABE. </p>
+                        </div>
+                    </div>
+            </div>
 
             </div>
 
         </div>
         <!--skill-->
         
-        <div class="skill w-1/2 grid grid-cols-3 content-center mobile:w-full mobile:text-xs mobile:h-48 mobile:mt-3">
-            <div  class=" mx-2 my-5 flex flex-col items-center ">
-                <div  class="m-1.5 w-auto">
+        <div class="skill w-px582 flex  justify-between font-robotoc text-lg ml-125px">
+            <div  class="  flex flex-col items-start ">
+                <div  class=" w-auto">
                     <img src="img/iconfast.png" alt="" srcset="">
                 </div>
-                <div class="mobile:h-auto">
-                    <p   class="text-center uppercase font-bold">en tu casa en<br>24/48 horas</p>
+                <div class="">
+                    <p   class="text-center uppercase font-bold leading-tight">en tu casa en<br>24/48 horas</p>
                 </div>
             </div>
-            <div class=" mx-2 my-5 flex flex-col items-center">
-                <div class="m-1.5 w-auto">
+            <div class=" flex flex-col items-center">
+                <div class=" w-auto">
                     <img src="img/iconbuysecure.png" alt="" srcset="">
                 </div>
-                <div class="mobile:h-auto">
-                    <p  class="text-center uppercase font-bold">compra 100%<br>seguras</p>
+                <div class="">
+                    <p  class="text-center uppercase font-bold leading-tight">compra 100%<br>seguras</p>
                 </div>
             </div>
-            <div class=" mx-2 my-5 flex flex-col items-center">
-                <div class="m-1.5 w-auto">
+            <div class="  flex flex-col items-center">
+                <div class="w-auto">
                     <img src="img/iconhelp.png" alt="" srcset="">
                 </div>
                 <div class="mobile:h-auto">
-                    <p class="text-center uppercase font-bold">centro de ayuda <br>preguntas frecuentes</p>
+                    <p class="text-center uppercase font-bold leading-tight">centro de ayuda <br>preguntas frecuentes</p>
                 </div>
             </div>
         </div>
     </div>
     <!--Susbscribe-->
     
-    <div class="join h-14 bg-redp w-full flex justify-center items-center font-robotoc font-bold mobile:h-10">
-        <div class="join_text text-white h-10 mobile:h-auto">
-            <h1 class="text-4xl uppercase mobile:text-sm ">¿Aun no perteneces a MERCASABE?</h1>
+    <div class="join h-px58 bg-redp w-full flex justify-center items-center font-robotoc font-bold mobile:h-10">
+        <div class="join_text text-white  mobile:h-auto">
+            <h1 class="text-3xl uppercase mobile:text-sm ">¿Aún no perteneces a Mercasabe?</h1>
         </div>
-        <div class="join_a text-4xl m-1.5 tracking-wide text-yellows uppercase mobile:text-lg">
-            <a href="#">Unete hoy!</a>
+        <div class="join_a text-3xl m-1.5 tracking-wide text-yellows uppercase mobile:text-lg">
+            <a href="#">Únete hoy!</a>
         </div>
     </div>
     <!--fotter-->
    
     <fotter>
-        <div class="footer w-full h-96 flex justify-center mobile:h-auto">
-            <div class="footer-info grid grid-cols-4 top-6 h-4/5 w-11/12 mobile:grid-cols-2 mobile:grid-rows-2 mobile:gap-2 mobile:w-full mobile:mx-4 mobile:h-72 mobile:mt-4">
-                <div class="flex flex-col w-80 h-full font-robotoc mobile:w-auto mobile:h-auto">
-                    <h5 class="uppercase text-lg font-bold mobile:text-sm" >Mercasabe</h4>
-                        <a  class="text-gray-500 text-sm mobile:text-xs" href="">Registrate</a>
-                        <a class="text-gray-500 text-sm mobile:text-xs" href="">Mi Cuenta</a>
-                        <a class="text-gray-500 text-sm mobile:text-xs" href="">Mis Pedidos</a>
-                        <a class="text-gray-500 text-sm mobile:text-xs" href="">Envios y Entregas</a>
-                        <a class="text-gray-500 text-sm mobile:text-xs" href="">Formas de pago</a>
-                        <a  class="text-gray-500 text-sm mobile:text-xs"href="">Devoluciones y Reembolso</a>
-                        <a class="text-gray-500 text-sm mobile:text-xs" href="">Preguntas Frecuentes</a>
+        <div class="footer w-full h-px386 flex justify-center pt-7 bg-white ">
+            <div class="footer-info grid grid-cols-4 top-6 w-px1240 mobile:grid-cols-2 mobile:grid-rows-2 mobile:gap-2 mobile:w-full mobile:mx-4 mobile:h-72 mobile:mt-4">
+                <div class="grid  auto-rows-min font-robotoc leading-none gap-10px text-gray-800">
+                    <h5 class="uppercase  text-lg font-bold leading-none text-gray-900" >MERCASABE</h5>
+                        <a  class=" text-15px leading-none"href="">Regístrate</a>
+                        <a class=" text-15px leading-none" href="">Mi Cuenta</a>
+                        <a  class=" text-15px leading-none"href="">Mis Pedidos</a>
+                        <a  class=" text-15px leading-none"href="">Envío y Entregas</a>
+                        <a class=" text-15px leading-none" href="">Formas de Pago</a>
+                        <a  class=" text-15px leading-none"href="">Devoluciones y Reembolsos</a>
+                        <a  class=" text-15px leading-none"href="">Preguntas Frecuentes</a> 
                 </div>
-                <div class="flex flex-col w-80 h-full font-robotoc mobile:w-auto mobile:h-auto mobile:justify-items-end">
-                    <h5 class="uppercase  text-lg font-bold mobile:text-sm" >vende en Mercasabe</h4>
-                        <a  class="text-gray-500 text-sm mobile:text-xs"href="">Iniciar sesion como Vendedor</a>
-                        <a class="text-gray-500 text-sm mobile:text-xs" href="">Registrarme como Vendedor</a>
-                        <a  class="text-gray-500 text-sm mobile:text-xs"href="">Como Vender</a>
-                        <a  class="text-gray-500 text-sm mobile:text-xs"href="">Comisiones y Tarifas</a>
-                        <a class="text-gray-500 text-sm mobile:text-xs" href="">Centro de Ayuda para Vendedores</a>
-                        <a  class="text-gray-500 text-sm mobile:text-xs"href="">Acuerdos de Servicios</a>
+                <div class="grid  auto-rows-min font-robotoc leading-none gap-10px text-gray-800 ">
+                    <h5 class="uppercase  text-lg font-bold leading-none text-gray-900" >vende en Mercasabe</h5>
+                        <a  class=" text-15px leading-none"href="">Iniciar sesión como Vendedor</a>
+                        <a class=" text-15px leading-none" href="">Registrarme como Vendedor</a>
+                        <a  class=" text-15px leading-none"href="">Cómo Vender</a>
+                        <a  class=" text-15px leading-none"href="">Comisiones y Tarifas</a>
+                        <a class=" text-15px leading-none" href="">Centro de Ayuda para Vendedores</a>
+                        <a  class=" text-sm leading-none"href="">Acuerdos de Servicios</a>
         
                 </div>
-                <div class="flex flex-col w-80 h-full font-robotoc mobile:w-auto mobile:h-auto">
-                    <h5 class="uppercase  text-lg  font-bold mobile:text-sm" >informacion</h4>
-                        <a class="text-gray-500 text-sm mobile:text-xs" href="">Contactenos y Centro de Ayuda</a>
-                        <a  class="text-gray-500 text-sm mobile:text-xs"href="">Sobre Nosotros</a>
-                        <a class="text-gray-500 text-sm mobile:text-xs" href="">Terminos y Condiciones</a>
-                        <a class="text-gray-500 text-sm mobile:text-xs" href="">Politica de Privacidad</a>
-        
-                        <a class="contact-whatsapp flex mobile:text-sm" href=""><img src="img/whatsapp.png" alt="">+1 (809) 000-0000</a>
-        
-                </div>
-                <div class="flex flex-col w-80 h-full font-robotoc mobile:w-auto mobile:h-auto">
-                    <h5 class="uppercase text-gray-900 text-lg font-bold mobile:text-sm" >servicio al cliente</h5>
-                        <p href="" class="mobile:text-sm">Obtenga ayuda de nuestros expertos 24/7</p>
-                        <a class="number text-gray-900 text-xl mobile:text-sm" href="">1 (809) 000-0000</a>
-                        <div class="social relative  w-full  ">
-                                <a  class="text-gray-500 text-sm"href=""><img src="img/social.png" alt=""></a>
+                <div class="grid  auto-rows-min font-robotoc leading-none gap-10px text-gray-800  ">
+                    <h5 class="uppercase  text-lg font-bold leading-none text-gray-900" >INFORMACIÓN</h5>
+                        <a  class=" text-15px leading-none"href="">Contáctenos y Centro de Ayuda</a>
+                        <a class=" text-15px leading-none" href="">Sobre Nosotros</a>
+                        <a  class=" text-15px leading-none"href="">Términos y Condiciones</a>
+                        <a  class=" text-15px leading-none"href="">Política de Privacidad</a>
+                        <div class="flex">
+                            <div><img src="img/whatsapp.png" alt=""></div>
+                            <div class="ml-2"><p class="text-20px leading-none">+1(829) 000-0000</p></div>
                         </div>
-                        <div class="social mobile:mt-3">
-                            <h5 class="uppercase text-gray-900 text-lg font-bold mobile:text-sm" >meracasabe app</h4>
-                                <a class="text-gray-500 text-sm" href="">Descargas nuestras app</a>
+                        
+        
+                </div>
+                <div class="grid auto-rows-min font-robotoc  gap-10px">
+                    <h5 class="uppercase text-gray-900 text-lg font-bold leading-none" >servicio al cliente</h5>
+                        <div>
+                            <p href="" class="text-15px leading-none ">Obtenga ayuda de nuestros expertos 24/7</p>
+                            <a class="number text-gray-900 text-2xl leading-snug font-medium" href="">1 (809) 000-0000</a>
+                            <div class="mt-1">
+                                <a  class="text-gray-500 text-sm "href=""><img src="img/social.png" alt=""></a>
+                            </div>
+                        </div>
+                        
+                                
+                        
+                        <div class="social ">
+                            <div class="grid auto-rows-min gap-10px">
+                                <h5 class="uppercase text-gray-900 text-lg font-bold leading-none" >meracasabe app</h5>
+                                    <a class="text-gray-800 text-15px leading-none" href="">Descargas nuestras app</a>
+                            </div>
                                 <div class="download-app flex relative top-2.5 ">
-                                    <div class="w-2/5 mr-4"> <a href=""><img src="img/appstore.png" alt=""></a></div>
+                                    <div class="w-2/5 mr-17px"> <a href=""><img src="img/appstore.png" alt=""></a></div>
                                     <div class="w-2/5"><a href=""><img src="img/playstore.png" alt=""></a></div>
         
         
@@ -556,12 +933,12 @@
             </div>
         </div>
         
-        <div class="footer-end w-full h-5 flex flex-col items-center justify-self-end mobile:mt-24">
-            <div>
+        <div class="footer-end w-full  flex flex-col items-center justify-self-end mobile:mt-24 bg-white">
+            <div class="">
                 <img src="img/pago.png" alt="">
             </div>
-            <div>
-                <p class="text-gray-500 text-sm mobile:text-xs">Copyright 2021 MERCASABE. Todos los derechos reservados</p>
+            <div class="mt-14px text-15px">
+                <p class="text-gray-900 text-sm  leading-none mobile:text-xs">Copyright © 2021 MERCASABE. Todos los derechos reservados.</p>
             </div>
         </div>
     </fotter>
