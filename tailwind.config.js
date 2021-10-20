@@ -29,7 +29,7 @@ module.exports = {
         '30': '1.875rem',
         '38':'2.375rem',
         '5px':'0.3125rem',
-        '22px':'1.375rem',
+        '22px':'21px',
         '13px':'0.8125rem',
         '6px':'0.375rem',
         '19px':'1.1875rem',
@@ -37,6 +37,11 @@ module.exports = {
         '125px':'125px',
         '17px':'17px',
         '14px':'14px',
+        '46px':'46px',
+        '25px':'25px',
+        '11px':'11px',
+        '3px':'3px',
+        '2px':'2px',
         
 
 },
@@ -56,9 +61,22 @@ padding: {
         yellowp: '#f28c00',
         yellows: '#ffd33c',
         grayp: '#e9e8e8',
-        grays: '#f6f7f9',
+        oftl: '#f2f2f2',
         ogroffer:'#e54d04',
-        body:'#ffcf00'
+        body:'#ffcf00',
+        prbgray:'#d2d2d2',
+        prfonth1:'#959595',
+        prvm:'#595959',
+        prllh1:'#c23d02',
+        searchb:'#f9f9f9',
+        offers:'#00386c',
+        bordersearchb:'#b9b9b9',
+        borderlinks:'#dfdfe1',
+        textunetehoy:'#ffe400',
+        offeryellow:'#ffce0c',
+        ahorras:'#ff0101',
+        precioenoferta:'#b2010d',
+        textsmofferweek:'#494949'
       },
       width:{
         xrxr:'48%',
@@ -97,6 +115,8 @@ padding: {
         px35:'35px',
         px34:'34px',
         px386:'386px',
+        px133:'133px',
+        px1587:'1587px'
         
       },
       fontFamily: {
@@ -120,6 +140,7 @@ padding: {
         '25px': '1.5625rem',
         '15px': '0.9375rem',
         '20px': '20px',
+        '10.83':'10.83333px'
 
         
        },
