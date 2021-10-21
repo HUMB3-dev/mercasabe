@@ -97,7 +97,8 @@ padding: {
         privacidadtext:'#8e8e8e',
         textindicatorpage:'#666666',
         navlinksinfo:'#f4f4f4',
-        navlinksinfoborder:'#d8d8d8'
+        navlinksinfoborder:'#d8d8d8',
+        navlinksinfoborder1:'#a8a8a8'
       },
       width:{
         xrxr:'48%',
