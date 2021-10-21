@@ -52,6 +52,9 @@ padding: {
   px22: '22px',
   px10: '10px',
   px7:'0.4375rem',
+  px13: '13px',
+  px9: '9px',
+
  },
  
       colors: {
@@ -77,7 +80,8 @@ padding: {
         ahorras:'#ff0101',
         precioenoferta:'#b2010d',
         textsmofferweek:'#494949',
-        circleoffer:'#fc1323'
+        circleoffer:'#fc1323',
+        firsttextred:'#dc3545'
       },
       width:{
         xrxr:'48%',
@@ -147,7 +151,9 @@ padding: {
         '20px': '20px',
         '10.83':'10.83333px',
         '13.33':'13.33333px',
-        '14.16':'14.16667px'
+        '14.16':'14.16667px',
+        '33.33':'33.33px',
+        '13.75':'13.75px'
 
         
        },
