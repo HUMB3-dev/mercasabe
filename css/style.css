@@ -1,6 +1,4 @@
-.line-through-text:line-through{
-background-color: red;
-}
+
 /**modificar scroll**/
 .body::-webkit-scrollbar {
   width: 10px;     /* Tamaño del scroll en vertical */
